@@ -47,11 +47,11 @@ ADD . ./webapps
 #RUN cd  ./webapps/ \
 #    && mvn  install -D maven.test.skip=true
 
-run cd ./webapps/ \
+#run cd ./webapps/ \
 #    && mkdir  data \
 #    && chmod 666 data \
-    && mv ./server.xml /usr/local/tomcat/conf/ \
-    && mv ./aicloudhis .
+#    && mv ./server.xml /usr/local/tomcat/conf/ \
+#    && mv ./aicloudhis .
 
 VOLUME /usr/local/tomcat/webapps/data
 
