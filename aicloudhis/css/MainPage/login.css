@@ -1,0 +1,23 @@
+*            { margin:0; padding:0;}
+body,button,input{ font:14px/1.5 "Microsoft YaHei",Arial, Helvetica, sans-serif;}
+img          { border:0;}
+a,img,input  { hide-focus:expression(this.hideFocus=true); /* for ie 5+ */outline:none; /* for firefox 1.5 + */ }
+.dhcclog     { position:relative; margin:0 auto; zoom:1; width:834px; height:418px;}
+.log_left    { background:#0b6ecb; width:476px; height:418px;}
+.log_img     { width:476px; height:302px;}
+.log_name    { background:url(../../images/loginImages/log_name.gif) no-repeat scroll 20px 31px; width:476px; height:116px;}
+.goback      { position:absolute; top:377px; left:20px;}
+.log_right   { background:url(../../images/loginImages/login_right.gif) no-repeat scroll 0 0; position:absolute; top:20px; right:0; width:290px; height:360px;}
+.log_logo    { background:url(../../images/loginImages/login_logo.gif) no-repeat scroll 0 0; width:290px; height:60px;}
+.log_user,.log_pswd,.pswd_placeholder{ position:absolute; left:41px; height:36px; line-height:36px; border:none; color:#999;}
+.log_user    { top:114px; width:236px;}
+.log_pswd    { top:172px; width:236px;}
+.pswd_placeholder      { top:172px; cursor:text; color:#999;}
+.log_check,.log_check:hover,.log_check_on,.log_check_on:hover{ position:absolute; top:229px; left:0; width:80px; height:17px;}
+.log_check:hover,.log_check_on,.log_check_on:hover{ background:url(../../images/loginImages/login_right.gif) no-repeat;}
+.log_check:hover       { background-position:0 0;}
+.log_check_on          { background-position:0 -17px;}
+.log_check_on:hover    { background-position:-80px 0;}
+.log_getpsw            { display:block; position:absolute; top:227px; right:0; width:70px; height:20px;}
+.log_btn,.log_btn:hover{ display:block; position:absolute; top:278px; left:0; width:290px; height:38px;}
+.log_btn:hover         { background:url(../../images/loginImages/login_right.gif) no-repeat scroll 0 -360px;}

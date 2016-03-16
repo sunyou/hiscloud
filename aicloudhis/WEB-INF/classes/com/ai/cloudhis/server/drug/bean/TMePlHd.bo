@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TMePlHd" mainattr="UUID">
+    <mapingenty type="table">T_ME_PL_HD</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="PK" remark="计划编码">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DESCRIPTION" maxlength="255" datatype="String" type="COL" remark="计划描述">
+        <mapingcol datatype="VARCHAR2">DESCRIPTION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_APPLY" maxlength="50" datatype="String" type="COL" remark="计划申请部门">
+        <mapingcol datatype="VARCHAR2">ORGID_APPLY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PLANTYPEID" maxlength="15" datatype="String" type="COL" remark="00: 采购计划
+01: 采购请退
+02: 科室请领
+03: 科室请退
+04: 机构请领
+05: 机构请退">
+        <mapingcol datatype="VARCHAR2">PLANTYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_SERVICE" maxlength="50" datatype="String" type="COL" remark="计划服务部门">
+        <mapingcol datatype="VARCHAR2">ORGID_SERVICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISEXECFLAG" maxlength="20" datatype="Long" type="COL" remark="计划是否执行">
+        <mapingcol datatype="NUMBER">ISEXECFLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POLICYMAKE_USERID" maxlength="50" datatype="String" type="COL" remark="计划制定人编码">
+        <mapingcol datatype="VARCHAR2">POLICYMAKE_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POLICYMAK_DATE" maxlength="20" datatype="DateTime" type="COL" remark="计划生成日期">
+        <mapingcol datatype="DATE">POLICYMAK_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POLICYCHECK_USERID" maxlength="50" datatype="String" type="COL" remark="计划审核人编码">
+        <mapingcol datatype="VARCHAR2">POLICYCHECK_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POLICYCHECK_DATE" maxlength="20" datatype="DateTime" type="COL" remark="计划审核日期">
+        <mapingcol datatype="DATE">POLICYCHECK_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POLICYHANDLE_USERID" maxlength="50" datatype="String" type="COL" remark="计划经办人编码">
+        <mapingcol datatype="VARCHAR2">POLICYHANDLE_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POLICYHANDLE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="计划经办日期">
+        <mapingcol datatype="DATE">POLICYHANDLE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

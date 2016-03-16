@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="GB2312"?>
+<proconfig>  
+  <DataSrcList>
+    
+       
+    <DataSrc>
+      <name>dbsource</name>
+      <type>DBCP</type>
+      <dbType>MYSQL</dbType>          
+      <srcUrl>jdbc:mysql://210.13.199.103:3306/smart_card?useUnicode=true&amp;characterEncoding=utf-8</srcUrl>
+      <minLimit>1</minLimit>
+      <maxLimit>5</maxLimit>
+      <userName>smart_card</userName> 
+      <password>{o}smart_card</password>  
+      <propString>maxWait=3000;maxIdle=50</propString>
+    </DataSrc>
+     
+    <DataSrc>
+      <name>healthDataSource</name>
+      <type>DBCP</type>
+      <dbType>MYSQL</dbType>          
+      <srcUrl>jdbc:mysql://210.13.199.103:3306/health_archive?useUnicode=true&amp;characterEncoding=utf-8</srcUrl>
+      <minLimit>1</minLimit>
+      <maxLimit>5</maxLimit>
+      <userName>health_archive</userName> 
+      <password>{o}health_archive</password>  
+      <propString>maxWait=3000;maxIdle=50</propString>
+    </DataSrc> 
+    
+    <DataSrc>
+      <name>dataPlatformDataSource</name>
+      <type>DBCP</type>
+      <dbType>MYSQL</dbType>          
+      <srcUrl>jdbc:mysql://210.13.199.103:3306/etl_config?useUnicode=true&amp;characterEncoding=utf-8</srcUrl>
+      <minLimit>0</minLimit>
+      <maxLimit>50</maxLimit>
+      <userName>root</userName> 
+      <password>{o}root</password>  
+      <propString>maxWait=3000;maxIdle=50</propString>
+    </DataSrc> 
+     
+   
+   <DataSrc>
+      <name>card</name>
+      <type>DBCP</type>
+      <dbType>MYSQL</dbType>          
+      <srcUrl>jdbc:mysql://210.13.199.103:3306/card?useUnicode=true&amp;characterEncoding=utf-8</srcUrl>
+      <minLimit>1</minLimit>
+      <maxLimit>5</maxLimit>
+      <userName>card</userName> 
+      <password>{o}card</password>  
+      <propString>maxWait=3000;maxIdle=50</propString>
+    </DataSrc>
+   
+  </DataSrcList>	
+  <transactionlist default-transaction="local" independence-transaction="local"
+	   container-implclass="com.ai.appframe2.transaction.TransactionLocal">
+      <transaction name="local" implclass="com.ai.appframe2.transaction.TransactionLocal"  default-datasource="dbsource">
+      <DataSrcLink ailas-name="dbsource" actul-name="dbsource"></DataSrcLink>
+      <DataSrcLink ailas-name="healthDataSource" actul-name="healthDataSource"></DataSrcLink>
+      <DataSrcLink ailas-name="dataPlatformDataSource" actul-name="dataPlatformDataSource"></DataSrcLink>
+      <DataSrcLink ailas-name="card" actul-name="card"></DataSrcLink>
+    </transaction>
+  </transactionlist>	
+  
+   <service-mapping>
+		<service name="com.ai.healtharchive"
+			service-type="singleton" transaction-name="local" transaction-type="join" datasource-name="healthDataSource"/>
+		
+		<service name="com.ai.dataplatform"
+			service-type="singleton" transaction-name="local" transaction-type="join" datasource-name="dataPlatformDataSource"/>
+		
+		<service name="com.ai.healtharchive.mental.serviceSmart"
+			service-type="singleton" transaction-name="local" transaction-type="join" datasource-name="dbsource"/>  
+			
+		<service name="com.ai.card"
+			service-type="singleton" transaction-name="local" transaction-type="join" datasource-name="card"/>  
+   </service-mapping>
+	 
+</proconfig>

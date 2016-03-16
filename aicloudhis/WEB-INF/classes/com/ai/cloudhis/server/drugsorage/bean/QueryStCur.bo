@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QueryStCur" mainattr="UUID">
+    <mapingenty type="query">select a.*,
+       b.itemname,
+       b.item_common_name,
+       b.entid_producer,
+       b.ord_cateid,
+       b.item_spec,
+       b.sales_price,
+       b.dispens_unit,
+       b.wholesales_price,
+       (select d.orgname from T_Org d where d.orgid = a.orgid) orgname,
+       (select f.entname from t_Ent f where f.entid = b.entid_producer) entname,
+       (select c.ord_catename
+          from T_Ord_Category c
+         where b.ord_cateid = c.ord_cateid) pharmacy_catename from t_me_st_cur a,
+       T_Ord_Item b where a.itemid = b.itemid
+</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEMID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BATCHCODE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BATCHCODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="QUANTITY" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STORAGE_SALESPRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">STORAGE_SALESPRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STORAGE_WHOLESALESPRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">STORAGE_WHOLESALESPRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVALIDDATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">INVALIDDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEMNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_COMMON_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_COMMON_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTID_PRODUCER" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTID_PRODUCER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_CATEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_CATEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_SPEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_SPEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALES_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISPENS_UNIT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DISPENS_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WHOLESALES_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">WHOLESALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PHARMACY_CATENAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PHARMACY_CATENAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

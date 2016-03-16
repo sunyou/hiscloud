@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TRelEmp" mainattr="EMP_RELID">
+    <mapingenty type="table">T_REL_EMP</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="EMP_RELID" maxlength="50" datatype="String" type="PK" remark="人员关系编码">
+        <mapingcol datatype="VARCHAR2">EMP_RELID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMP_RELNAME" maxlength="255" datatype="String" type="COL" remark="人员关系名称">
+        <mapingcol datatype="VARCHAR2">EMP_RELNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPRELTYPEID" maxlength="50" datatype="String" type="COL" remark="人员关系类型编码">
+        <mapingcol datatype="VARCHAR2">EMPRELTYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="50" datatype="String" type="COL" remark="输入串">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTEDES" maxlength="255" datatype="String" type="COL" remark="描述">
+        <mapingcol datatype="VARCHAR2">NOTEDES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

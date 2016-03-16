@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QueryPlHd" mainattr="UUID">
+    <mapingenty type="query"> 
+ select t.*,
+        (select sum(s.dispens_quantity * s.sales_price)
+           from t_me_pl_sub s
+          where s.uuid_plan = t.uuid
+          group by s.uuid_plan) amount_total,
+        (select o.orgname from T_Org o where o.orgid = t.orgid_apply) orgname_apply,
+        (select  a.emp_name from t_emp a where a.empid=t.policymake_userid) empname,
+        (select d.entname from T_Ent d where d.entid = t.orgid_service) entname
+   from t_me_pl_hd t</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DESCRIPTION" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DESCRIPTION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_APPLY" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_APPLY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PLANTYPEID" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PLANTYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_SERVICE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_SERVICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISEXECFLAG" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ISEXECFLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POLICYMAKE_USERID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">POLICYMAKE_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POLICYMAK_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">POLICYMAK_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POLICYCHECK_USERID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">POLICYCHECK_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POLICYCHECK_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">POLICYCHECK_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POLICYHANDLE_USERID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">POLICYHANDLE_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POLICYHANDLE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">POLICYHANDLE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AMOUNT_TOTAL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">AMOUNT_TOTAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_APPLY" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME_APPLY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTNAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

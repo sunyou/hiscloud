@@ -1,0 +1,862 @@
+﻿
+a.more-link {
+	display:block;
+	margin-top:-0.5em;
+	margin-bottom:1.5em;
+}
+
+
+ul#docs-menu ul{display:none;position:static !important;top:auto !important;left:auto !important;margin-left:0 !important;margin-top:0 !important;width:auto !important;min-width:0 !important;max-width:none !important;}
+ul#docs-menu>li{float:none;}
+ul#docs-menu>li>a{white-space:normal;}
+ul#docs-menu ul.sm-nowrap>li>a{white-space:normal;}
+ul#docs-menu iframe{display:none;}
+#docs-menu {
+	width:100%;
+}
+#docs-menu a {
+	padding:10px 0 10px 28px;
+	font-family:"PT Sans Narrow","Arial Narrow",Arial,Helvetica,sans-serif;
+	font-size:1em;
+	font-weight:bold;
+	text-decoration:none;
+	color:#1675a1;
+}
+#docs-menu a:hover, #docs-menu a:focus, #docs-menu a:active,
+#docs-menu a.highlighted {
+	color:#D23600;
+}
+#docs-menu > li {
+	border-top:1px dashed #DAD3C9;
+}
+#docs-menu > li:first-child {
+	border-top:0;
+}
+#docs-menu > li:last-child {
+	text-align:center;
+}
+#docs-menu > li:last-child > a {
+	margin:1.5em auto;
+	display:inline-block;
+	border:1px solid #dad3c9;
+	padding:0.111em 0.666em;
+	font-family:Lora,Georgia,'Times New Roman',Times,serif;
+	font-size:0.88em;
+	font-weight:normal;
+	line-height:1.61em;
+	-moz-border-radius:50px;
+	-webkit-border-radius:50px;
+	border-radius:50px;
+}
+/* Make sub indicators align to the left of the item */
+#docs-menu a span.sub-arrow,
+#docs-menu ul a span.sub-arrow {
+	position:absolute;
+	top:50%;
+	margin-top:-9px;
+	margin-left:-22px;
+	width:17px;
+	height:17px;
+	font:bold 16px/16px monospace !important;
+	text-align:center;
+	border:0;
+	text-shadow:none;
+	background:rgba(0,0,0,0.1);
+	-moz-border-radius:100px;
+	-webkit-border-radius:100px;
+	border-radius:100px;
+}
+/* Hide sub indicator "+" when item is expanded - we enable the item link when it's expanded */
+#docs-menu a.highlighted span.sub-arrow {
+	display:none !important;
+}
+#docs-menu ul {
+	padding-bottom:10px;
+}
+#docs-menu ul a {
+	padding:4px 0 4px 28px;
+	font-family:Lora,Georgia,'Times New Roman',Times,serif;
+	font-size:0.88em;
+	font-weight:normal;
+	color:#1675a1;
+}
+#docs-menu ul a:hover, #docs-menu ul a:focus, #docs-menu ul a:active {
+	color:#D23600;
+}
+#docs-menu span.disabled {
+	display:block;
+	font-family:"PT Sans Narrow","Arial Narrow",Arial,Helvetica,sans-serif;
+	font-size:1em;
+	color:#BBB1A3;
+	text-transform:uppercase;
+	text-shadow:0px 1px 1px #fff;
+	font-size:1em;
+}
+
+
+
+	/* ==================== | MISC | ==================== */
+
+/* JS support on */
+.js {
+
+}
+.hide {
+	position:absolute;
+	top:-9999px;
+	left:-800px;
+}
+.nodisplay {
+	display:none;
+}
+.pretty-amp {
+	font-family:baskerville,'book antiqua',serif !important;
+	font-style:italic !important;
+	font-size:1.2em;
+	line-height:1em;
+}
+.align-left {
+	float:left;
+}
+.notice {
+	padding:0.5em;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	background:#FEF5A5;
+}
+/* START clearfix */
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix {
+	min-height:1px;
+}
+* html .clearfix {
+	height:1px;
+}
+* html>body .clearfix {
+	height:auto;
+	display:inline-block;
+}
+/* END clearfix */
+
+
+
+	/* ==================== | SmartMenus | ==================== */
+
+/* Main Menu */
+#main-menu {
+	position:relative;
+	top:0;
+	left:0;
+	width:auto;
+	z-index:2;
+}
+#main-menu ul {
+	width:12em;
+}
+/* right align and no separator for the last item */
+#main-menu > li:last-child {
+	float:right;
+	border-left:0;
+}
+/* main menu icons */
+#main-menu > li [data-icon]:before {
+	position:relative;
+	top:2px;
+	line-height:20px;
+	margin-right:0.375em;
+	font-size:0.89em;
+	text-shadow:none;
+}
+#main-menu.sm-blue > li [data-icon]:before {
+	color:#A4CDE1;
+}
+/* round the right corners of the last item */
+.sm-blue > li:last-child > a {
+	-moz-border-radius:0 8px 8px 0;
+	-webkit-border-radius:0 8px 8px 0;
+	border-radius:0 8px 8px 0;
+}
+.sm-blue > li:first-child, .sm-blue > li:last-child {
+	border-left:0;
+}
+
+
+
+	/* ==================== | Resposiveness | ==================== */
+
+@media screen and (max-width: 966px) {
+	/* home banner */
+	body:not(.docs) #home-banner h1 {
+		margin-bottom:0.6em;
+		font-size:1.888em;
+	}
+	body:not(.docs) #home-banner h1 span {
+		font-size:0.7058em;
+	}
+	body:not(.docs) #home-banner #smartmenus-logo {
+		width:214px;
+	}
+	body:not(.docs) #home-banner #jquery-logo {
+		width:135px;
+	}
+	body:not(.docs) #home-banner #slogan-1 {
+		margin-bottom:1.33em;
+		position:static;
+		text-align:center;
+		font-size:1.33em;
+	}
+	body:not(.docs) #home-banner #slogan-1 br {
+		display:none;
+	}
+}
+@media screen and (max-width: 799px) {
+	body.docs #content .inner {
+		margin:0 auto;
+	}
+	/* Docs menu */
+	#docs-nav {
+		display:none;
+	}
+	.docs-home-link {
+		display:block;
+	}
+}
+@media screen and (max-width: 700px) {
+	#footer .col {
+		width:47%;
+	}
+	#footer .col-1 {
+		padding-right:5.5%;
+	}
+	#footer .col-3 {
+		clear:both;
+		float:none;
+		width:auto;
+		padding-top:1.5em;
+	}
+}
+@media screen and (max-width: 640px) {
+	#nav {
+		padding-top:1em;
+	}
+	#menu-button {
+		display:block;
+	}
+	/* Main menu */
+	#main-menu.hidden {
+		display:none;
+	}
+	/* the last item should not be floated to the right */
+	#main-menu > li:last-child {
+		float:none;
+	}
+	/* hide main menu icons */
+	#main-menu > li [data-icon] {
+		display:none;
+	}
+}
+@media screen and (max-width: 520px) {
+	body {
+		font-size:94.44%;
+	}
+	#home-banner h1 {
+		margin-bottom:0.8em;
+	}
+	#home-banner h1 span {
+		display:block;
+	}
+	#home-banner #smartmenus-logo {
+		width:187px;
+	}
+	#home-banner #jquery-logo {
+		width:118px;
+	}
+	/* normal/visited items */
+	ul.sm a, ul.sm a:visited {
+		font-size:1.2em;
+	}
+	/* normal/visited items */
+	ul.sm ul a, ul.sm ul a:visited {
+		font-size:1.0667em;
+	}
+	#footer .col {
+		float:none;
+		clear:none;
+		margin-bottom:1.5em;
+		width:auto;
+		padding:0;
+	}
+	#copyright {
+		margin-bottom:2em;
+		padding:0;
+		text-align:center;
+	}
+	/*
+	#project-vadikom {
+		position:static;
+		margin-bottom:2em;
+		text-align:center;
+	}
+	*/
+	#share {
+		display:none;
+	}
+	table.generic th, table.generic td {
+		padding-right:0.111em !important;
+	}
+	#content table.generic a.gray-button {
+		display:inline;
+		padding:0.111em 0.222em;
+	}
+}
+
+
+
+	/* ==================== | SmartMenus .sm-blue class | ==================== */
+
+/* SmartMenus Core CSS (it's not recommended editing this)
+===============================================================*/
+
+ul.sm,ul.sm li{display:block;list-style:none;padding:0;line-height:normal;direction:ltr;}
+li.slef{margin:0 0 0 30px;}
+ul.sm li{position:relative;}
+ul.sm a{position:relative;display:block;}
+ul.sm a.disabled{cursor:default;}
+ul.sm ul{position:absolute;top:-9999px;left:-800px;width:100px;}
+ul.sm li{float:left;}
+ul.sm-rtl{direction:rtl;}
+ul.sm-rtl li{float:right;}
+ul.sm ul li,ul.sm-vertical li{float:none;}
+ul.sm a{white-space:nowrap;}
+ul.sm ul a,ul.sm-vertical a{white-space:normal;}
+* html ul.sm-vertical li{float:left;width:100%;}
+* html ul.sm-vertical ul li{float:none;width:auto;}
+*:first-child+html ul.sm-vertical>li{float:left;width:100%;}
+ul.sm ul.sm-nowrap>li>a{white-space:nowrap;}
+ul.sm:after{content:"\00a0";display:block;height:0;font:0/0 serif;clear:both;visibility:hidden;overflow:hidden;}
+* html ul.sm{height:1px;}
+*:first-child+html ul.sm{min-height:1px;}
+ul.sm li *,ul.sm li *:before,ul.sm li *:after{-moz-box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+ul.sm{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+
+/*
+---------------------------------------------------------------
+  Note that styles you apply to the main menu items are inherited by the sub menus items too.
+  If you'd like to avoid this, you could use child selectors (not supported by IE6) - for example:
+  .sm-blue > li > a { ... } instead of .sm-blue a { ... }
+---------------------------------------------------------------*/
+
+
+/* Menu box
+===================*/
+
+	.sm-blue {
+
+		
+		
+		-moz-border-radius:8px;
+		-webkit-border-radius:8px;
+		border-radius:8px;
+		-moz-box-shadow:0 1px 1px rgba(0,0,0,0.3);
+		/* -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.3); */
+		
+	}
+	.sm-blue-vertical {
+		-moz-box-shadow:0 1px 4px rgba(0,0,0,0.3);
+		-webkit-box-shadow:0 1px 4px rgba(0,0,0,0.3);
+		box-shadow:0 1px 4px rgba(0,0,0,0.3);
+	}
+	.sm-blue ul {
+		border:1px solid #a9a9a9;
+		padding:7px 0;
+		background:#fff;
+		-moz-border-radius:0 0 4px 4px;
+		-webkit-border-radius:0 0 4px 4px;
+		border-radius:0 0 4px 4px;
+		-moz-box-shadow:0 5px 12px rgba(0,0,0,0.3);
+		-webkit-box-shadow:0 5px 12px rgba(0,0,0,0.3);
+		box-shadow:0 5px 12px rgba(0,0,0,0.3);
+	}
+	/* for vertical main menu subs and 2+ level horizontal main menu subs round all corners */
+	.sm-blue-vertical ul,
+	.sm-blue ul ul {
+		-moz-border-radius:4px;
+		-webkit-border-radius:4px;
+		border-radius:4px;
+	}
+
+
+/* Menu items
+===================*/
+
+	.sm-blue a {
+		padding:10px 25px;
+		color:#00709E;
+		font-size:18px;
+		font-family:"微软雅黑";
+		text-decoration:none;
+	}
+	.sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active,
+	 /* .sm-blue a.highlighted {
+		background:#1983af; Old browsers 
+		background-image:url(css-gradients-fallback/main-item-hover-bg.png);
+		background-image:-moz-linear-gradient(top,#34a2d0 0%,#006791 100%);
+		background-image:-webkit-gradient(linear,left top, left bottom,color-stop(0%,#34a2d0),color-stop(100%,#006791));
+		background-image:-webkit-linear-gradient(top,#34a2d0 0%,#006791 100%);
+		background-image:-o-linear-gradient(top,#34a2d0 0%,#006791 100%);
+		background-image:-ms-linear-gradient(top,#34a2d0 0%,#006791 100%);
+		background-image:linear-gradient(top,#34a2d0 0%,#006791 100%);
+		color:#fff;
+	} */
+	.sm-blue-vertical a {
+	/* 
+		padding:9px 40px 8px 23px;
+		background:#3193c0;
+		background-image:url(css-gradients-fallback/vertical-main-item-bg.png);
+		background-image:-moz-linear-gradient(top,#3fa3d1 0%,#2586b3 100%);
+		background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#3fa3d1),color-stop(100%,#2586b3));
+		background-image:-webkit-linear-gradient(top,#3fa3d1 0%,#2586b3 100%);
+		background-image:-o-linear-gradient(top,#3fa3d1 0%,#2586b3 100%);
+		background-image:-ms-linear-gradient(top,#3fa3d1 0%,#2586b3 100%);
+		background-image:linear-gradient(top,#3fa3d1 0%,#2586b3 100%);
+	 */
+	}
+	.sm-blue ul a {
+		padding:9px 40px 8px 23px;
+		background:transparent;
+		color:#247eab;
+		font-size:16px;
+		text-shadow:none;
+	}
+	.sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active,
+	.sm-blue ul a.highlighted {
+		background:#3193c0; /* Old browsers */
+		background-image:url(css-gradients-fallback/main-menu-bg.png);
+		background-image:-moz-linear-gradient(top,#4cb1e0 0%,#1675a1 100%);
+		background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#4cb1e0),color-stop(100%,#1675a1));
+		background-image:-webkit-linear-gradient(top,#4cb1e0 0%,#1675a1 100%);
+		background-image:-o-linear-gradient(top,#4cb1e0 0%,#1675a1 100%);
+		background-image:-ms-linear-gradient(top,#4cb1e0 0%,#1675a1 100%);
+		background-image:linear-gradient(top,#4cb1e0 0%,#1675a1 100%);
+		color:#fff;
+		text-shadow:0 1px 0 rgba(0,0,0,0.3);
+	}
+	/* current items - add the class manually to some item or check the "markCurrentItem" script option */
+	.sm-blue a.current, .sm-blue a.current:hover, .sm-blue a.current:focus, .sm-blue a.current:active,
+	/*
+	.sm-blue ul a.current, .sm-blue ul a.current:hover, .sm-blue ul a.current:focus, .sm-blue ul a.current:active {
+		background:#006892;
+		background-image:url(css-gradients-fallback/current-item-bg.png);
+		background-image:-moz-linear-gradient(top,#005a84 0%,#00749f 100%);
+		background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#005a84),color-stop(100%,#00749f));
+		background-image:-webkit-linear-gradient(top,#005a84 0%,#00749f 100%);
+		background-image:-o-linear-gradient(top,#005a84 0%,#00749f 100%);
+		background-image:-ms-linear-gradient(top,#005a84 0%,#00749f 100%);
+		background-image:linear-gradient(top,#005a84 0%,#00749f 100%);
+		color:#fff;
+		text-shadow:0 1px 0 rgba(0,0,0,0.3);
+	}
+	*/
+	/* round the left corners of the first item for horizontal main menu */
+	.sm-blue > li:first-child > a {
+		-moz-border-radius:8px 0 0 8px;
+		-webkit-border-radius:8px 0 0 8px;
+		border-radius:8px 0 0 8px;
+	}
+	/* round the corners of the first and last items for vertical main menu */
+	.sm-blue-vertical > li:first-child > a {
+		-moz-border-radius:8px 8px 0 0;
+		-webkit-border-radius:8px 8px 0 0;
+		border-radius:8px 8px 0 0;
+	}
+	.sm-blue-vertical > li:last-child > a {
+		-moz-border-radius:0 0 8px 8px;
+		-webkit-border-radius:0 0 8px 8px;
+		border-radius:0 0 8px 8px;
+	}
+	.sm-blue a.has-submenu {
+
+	}
+
+
+/* Sub menu indicators
+===================*/
+
+	.sm-blue a span.sub-arrow {
+		position:absolute;
+		bottom:2px;
+		left:50%;
+		margin-left:-5px;
+		/* we will use one-side border to create a triangle so that we don't use a real background image, of course, you can use a real image if you like too */
+		width:0;
+		height:0;
+		overflow:hidden;
+		border-width:5px; /* tweak size of the arrow */
+		/*border-style:solid dashed dashed dashed;*/
+		border-color:#a4cde1 transparent transparent transparent;
+	}
+	.sm-blue-vertical a span.sub-arrow,
+ 	.sm-blue ul a span.sub-arrow {
+		bottom:auto;
+		top:50%;
+		margin-top:-5px;
+		right:15px;
+		left:auto;
+		margin-left:0;
+		border-style:dashed dashed dashed solid;
+		border-color:transparent transparent transparent #a4cde1;
+	}
+
+
+/* Items separators
+===================*/
+
+	
+	.sm-blue li:first-child,
+	.sm-blue-vertical li,
+	.sm-blue ul li {
+		border-left:0;
+	}
+
+
+/* Scrolling arrows containers for tall sub menus - test sub menu: "Sub test" -> "more..." -> "more..." in the default download package
+===================*/
+
+	.sm-blue span.scroll-up, .sm-blue span.scroll-down {
+		position:absolute;
+		display:none;
+		visibility:hidden;
+		overflow:hidden;
+		background:#ffffff;
+		height:20px;
+		/* width and position will be automatically set by the script */
+	}
+	.sm-blue span.scroll-up-arrow, .sm-blue span.scroll-down-arrow {
+		position:absolute;
+		top:-2px;
+		left:50%;
+		margin-left:-8px;
+		/* we will use one-side border to create a triangle so that we don't use a real background image, of course, you can use a real image if you like too */
+		width:0;
+		height:0;
+		overflow:hidden;
+		border-width:8px; /* tweak size of the arrow */
+		border-style:dashed dashed solid dashed;
+		border-color:transparent transparent #247eab transparent;
+	}
+	.sm-blue span.scroll-down-arrow {
+		top:6px;
+		border-style:solid dashed dashed dashed;
+		border-color:#247eab transparent transparent transparent;
+	}
+
+
+
+/*
+---------------------------------------------------------------
+  Responsiveness
+  These will make the sub menus collapsible when the screen width is too small.
+---------------------------------------------------------------*/
+
+
+/* decrease horizontal main menu items left/right padding to avoid wrapping */
+@media screen and (max-width: 700px) {
+	.sm-blue:not(.sm-blue-vertical) > li > a {
+		padding-left:18px;
+		padding-right:18px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+
+	/* The following will make the sub menus collapsible for small screen devices (it's not recommended editing these) */
+	ul.sm-blue{width:auto !important;}
+	ul.sm-blue ul{display:none;position:static !important;top:auto !important;left:auto !important;margin-left:0 !important;margin-top:0 !important;width:auto !important;min-width:0 !important;max-width:none !important;}
+	ul.sm-blue>li{float:none;}
+	ul.sm-blue>li>a,ul.sm-blue ul.sm-nowrap>li>a{white-space:normal;}
+	ul.sm-blue iframe{display:none;}
+
+	/* Uncomment this rule to disable completely the sub menus for small screen devices */
+	/*.sm-blue ul, .sm-blue span.sub-arrow, .sm-blue iframe {
+		display:none !important;
+	}*/
+
+
+/* Menu box
+===================*/
+
+	.sm-blue {
+		background:transparent;
+		-moz-box-shadow:0 1px 4px rgba(0,0,0,0.3);
+		-webkit-box-shadow:0 1px 4px rgba(0,0,0,0.3);
+		box-shadow:0 1px 4px rgba(0,0,0,0.3);
+	}
+	.sm-blue ul {
+		border:0;
+		padding:0;
+		background:#fff;
+		-moz-border-radius:0;
+		-webkit-border-radius:0;
+		border-radius:0;
+		-moz-box-shadow:none;
+		-webkit-box-shadow:none;
+		box-shadow:none;
+	}
+	.sm-blue ul ul {
+		/* darken the background of the 2+ level sub menus and remove border rounding */
+		background:rgba(100,100,100,0.1);
+		-moz-border-radius:0;
+		-webkit-border-radius:0;
+		border-radius:0;
+	}
+
+
+/* Menu items
+===================*/
+
+	.sm-blue a,
+	.sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active,
+	.sm-blue a.highlighted {
+		padding:10px 5px 10px 28px !important; /* add some additional left padding to make room for the sub indicator */
+		background:#3193c0; /* Old browsers */
+		background-image:url(css-gradients-fallback/vertical-main-item-bg.png);
+		background-image:-moz-linear-gradient(top,#3fa3d1 0%,#2586b3 100%);
+		background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#3fa3d1),color-stop(100%,#2586b3));
+		background-image:-webkit-linear-gradient(top,#3fa3d1 0%,#2586b3 100%);
+		background-image:-o-linear-gradient(top,#3fa3d1 0%,#2586b3 100%);
+		background-image:-ms-linear-gradient(top,#3fa3d1 0%,#2586b3 100%);
+		background-image:linear-gradient(top,#3fa3d1 0%,#2586b3 100%);
+		color:#fff;
+	}
+	.sm-blue ul a,
+	.sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active,
+	.sm-blue ul a.highlighted {
+		background:transparent;
+		color:#247eab;
+		text-shadow:none;
+	}
+	.sm-blue a.current, .sm-blue a.current:hover, .sm-blue a.current:focus, .sm-blue a.current:active,
+	.sm-blue ul a.current, .sm-blue ul a.current:hover, .sm-blue ul a.current:focus, .sm-blue ul a.current:active {
+		background:#006892; /* Old browsers */
+		background-image:url(css-gradients-fallback/current-item-bg.png);
+		background-image:-moz-linear-gradient(top,#005a84 0%,#00749f 100%);
+		background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#005a84),color-stop(100%,#00749f));
+		background-image:-webkit-linear-gradient(top,#005a84 0%,#00749f 100%);
+		background-image:-o-linear-gradient(top,#005a84 0%,#00749f 100%);
+		background-image:-ms-linear-gradient(top,#005a84 0%,#00749f 100%);
+		background-image:linear-gradient(top,#005a84 0%,#00749f 100%);
+		color:#fff;
+	}
+	/* add some text indentation for the 2+ level sub menu items */
+	.sm-blue ul a {
+		border-left:8px solid transparent;
+	}
+	.sm-blue ul ul a {
+		border-left:16px solid transparent;
+	}
+	.sm-blue ul ul ul a {
+		border-left:24px solid transparent;
+	}
+	.sm-blue ul ul ul ul a {
+		border-left:32px solid transparent;
+	}
+	.sm-blue ul ul ul ul ul a {
+		border-left:40px solid transparent;
+	}
+	/* round the corners of the first and last items */
+	.sm-blue > li:first-child > a {
+		-moz-border-radius:8px 8px 0 0;
+		-webkit-border-radius:8px 8px 0 0;
+		border-radius:8px 8px 0 0;
+	}
+	/* presume we have 4 levels max */
+	.sm-blue > li:last-child > a,
+	.sm-blue > li:last-child > ul > li:last-child > a,
+	.sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > a,
+	.sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a,
+	.sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a,
+	.sm-blue > li:last-child > ul,
+	.sm-blue > li:last-child > ul > li:last-child > ul,
+	.sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul,
+	.sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul,
+	.sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul {
+		-moz-border-radius:0 0 8px 8px;
+		-webkit-border-radius:0 0 8px 8px;
+		border-radius:0 0 8px 8px;
+	}
+	/* highlighted items, don't need rounding since their sub is open */
+	.sm-blue > li:last-child > a.highlighted,
+	.sm-blue > li:last-child > ul > li:last-child > a.highlighted,
+	.sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > a.highlighted,
+	.sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a.highlighted,
+	.sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a.highlighted {
+		-moz-border-radius:0;
+		-webkit-border-radius:0;
+		border-radius:0;
+	}
+
+
+/* Sub menu indicators
+===================*/
+
+	.sm-blue a span.sub-arrow,
+	.sm-blue ul a span.sub-arrow {
+		top:50%;
+		margin-top:-9px;
+		right:auto;
+		left:6px;
+		margin-left:0;
+		width:17px;
+		height:17px;
+		font:bold 16px/16px monospace !important;
+		text-align:center;
+		border:0;
+		text-shadow:none;
+		background:rgba(0,0,0,0.1);
+		-moz-border-radius:100px;
+		-webkit-border-radius:100px;
+		border-radius:100px;
+	}
+	/* Hide sub indicator "+" when item is expanded - we enable the item link when it's expanded */
+	.sm-blue a.highlighted span.sub-arrow {
+		display:none !important;
+	}
+
+
+/* Items separators
+===================*/
+
+	.sm-blue li {
+		border-left:0;
+	}
+	.sm-blue ul li {
+		border-top:1px solid rgba(0,0,0,0.05);
+	}
+	.sm-blue ul li:first-child {
+		border-top:0;
+	}
+
+}
+
+
+
+	/* ==================== | SHJS (syntax highlighter) | ==================== */
+
+pre.sh_sourceCode .sh_keyword {
+	color: #aa0d91;
+	font-weight: normal;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_type {
+	color: #008000;
+	font-weight: normal;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_string {
+	color: #c80000;
+	font-weight: normal;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_regexp {
+	color: #008000;
+	font-weight: normal;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_specialchar {
+	color: #ff00ff;
+	font-weight: normal;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_comment {
+	color: #007400;
+	font-weight: normal;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_number {
+	color: #3200ff;
+	font-weight: normal;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_preproc {
+	color: #008200;
+	font-weight: normal;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_function {
+	color: #000000;
+	font-weight: normal;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_url {
+	color: #008000;
+	font-weight: normal;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_date {
+	color: #000000;
+	font-weight: bold;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_time {
+	color: #000000;
+	font-weight: bold;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_file {
+	color: #000000;
+	font-weight: bold;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_ip {
+	color: #008000;
+	font-weight: normal;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_name {
+	color: #008000;
+	font-weight: normal;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_variable {
+	color: #000000;
+	font-weight: bold;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_oldfile {
+	color: #ff00ff;
+	font-weight: normal;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_newfile {
+	color: #008000;
+	font-weight: normal;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_difflines {
+	color: #000000;
+	font-weight: bold;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_selector {
+	color: #000000;
+	font-weight: normal;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_property {
+	color: #c80000;
+	font-weight: normal;
+	font-style: normal;
+}
+pre.sh_sourceCode .sh_value {
+	color: #3200ff;
+	font-weight: normal;
+	font-style: normal;
+}

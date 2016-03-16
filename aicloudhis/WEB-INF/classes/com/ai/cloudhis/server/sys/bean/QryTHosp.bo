@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryTHosp" mainattr="ORGID_HOSP">
+    <mapingenty type="query"> select t.*, DATE_FORMAT(createdate, '%Y-%M-%d %H:%i:%s') create_date
+   , ( case when use_state = '0' then '未启用' when USE_STATE = '1' then '启用' else '未启用' end) state
+     from T_Hosp t</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MAIN_DEPTNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MAIN_DEPTNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TELEPHONE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TELEPHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FAX" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FAX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POST" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">POST</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ARTIFICIAL_PERSON" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ARTIFICIAL_PERSON</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRINCIPAL" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PRINCIPAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROVIN_CESID" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PROVIN_CESID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYID" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYAERAID" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITYAERAID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROVINCESNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PROVINCESNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITYNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYAERANAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITYAERANAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STREETINFO" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STREETINFO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARK" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARK</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USE_STATE" maxlength="2" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">USE_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATEDATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATEDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="19" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="9" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TMeTkHd" mainattr="TAKINGID">
+    <mapingenty type="table">T_ME_TK_HD</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="TAKINGID" maxlength="32" datatype="String" type="PK" remark="盘点编码">
+        <mapingcol datatype="VARCHAR2">TAKINGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL" remark="库存地点编码">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="50" datatype="String" type="COL" remark="库存地点名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TAKING_DATETIME" maxlength="20" datatype="DateTime" type="COL" remark="盘点时间">
+        <mapingcol datatype="DATE">TAKING_DATETIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TAKING_USERID" maxlength="50" datatype="String" type="COL" remark="盘点人">
+        <mapingcol datatype="VARCHAR2">TAKING_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHECK_USERID" maxlength="50" datatype="String" type="COL" remark="审核人">
+        <mapingcol datatype="VARCHAR2">CHECK_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISFINISHED" maxlength="20" datatype="Long" type="COL" remark="盘点完成">
+        <mapingcol datatype="NUMBER">ISFINISHED</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

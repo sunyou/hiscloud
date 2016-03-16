@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TInvInout" mainattr="INOUTID">
+    <mapingenty type="table">T_INV_INOUT</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="INOUTID" maxlength="50" datatype="String" type="PK" remark="领退编码">
+        <mapingcol datatype="VARCHAR2">INOUTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVTYPE" maxlength="15" datatype="String" type="COL" remark="领退发票类型">
+        <mapingcol datatype="VARCHAR2">INVTYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PREFIX" maxlength="50" datatype="String" type="COL" remark="发票前缀">
+        <mapingcol datatype="VARCHAR2">PREFIX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVBEGIN" maxlength="50" datatype="String" type="COL" remark="开始发票号">
+        <mapingcol datatype="VARCHAR2">INVBEGIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVEND" maxlength="50" datatype="String" type="COL" remark="结束发票号">
+        <mapingcol datatype="VARCHAR2">INVEND</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_INV" maxlength="50" datatype="String" type="COL" remark="票据操人员">
+        <mapingcol datatype="VARCHAR2">EMPID_INV</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIRECT" maxlength="20" datatype="Long" type="COL" remark="领退方向">
+        <mapingcol datatype="NUMBER">DIRECT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_INOUT" maxlength="50" datatype="String" type="COL" remark="执行领退的操作人员编码">
+        <mapingcol datatype="VARCHAR2">EMPID_INOUT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVCOUNT" maxlength="20" datatype="Long" type="COL" remark="票据张数">
+        <mapingcol datatype="NUMBER">INVCOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP2" maxlength="50" datatype="String" type="COL" remark="所属诊所编码">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_HOSP" maxlength="255" datatype="String" type="COL" remark="所属诊所名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID2" maxlength="50" datatype="String" type="COL" remark="所属科室编码">
+        <mapingcol datatype="VARCHAR2">ORGID2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="255" datatype="String" type="COL" remark="所属科室名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

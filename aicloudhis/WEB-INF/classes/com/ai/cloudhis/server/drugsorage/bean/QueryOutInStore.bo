@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QueryOutInStore" mainattr="ITEMNAME">
+    <mapingenty type="query">select t.itemname,
+       c.direct,
+       c.inouttypeid,
+       c.inoutdatetime,
+       a.batchcode,
+       t.warehous_unit,
+       t.basic_unit,
+       a.warehous_quantity,
+       a.quantity,
+       b.quantity total_quantity,
+       c.orgid,
+       (select o.orgname from T_Org o where o.orgid = c.orgid) orgname
+  from t_ord_item t, t_me_st_sub a, t_me_st_cur b, t_me_st_hd c
+ where t.itemid = a.itemid
+   and t.itemid = b.itemid
+   and c.inoutid = a.inoutid
+</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ITEMNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEMNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIRECT" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DIRECT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INOUTTYPEID" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INOUTTYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INOUTDATETIME" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">INOUTDATETIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BATCHCODE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BATCHCODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WAREHOUS_UNIT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WAREHOUS_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BASIC_UNIT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BASIC_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WAREHOUS_QUANTITY" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">WAREHOUS_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="QUANTITY" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TOTAL_QUANTITY" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">TOTAL_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

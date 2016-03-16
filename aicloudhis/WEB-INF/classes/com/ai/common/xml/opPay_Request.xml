@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Request>
+	<Serial_No>20150512001</Serial_No>
+	<Hospital_Mark>11111</Hospital_Mark>
+	<Patient_Id>00035557</Patient_Id>
+	<Pay_Mode>1</Pay_Mode>
+	<Amt>198</Amt>
+	<Flow_No>QY10011411643749234</Flow_No>
+	<Presc_No/>
+</Request>

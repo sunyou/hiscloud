@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryTPatient" mainattr="PATIENTID">
+    <mapingenty type="query">select patientid,
+               patient_name,
+               patient_ename,
+               decode((select description
+                        from t_dictionary b
+                       where dic_type = 'gender'
+                         and value = patient_sexid),
+                      null,
+                      '未知的性别',
+                      (select description
+                         from t_dictionary b
+                        where dic_type = 'gender'
+                          and value = patient_sexid)) patient_sexid,
+               floor(months_between(SYSDATE, birth_date) / 12) age,
+               patient_sename,
+               inputstr,
+               to_char(birth_date, 'yyyy-mm-dd') birth_date,
+               occupationid,
+               occupation_name,
+               marriedid,
+               married_name,
+               countryid,
+               (select description
+                  from t_dictionary
+                 where dic_type = 'area'
+                   and grade = '0') countryidName,
+               country_name,
+               provin_cesid,
+               (select description
+                  from t_dictionary b
+                 where dic_type = 'area'
+                   and grade = '1'
+                   and b.value = provin_cesid) provin_cesidName,
+               cityid,
+               (select description
+                  from t_dictionary b
+                 where dic_type = 'area'
+                   and grade = '2'
+                   and b.value = cityid) cityidName,
+               cityaeraid,
+               (select description
+                  from t_dictionary b
+                 where dic_type = 'area'
+                   and grade = '3'
+                   and b.value = cityaeraid) cityaeraidName,
+               provincesname,
+               cityname,
+               cityaeraname,
+               streetinfo,
+               nationalityid,
+               nationalityname,
+               flpostcode,
+               ent_name,
+               ent_addr,
+               ent_contactor,
+               ent_telenum,
+               ent_postcode,
+               ct_name,
+               ct_roleid,
+               ct_addr,
+               ct_elenum,
+               patient_identityid,
+               patient_identityname,
+               orgid_hosp,
+               patient_telephone,
+               create_datetime,
+               create_userid,
+               idcard_typeid,
+               idcard_typename,
+               icard,
+               (select diag_name
+                  from T_Pa_Diag a
+                 where a.patientid = t.patientid
+                   and rownum = 1) diag_name
+          from t_patient t</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PATIENTID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_ENAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_ENAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_SEXID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_SEXID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AGE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">AGE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_SENAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_SENAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BIRTH_DATE" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BIRTH_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OCCUPATIONID" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OCCUPATIONID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OCCUPATION_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OCCUPATION_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MARRIEDID" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MARRIEDID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MARRIED_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MARRIED_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTRYID" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">COUNTRYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTRYIDNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">COUNTRYIDNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTRY_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">COUNTRY_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROVIN_CESID" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PROVIN_CESID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROVIN_CESIDNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PROVIN_CESIDNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYID" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYIDNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITYIDNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYAERAID" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITYAERAID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYAERAIDNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITYAERAIDNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROVINCESNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PROVINCESNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITYNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYAERANAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITYAERANAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STREETINFO" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STREETINFO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NATIONALITYID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">NATIONALITYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NATIONALITYNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">NATIONALITYNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FLPOSTCODE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FLPOSTCODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENT_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENT_ADDR" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENT_ADDR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENT_CONTACTOR" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENT_CONTACTOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENT_TELENUM" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENT_TELENUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENT_POSTCODE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENT_POSTCODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CT_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CT_ROLEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CT_ROLEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CT_ADDR" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CT_ADDR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CT_ELENUM" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CT_ELENUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_IDENTITYID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_IDENTITYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_IDENTITYNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_IDENTITYNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_TELEPHONE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_TELEPHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATETIME" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATETIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_USERID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CREATE_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IDCARD_TYPEID" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">IDCARD_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IDCARD_TYPENAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">IDCARD_TYPENAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ICARD" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ICARD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAG_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DIAG_NAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

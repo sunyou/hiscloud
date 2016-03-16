@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Request>
+	<Current_Call_Time>2015-05-12 10:30:00</Current_Call_Time>
+	<Dept_Code>00045101</Dept_Code>
+	<Dept_Name>皮肤科</Dept_Name>
+	<Doctor_Code>7889</Doctor_Code>
+	<Doctor_Name>贾雨村</Doctor_Name>
+	<Hospital_Mark>11111</Hospital_Mark>
+</Request>

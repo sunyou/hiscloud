@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TPaoClinic" mainattr="UUID">
+    <mapingenty type="table">T_PAO_CLINIC</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="PK" remark="唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CURDATE" maxlength="20" datatype="DateTime" type="COL" remark="当前日期">
+        <mapingcol datatype="DATE">CURDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGISTID" maxlength="50" datatype="String" type="COL" remark="号别编码">
+        <mapingcol datatype="VARCHAR2">REGISTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WEEK_TYPEID" maxlength="15" datatype="String" type="COL" remark="周类型编码">
+        <mapingcol datatype="VARCHAR2">WEEK_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATE_TYPEID" maxlength="15" datatype="String" type="COL" remark="午别类型编码">
+        <mapingcol datatype="VARCHAR2">DATE_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LIMIT_AMOUNT" maxlength="20" datatype="Long" type="COL" remark="当日计划限额">
+        <mapingcol datatype="NUMBER">LIMIT_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USED_AMOUNT" maxlength="20" datatype="Long" type="COL" remark="当日已使用数量">
+        <mapingcol datatype="NUMBER">USED_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STOP_FLAG" maxlength="20" datatype="Long" type="COL" remark="资源停止使用标志">
+        <mapingcol datatype="NUMBER">STOP_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RESSTARTNO" maxlength="20" datatype="Long" type="COL" remark="预约排队顺序开始号">
+        <mapingcol datatype="NUMBER">RESSTARTNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USEDRES_AMOUNT" maxlength="20" datatype="Long" type="COL" remark="当日已预约数量">
+        <mapingcol datatype="NUMBER">USEDRES_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LIMIT_RESAMOUNT" maxlength="20" datatype="Long" type="COL" remark="当日预约限额">
+        <mapingcol datatype="NUMBER">LIMIT_RESAMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所编码">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_HOSP" maxlength="255" datatype="String" type="COL" remark="所属诊所名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL" remark="所属科室编码">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="255" datatype="String" type="COL" remark="所属科室名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

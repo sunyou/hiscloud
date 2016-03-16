@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+	<Result_Code>0000</Result_Code>
+	<Error_Msg>交易成功</Error_Msg>
+	<Result_Data>
+		<Record_List>
+			<Record_Info>
+				<Patient_Id>000129977</Patient_Id>
+				<Visit_Id>1</Visit_Id>
+				<Inp_No>20150512001</Inp_No>
+				<Item_Code>MX212</Item_Code>
+				<Item_Name>0.9%氯化钠注射液</Item_Name>
+				<Item_Class>西药费</Item_Class>
+				<Total_Costs>100</Total_Costs>
+				<Should_Pay_Fee>100</Should_Pay_Fee>
+				<Real_Pay_Fee>100</Real_Pay_Fee>
+				<Prepaid_Balance/>
+				<Billing_Date_Time>2015-05-12 15:36:56</Billing_Date_Time>
+				<Item_Spec>100ml/瓶</Item_Spec>
+				<Amount>2</Amount>
+				<Units>袋</Units>
+			</Record_Info>
+			<Record_Info>
+				<Patient_Id>000129977</Patient_Id>
+				<Visit_Id>1</Visit_Id>
+				<Inp_No>20150512001</Inp_No>
+				<Item_Code>MX422</Item_Code>
+				<Item_Name>0.9%葡萄糖注射液</Item_Name>
+				<Item_Class>西药费</Item_Class>
+				<Total_Costs>200</Total_Costs>
+				<Should_Pay_Fee>200</Should_Pay_Fee>
+				<Real_Pay_Fee>200</Real_Pay_Fee>
+				<Prepaid_Balance/>
+				<Billing_Date_Time>2015-05-12 15:36:56</Billing_Date_Time>
+				<Item_Spec>100ml/瓶</Item_Spec>
+				<Amount>1</Amount>
+				<Units>瓶</Units>
+			</Record_Info>
+		</Record_List>
+	</Result_Data>
+</Response>

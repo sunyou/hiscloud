@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryAddscheduList" mainattr="BOOKQUEUE_STARTNO">
+    <mapingenty type="query">select 
+a.bookqueue_startno,
+(select description from t_dictionary where dic_type='docTime' and value=a.date_typeid) date_typeid,
+a.limit_amount,
+a.limitbook_addamount,
+a.limitbook_amount,
+a.orgid,
+a.orgid_hosp,
+a.orgname,
+a.registid,
+b.registname regist_typeid,
+a.uuid uuid1,
+b.registid uuid2,
+(select description from t_dictionary where dic_type='weekday' and value=a.week_typeid) week_typeid
+from 
+t_register_plan a,t_register b
+where a.registid=b.registid</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="BOOKQUEUE_STARTNO" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">BOOKQUEUE_STARTNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATE_TYPEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DATE_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LIMIT_AMOUNT" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LIMIT_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LIMITBOOK_ADDAMOUNT" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LIMITBOOK_ADDAMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LIMITBOOK_AMOUNT" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LIMITBOOK_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="225" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGISTID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGISTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGIST_TYPEID" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGIST_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UUID1" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UUID1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UUID2" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UUID2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WEEK_TYPEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WEEK_TYPEID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

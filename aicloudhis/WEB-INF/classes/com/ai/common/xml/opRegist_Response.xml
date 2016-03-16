@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+	<Result_Code>0000</Result_Code>
+	<Error_Msg>交易成功</Error_Msg>
+	<Result_Data>
+		<Receipt_No>1201509301214233309878653</Receipt_No>
+		<Remain_Money>100</Remain_Money>
+		<Visit_No>22973689</Visit_No>
+		<Call_Number>5</Call_Number>
+	</Result_Data>
+</Response>

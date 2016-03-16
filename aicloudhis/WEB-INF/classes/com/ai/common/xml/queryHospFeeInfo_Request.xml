@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Request>
+	<Patient_Id>00035557</Patient_Id>
+	<Visit_Id>1</Visit_Id>
+	<Inp_No>20150512001</Inp_No>
+	<Hospital_Mark>11111</Hospital_Mark>
+</Request>

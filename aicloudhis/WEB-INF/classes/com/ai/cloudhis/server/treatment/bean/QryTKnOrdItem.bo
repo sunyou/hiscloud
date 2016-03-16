@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryTKnOrdItem" mainattr="UUID">
+    <mapingenty type="query">select a.*,
+       b.basic_unit,
+       b.charge_cateid,
+       b.control_cateid,
+       b.create_userid,
+       b.dispens_facotr,
+       b.dispens_unit,
+       b.entid_producer,
+       b.entid_supplier,
+       c.freq_name,
+       b.inputstr,
+       1 interval_Days,
+       b.ismeditem,
+       b.item_chemistry_name,
+       b.item_common_name,
+       b.item_doseid,
+       b.item_usageid,
+       b.medfactor,
+       b.medunit,
+       b.note,
+       b.ord_cateid,
+       1 per_Quantity,
+       b.pharmacy_cate_twosubid pharmacycate,
+       b.sales_price1,
+       b.sales_price2,
+       b.updatetime,
+       b.warehous_facotr,
+       b.warehous_unit,
+       b.wholesales_price,
+       b.createtime
+  from T_Kn_Ord_Item a, T_Ord_Item b,t_frequecy c
+ where a.ord_itemid = b.ord_itemid and a.freqid=c.freqid(+)</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ROWNO" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ROWNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_ITEMID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_ITEMID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEMID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEMNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_SPEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_SPEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="QUANTITY" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UNIT_QUANTITY" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">UNIT_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UNIT_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UNIT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FACTOR" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">FACTOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FREQID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FREQID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USAGEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">USAGEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USAGENAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">USAGENAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FREQ_UNIT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FREQ_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FREQ_QUANTITY" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">FREQ_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALES_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PURCHASE_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PURCHASE_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AMOUNT_TOTAL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">AMOUNT_TOTAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP_EXEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP_EXEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_HOSP_EXEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME_HOSP_EXEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_EXEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_EXEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_EXEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME_EXEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_GROUPNO" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_GROUPNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATE_TIME" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">UPDATE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATE_USERID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UPDATE_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDDICID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORDDICID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BASIC_UNIT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BASIC_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHARGE_CATEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CHARGE_CATEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTROL_CATEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONTROL_CATEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_USERID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CREATE_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISPENS_FACOTR" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DISPENS_FACOTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISPENS_UNIT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DISPENS_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTID_PRODUCER" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTID_PRODUCER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTID_SUPPLIER" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTID_SUPPLIER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FREQ_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FREQ_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INTERVAL_DAYS" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">INTERVAL_DAYS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISMEDITEM" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ISMEDITEM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_CHEMISTRY_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_CHEMISTRY_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_COMMON_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_COMMON_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_DOSEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_DOSEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_USAGEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_USAGEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEDFACTOR" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">MEDFACTOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEDUNIT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MEDUNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">NOTE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_CATEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_CATEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PER_QUANTITY" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PER_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PHARMACYCATE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PHARMACYCATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALES_PRICE1" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SALES_PRICE1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALES_PRICE2" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SALES_PRICE2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATETIME" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">UPDATETIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WAREHOUS_FACOTR" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">WAREHOUS_FACOTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WAREHOUS_UNIT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WAREHOUS_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WHOLESALES_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">WHOLESALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATETIME" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATETIME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

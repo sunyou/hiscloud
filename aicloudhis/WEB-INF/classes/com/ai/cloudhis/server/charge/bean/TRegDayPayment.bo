@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TRegDayPayment" mainattr="FOOTID">
+    <mapingenty type="table">T_REGDAYPAYMENT</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="FOOTID" maxlength="50" datatype="String" type="PK" remark="日结编码">
+        <mapingcol datatype="VARCHAR2">FOOTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FOOTTYPEID" maxlength="50" datatype="String" type="COL" remark="日结类型">
+        <mapingcol datatype="VARCHAR2">FOOTTYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATE_FOOT" maxlength="20" datatype="DateTime" type="COL" remark="日结日期">
+        <mapingcol datatype="DATE">DATE_FOOT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_FOOT" maxlength="50" datatype="String" type="COL" remark="操作人员">
+        <mapingcol datatype="VARCHAR2">EMPID_FOOT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATE_BEGINFOOT" maxlength="20" datatype="DateTime" type="COL" remark="日结开始日期">
+        <mapingcol datatype="DATE">DATE_BEGINFOOT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATE_ENDFOOT" maxlength="20" datatype="DateTime" type="COL" remark="日结结束日期">
+        <mapingcol datatype="DATE">DATE_ENDFOOT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVBEGIN" maxlength="20" datatype="String" type="COL" remark="开始发票号">
+        <mapingcol datatype="VARCHAR2">INVBEGIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVEND" maxlength="20" datatype="String" type="COL" remark="结束发票号">
+        <mapingcol datatype="VARCHAR2">INVEND</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVCANCEL" maxlength="20" datatype="String" type="COL" remark="作废发票号">
+        <mapingcol datatype="VARCHAR2">INVCANCEL</mapingcol>
+      </attr>
+      <attr floatlength="2" name="PAYCASH_AMOUNT" maxlength="8" datatype="Float" type="COL" remark="现金支付总金额">
+        <mapingcol datatype="NUMBER">PAYCASH_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="2" name="BACKCASH_AMOUNT" maxlength="8" datatype="Float" type="COL" remark="现金退费总金额">
+        <mapingcol datatype="NUMBER">BACKCASH_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="2" name="PAYCUP_AMOUNT" maxlength="8" datatype="Float" type="COL" remark="银联支付总金额">
+        <mapingcol datatype="NUMBER">PAYCUP_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="2" name="BACKCUP_AMOUNT" maxlength="8" datatype="Float" type="COL" remark="银联退费总金额">
+        <mapingcol datatype="NUMBER">BACKCUP_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="2" name="PAYADVANCE_AMOUNT" maxlength="8" datatype="Float" type="COL" remark="患者垫付支付总金额">
+        <mapingcol datatype="NUMBER">PAYADVANCE_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="2" name="BACKADVANCE_AMOUNT" maxlength="8" datatype="Float" type="COL" remark="患者垫付退费总金额">
+        <mapingcol datatype="NUMBER">BACKADVANCE_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所编码">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_HOSP" maxlength="255" datatype="String" type="COL" remark="所属诊所名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL" remark="所属科室编码">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="255" datatype="String" type="COL" remark="所属科室名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryTemp" mainattr="EMPID">
+    <mapingenty type="query">   
+   select a.*, 
+          (select b.orgname_hosp
+             from t_hosp b
+            where a.orgid_hosp = b.orgid_hosp) orgname_hosp 
+     from t_emp a</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="EMPID" maxlength="50" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">EMPID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMP_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMP_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOGIN_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LOGIN_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMP_TYPEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMP_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMP_ITLEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMP_ITLEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMP_PWD" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMP_PWD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMP_TELENUM" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMP_TELENUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STOPFLAG" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">STOPFLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMP_ADDR" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMP_ADDR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME_HOSP</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

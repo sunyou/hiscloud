@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryTreatmentMethod" mainattr="ORDID">
+    <mapingenty type="query">select a.ordid,
+       a.admis_serialno,
+       b.itemname || '-' || b.usagename || '-' || a.times_quantity || '-' ||
+       b.permed_quantity || b.inputunit_sign || '-' || b.freqid || '&lt;br/&gt;' as zlff
+  from t_ord a, t_order_sub b
+ where a.ordid = b.ordid </mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ORDID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORDID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADMIS_SERIALNO" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADMIS_SERIALNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ZLFF" maxlength="459" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ZLFF</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

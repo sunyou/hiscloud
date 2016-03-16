@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryOutPatient" mainattr="ADMIS_DATETIME">
+    <mapingenty type="query">select to_char(a.admis_datetime, 'mm-dd') admistime,a.admis_datetime, b.patient_name, (select description from t_dictionary b where dic_type = 'gender' and value = patient_sexid) patient_sexid, floor(months_between(SYSDATE, birth_date) / 12) age, (select description from t_dictionary b where dic_type = 'area' and grade = '0') countryid, country_name, (select description from t_dictionary b where dic_type = 'area' and grade = '1' and b.value = provin_cesid) provin_cesid, (select description from t_dictionary b where dic_type = 'area' and grade = '2' and b.value = cityid) cityid, (select description from t_dictionary b where dic_type = 'area' and grade = '3' and b.value = cityaeraid) cityaeraid, provincesname, cityname, cityaeraname, streetinfo, (select description from t_dictionary where dic_type = 'job' and value = occupationid) occupationid, (select count(1) from T_Append_Info d where append_typeid = '09' and append_content = 'on' and d.admis_serialno = a.admis_serialno) cz, (select append_content from T_Append_Info d where append_typeid = '01' and d.admis_serialno = a.admis_serialno and rownum = 1) complaint, (select append_content from T_Append_Info d where append_typeid = '03' and d.admis_serialno = a.admis_serialno and rownum = 1) temperature, (select append_content from T_Append_Info d where append_typeid = '04' and d.admis_serialno = a.admis_serialno and rownum = 1) heartRate, (select append_content from T_Append_Info d where append_typeid = '07' and d.admis_serialno = a.admis_serialno and rownum = 1) rhythm, (select append_content from T_Append_Info d where append_typeid = '05' and d.admis_serialno = a.admis_serialno and rownum = 1) sbp, (select append_content from T_Append_Info d where append_typeid = '06' and d.admis_serialno = a.admis_serialno and rownum = 1) dbp, (select e.diag_name from T_Pa_Diag e where e.admis_serialno = a.admis_serialno and e.patientid = b.patientid and diagroleid in ('00', '02') and rownum = 1) diag_name, (select '' from dual ) zlff, a.admis_serialno, a.admission_statue, b.patientid, b.orgid_hosp, b.create_userid from T_Paadm a, t_patient b where a.patientid = b.patientid</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ADMISTIME" maxlength="5" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADMISTIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADMIS_DATETIME" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">ADMIS_DATETIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_SEXID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_SEXID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AGE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">AGE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTRYID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">COUNTRYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTRY_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">COUNTRY_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROVIN_CESID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PROVIN_CESID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYAERAID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITYAERAID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROVINCESNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PROVINCESNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITYNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYAERANAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITYAERANAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STREETINFO" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STREETINFO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OCCUPATIONID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OCCUPATIONID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CZ" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CZ</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COMPLAINT" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">COMPLAINT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TEMPERATURE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TEMPERATURE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HEARTRATE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">HEARTRATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RHYTHM" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">RHYTHM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SBP" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SBP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DBP" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DBP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAG_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DIAG_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ZLFF" maxlength="0" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">ZLFF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADMIS_SERIALNO" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADMIS_SERIALNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADMISSION_STATUE" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADMISSION_STATUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENTID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_USERID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CREATE_USERID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

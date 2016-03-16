@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="THospRegister" mainattr="UUID">
+    <mapingenty type="table">T_HOSP_REGISTER</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="50" datatype="String" type="PK" remark="唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="机构编码">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_HOSP" maxlength="50" datatype="String" type="COL" remark="机构名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OWNERSHIP" maxlength="15" datatype="String" type="COL" remark="所有制形式(字典)">
+        <mapingcol datatype="VARCHAR2">OWNERSHIP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBERSHIP" maxlength="15" datatype="String" type="COL" remark="隶属关系(字典)">
+        <mapingcol datatype="VARCHAR2">MEMBERSHIP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MAINDEPTNAME" maxlength="255" datatype="String" type="COL" remark="主管单位名称">
+        <mapingcol datatype="VARCHAR2">MAINDEPTNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVICE_WAY" maxlength="15" datatype="String" type="COL" remark="服务方式(字典)">
+        <mapingcol datatype="VARCHAR2">SERVICE_WAY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVICE_OBJECT" maxlength="15" datatype="String" type="COL" remark="服务对象(字典)">
+        <mapingcol datatype="VARCHAR2">SERVICE_OBJECT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSINESS_LICENCE" maxlength="20" type="COL" remark="机构营业执照">
+        <mapingcol datatype="BLOB">BUSINESS_LICENCE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEGALPERSON_NAME" maxlength="50" datatype="String" type="COL" remark="法定代表人姓名">
+        <mapingcol datatype="VARCHAR2">LEGALPERSON_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEGALPERSON_PHOTO" maxlength="20" type="COL" remark="法人代表照片">
+        <mapingcol datatype="BLOB">LEGALPERSON_PHOTO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEGALPERSON_SEXID" maxlength="15" datatype="String" type="COL" remark="法定代表人性别编码">
+        <mapingcol datatype="VARCHAR2">LEGALPERSON_SEXID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEGALPERSON_BIRTH" maxlength="20" datatype="DateTime" type="COL" remark="法定代表人日期">
+        <mapingcol datatype="DATE">LEGALPERSON_BIRTH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEGALPERSON_SPECIALITY" maxlength="15" datatype="String" type="COL" remark="法定代表人专业(字典)">
+        <mapingcol datatype="VARCHAR2">LEGALPERSON_SPECIALITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEGALPERSON_POSE" maxlength="15" datatype="String" type="COL" remark="法定代表人职务(字典)">
+        <mapingcol datatype="VARCHAR2">LEGALPERSON_POSE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEGALPERSON_TITLE" maxlength="15" datatype="String" type="COL" remark="法定代表人职称(字典)">
+        <mapingcol datatype="VARCHAR2">LEGALPERSON_TITLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEGALPERSON_STUDY" maxlength="15" datatype="String" type="COL" remark="法定代表人最高学历(字典)">
+        <mapingcol datatype="VARCHAR2">LEGALPERSON_STUDY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEGALPERSON_IDCARD" maxlength="50" datatype="String" type="COL" remark="法人代表身份证号码">
+        <mapingcol datatype="VARCHAR2">LEGALPERSON_IDCARD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEGALPERSON_SCAN" maxlength="20" type="COL" remark="法人代表身份证扫描图">
+        <mapingcol datatype="BLOB">LEGALPERSON_SCAN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHARGEPERSON_NAME" maxlength="50" datatype="String" type="COL" remark="主要负责人姓名">
+        <mapingcol datatype="VARCHAR2">CHARGEPERSON_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHARGEPERSON_SEXID" maxlength="15" datatype="String" type="COL" remark="主要负责人性别(字典)">
+        <mapingcol datatype="VARCHAR2">CHARGEPERSON_SEXID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHARGEPERSON_BIRTH" maxlength="20" datatype="DateTime" type="COL" remark="主要负责人出生年月">
+        <mapingcol datatype="DATE">CHARGEPERSON_BIRTH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHARGEPERSON_SPECIALITY" maxlength="15" datatype="String" type="COL" remark="主要负责人专业(字典)">
+        <mapingcol datatype="VARCHAR2">CHARGEPERSON_SPECIALITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHARGEPERSON_POSE" maxlength="15" datatype="String" type="COL" remark="主要负责人职务(字典)">
+        <mapingcol datatype="VARCHAR2">CHARGEPERSON_POSE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHARGEPERSON_TITLE" maxlength="15" datatype="String" type="COL" remark="主要负责人职称(字典)">
+        <mapingcol datatype="VARCHAR2">CHARGEPERSON_TITLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHARGEPERSON_STUDY" maxlength="15" datatype="String" type="COL" remark="主要负责人最高学历(字典)">
+        <mapingcol datatype="VARCHAR2">CHARGEPERSON_STUDY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROVIN_CESID" maxlength="15" datatype="String" type="COL" remark="地址（省份)编码">
+        <mapingcol datatype="VARCHAR2">PROVIN_CESID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYID" maxlength="15" datatype="String" type="COL" remark="地址（市）编码">
+        <mapingcol datatype="VARCHAR2">CITYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYAERAID" maxlength="15" datatype="String" type="COL" remark="地址（区县）编码">
+        <mapingcol datatype="VARCHAR2">CITYAERAID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROVINCESNAME" maxlength="50" datatype="String" type="COL" remark="地址(省份)名称">
+        <mapingcol datatype="VARCHAR2">PROVINCESNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYNAME" maxlength="50" datatype="String" type="COL" remark="地址(市)名称">
+        <mapingcol datatype="VARCHAR2">CITYNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITYAERANAME" maxlength="50" datatype="String" type="COL" remark="地址(区县)名称">
+        <mapingcol datatype="VARCHAR2">CITYAERANAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STREETINFO" maxlength="255" datatype="String" type="COL" remark="地址街道信息">
+        <mapingcol datatype="VARCHAR2">STREETINFO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TELEPHONE" maxlength="50" datatype="String" type="COL" remark="医疗机构电话">
+        <mapingcol datatype="VARCHAR2">TELEPHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FAX" maxlength="50" datatype="String" type="COL" remark="医疗传真">
+        <mapingcol datatype="VARCHAR2">FAX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POST" maxlength="50" datatype="String" type="COL" remark="医疗邮政编码">
+        <mapingcol datatype="VARCHAR2">POST</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTE" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">NOTE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

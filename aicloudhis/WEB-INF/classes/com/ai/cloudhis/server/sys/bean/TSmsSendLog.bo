@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TSmsSendLog" mainattr="ID">
+    <mapingenty type="table">T_SMS_SEND_LOG</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ID" maxlength="20" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSI_MODULE" maxlength="64" datatype="String" type="COL" remark="业务类型：0 注册成功发送机构成员短信 1 发送患者短信">
+        <mapingcol datatype="VARCHAR2">BUSI_MODULE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TELEPHONE" maxlength="11" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TELEPHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MSG_INFO" maxlength="1024" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MSG_INFO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEND_TIME" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">SEND_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEND_STATUS" maxlength="64" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SEND_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_ID" maxlength="64" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID" maxlength="64" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="64" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="64" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QueryDrugAdjust" mainattr="ADJUST_USER_ID">
+    <mapingenty type="query">select t.*,(select a.emp_name from t_emp a where a.empid=t.adjust_user_id) emp_name, (select d.orgname from T_Org d where d.orgid = t.orgid) orgname from t_store_adjust_record t 
+</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ADJUST_USER_ID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADJUST_USER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_ID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADJUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">ADJUST_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_REASON" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADJUST_REASON</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_CURID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADJUST_CURID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMP_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMP_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

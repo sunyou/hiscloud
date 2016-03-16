@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryTOrg" mainattr="ORGID">
+    <mapingenty type="query">select a.*,a.orgid orgid_Exec,a.orgname orgname_Exec  from t_org a</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UPID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UPNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GRADE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GRADE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEAF" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LEAF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGTYPEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGTYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGADDRESS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_EXEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_EXEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_EXEC" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME_EXEC</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

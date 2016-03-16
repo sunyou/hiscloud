@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TLogList" mainattr="LOGID">
+    <mapingenty type="table">T_LOG_LIST</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="LOGID" maxlength="32" datatype="String" type="PK" remark="日志编码">
+        <mapingcol datatype="VARCHAR2">LOGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEND_EMPID" maxlength="50" datatype="String" type="COL" remark="发送人编码">
+        <mapingcol datatype="VARCHAR2">SEND_EMPID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEND_EMPNAME" maxlength="50" datatype="String" type="COL" remark="发送人名称">
+        <mapingcol datatype="VARCHAR2">SEND_EMPNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEND_ORGID" maxlength="50" datatype="String" type="COL" remark="发送人所在科室编码">
+        <mapingcol datatype="VARCHAR2">SEND_ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEND_ORGNAME" maxlength="50" datatype="String" type="COL" remark="发送人所在科室名称">
+        <mapingcol datatype="VARCHAR2">SEND_ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEND_IP" maxlength="50" datatype="String" type="COL" remark="发送方IP地址">
+        <mapingcol datatype="VARCHAR2">SEND_IP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEND_COMPUTER" maxlength="255" datatype="String" type="COL" remark="发送方机器名">
+        <mapingcol datatype="VARCHAR2">SEND_COMPUTER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEND_DATE" maxlength="20" datatype="DateTime" type="COL" remark="发送日期">
+        <mapingcol datatype="DATE">SEND_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOGTYPEID" maxlength="50" datatype="String" type="COL" remark="消息类型编码">
+        <mapingcol datatype="VARCHAR2">LOGTYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOG_INFO" maxlength="4000" datatype="String" type="COL" remark="消息内容">
+        <mapingcol datatype="VARCHAR2">LOG_INFO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

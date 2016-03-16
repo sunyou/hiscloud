@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TRekPayMode" mainattr="UUID">
+    <mapingenty type="table">T_REK_PAYMODE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="PK" remark="唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REKID" maxlength="50" datatype="String" type="COL" remark="结算编码">
+        <mapingcol datatype="VARCHAR2">REKID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYMODE_TYPEID" maxlength="50" datatype="String" type="COL" remark="付款类型编码">
+        <mapingcol datatype="VARCHAR2">PAYMODE_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="2" name="AMOUNT" maxlength="8" datatype="Float" type="COL" remark="交款金额">
+        <mapingcol datatype="NUMBER">AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTE" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">NOTE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

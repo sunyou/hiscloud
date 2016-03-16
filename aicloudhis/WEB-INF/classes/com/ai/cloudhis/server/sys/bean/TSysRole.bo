@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TSysRole" mainattr="ROLE_ID">
+    <mapingenty type="table">T_SYS_ROLE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ROLE_ID" maxlength="50" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">ROLE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ROLE_NAME" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ROLE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ROLE_DES" maxlength="500" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ROLE_DES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ROLE_STATE" maxlength="2" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ROLE_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_USERID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CREATE_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">UPDATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATE_USERID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UPDATE_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SYS_TYPE" maxlength="20" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SYS_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

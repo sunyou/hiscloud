@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryTOrdInsp" mainattr="ADMIS_SERIALNO">
+    <mapingenty type="query">select admis_Serialno,
+       (select sum(amount_Total) from t_order_sub where ordid = a.ordid) amount_Total,
+       applyid,
+       date_Canc,
+       empid_Canc,
+       empid_Doct,
+       empid_Input,
+       empname_Doct,
+       empname_Input,
+       decode(a.ord_typeid,
+              '03',
+              (select exec_Address
+                 from T_App_Lab
+                where applyid = a.applyid
+                  and rownum = 1),
+              '') exec_Address,
+       exec_Flag,
+       isapplyflag,
+       note,
+       to_char(ord_Date,'yyyy-MM-dd') ord_Date,
+       ord_Name,
+       ord_Name ord_Name_Backup,
+       ord_Typeid,
+       ord_Typename,
+       (select orddicid from T_Ord_App where applyid = a.applyid) orddicid,
+       ordid,
+       orgId_exec,
+       orgid,
+       orgid_Hosp,
+       orgname,
+       orgname_Exec,
+       patientid,
+       rek_Status,
+       serialno,
+       decode(a.ord_typeid,
+              '03',
+              (select sp_date
+                 from T_App_Lab
+                where applyid = a.applyid
+                  and rownum = 1),
+              '') sp_Date,
+       decode(a.ord_typeid,
+              '03',
+              (select sp_empid
+                 from T_App_Lab
+                where applyid = a.applyid
+                  and rownum = 1),
+              empid_input) sp_Empid,
+       decode(a.ord_typeid,
+              '03',
+              (select spbody
+                 from T_App_Lab
+                where applyid = a.applyid
+                  and rownum = 1),
+              '04',
+              (select spbody
+                 from T_App_Exam
+                where applyid = a.applyid
+                  and rownum = 1),
+              '') spbody,
+       typeid_Canc
+  from t_ord a
+</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ADMIS_SERIALNO" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADMIS_SERIALNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AMOUNT_TOTAL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">AMOUNT_TOTAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APPLYID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">APPLYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATE_CANC" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DATE_CANC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_CANC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPID_CANC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_DOCT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPID_DOCT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_INPUT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPID_INPUT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME_DOCT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPNAME_DOCT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME_INPUT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPNAME_INPUT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXEC_ADDRESS" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXEC_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXEC_FLAG" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">EXEC_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISAPPLYFLAG" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ISAPPLYFLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTE" maxlength="1000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">NOTE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_DATE" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_NAME_BACKUP" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_NAME_BACKUP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_TYPEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_TYPENAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_TYPENAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDDICID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORDDICID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORDID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_EXEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_EXEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_EXEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME_EXEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENTID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REK_STATUS" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">REK_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERIALNO" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SERIALNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SP_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">SP_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SP_EMPID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SP_EMPID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SPBODY" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SPBODY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TYPEID_CANC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TYPEID_CANC</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

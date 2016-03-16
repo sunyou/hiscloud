@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TKnOrdGrpStand" mainattr="DTORDGRID">
+    <mapingenty type="table">T_KN_ORD_GRP_STAND</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="DTORDGRID" maxlength="50" datatype="String" type="PK" remark="医嘱组编码">
+        <mapingcol datatype="VARCHAR2">DTORDGRID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDGRNAME" maxlength="255" datatype="String" type="COL" remark="医嘱组名称">
+        <mapingcol datatype="VARCHAR2">ORDGRNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDGRDES" maxlength="1000" datatype="String" type="COL" remark="医嘱组使用说明">
+        <mapingcol datatype="VARCHAR2">ORDGRDES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGEUSERID" maxlength="50" datatype="String" type="COL" remark="医嘱人员编码">
+        <mapingcol datatype="VARCHAR2">ORGEUSERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_EXEC" maxlength="50" datatype="String" type="COL" remark="默认的执行科室">
+        <mapingcol datatype="VARCHAR2">ORGID_EXEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="50" datatype="String" type="COL" remark="输入串">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRIVTYPEID" maxlength="50" datatype="String" type="COL" remark="使用权利">
+        <mapingcol datatype="VARCHAR2">PRIVTYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GRPFLAG" maxlength="20" datatype="Long" type="COL" remark="是否是组套">
+        <mapingcol datatype="NUMBER">GRPFLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPID" maxlength="50" datatype="String" type="COL" remark="上级医嘱组编码">
+        <mapingcol datatype="VARCHAR2">UPID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GRADE" maxlength="20" datatype="Long" type="COL" remark="级次">
+        <mapingcol datatype="NUMBER">GRADE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEAF" maxlength="20" datatype="Long" type="COL" remark="是否叶节点">
+        <mapingcol datatype="NUMBER">LEAF</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QrySendMedSubList" mainattr="AMOUNT_TOTAL">
+    <mapingenty type="query">select c.amount_total,
+       d.empid_doct,
+       d.empname_input empname,
+       d.empname_doct,
+       d.orgid_exec exec_Orgid,
+       d.orgname_exec exec_Orgname,
+       to_char(c.rek_date, 'yyyy-MM-dd hh24:mm:ss') fee_Data,
+       c.rek_user fee_Userid,
+       (select emp_name from t_emp where empid = c.rek_user) fee_Username,
+       to_char(d.ord_date, 'yyyy-MM-dd hh24:mm:ss') ord_date,
+       d.ord_name,
+       d.ord_typeid,
+       d.orgname,
+       d.patientid,
+       e.uuid uuid_Window,
+       e.windonsno windowid,
+       e.windonsname,
+       b.rekid,
+       d.ordid,
+       b.uuid
+  from t_patient a, t_me_sheet b, T_AccountRek c, t_ord d, t_me_window e
+ where a.patientid = b.patientid
+   and b.rekid = c.rekid
+   and b.ordid = d.ordid
+   and b.windonsno = e.windonsno(+)
+   and b.state in ('00', '01')
+   and b.cancel_typeid is null
+   and d.ord_typeid in ('00', '01')
+</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="AMOUNT_TOTAL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">AMOUNT_TOTAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_DOCT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPID_DOCT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME_DOCT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPNAME_DOCT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXEC_ORGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXEC_ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXEC_ORGNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXEC_ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FEE_DATA" maxlength="19" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FEE_DATA</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FEE_USERID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FEE_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FEE_USERNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FEE_USERNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_DATE" maxlength="19" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_TYPEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENTID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UUID_WINDOW" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UUID_WINDOW</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WINDOWID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WINDOWID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WINDONSNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WINDONSNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REKID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REKID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORDID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

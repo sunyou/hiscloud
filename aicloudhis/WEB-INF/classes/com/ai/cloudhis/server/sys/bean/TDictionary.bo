@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TDictionary" mainattr="ID">
+    <mapingenty type="table">T_DICTIONARY</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ID" maxlength="50" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIC_TYPE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DIC_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DESCRIPTION" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DESCRIPTION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALUE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">VALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPID" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UPID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GRADE" maxlength="20" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GRADE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEAFLAG" maxlength="20" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LEAFLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STOPFLAG" maxlength="20" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">STOPFLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_DESC" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_DESC</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

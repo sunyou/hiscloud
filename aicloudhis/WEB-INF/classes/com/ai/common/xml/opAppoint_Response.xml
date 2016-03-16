@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+	<Result_Code>0000</Result_Code>
+	<Error_Msg>交易成功</Error_Msg>
+	<Result_Data>
+		<App_Time>2015-05-12 09:45:00</App_Time>
+		<Appoint_No>22973689</Appoint_No>
+	</Result_Data>
+</Response>

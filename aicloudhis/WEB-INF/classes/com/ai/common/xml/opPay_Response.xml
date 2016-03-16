@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+	<Result_Code>0000</Result_Code>
+	<Error_Msg>交易成功</Error_Msg>
+	<Result_Data>
+		<Receipt_No>FY20150512001</Receipt_No>
+		<Drug_Windows>5</Drug_Windows>
+		<Remain_Money>100</Remain_Money>
+	</Result_Data>
+</Response>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TStoreAdjustRecord" mainattr="ADJUST_USER_ID">
+    <mapingenty type="table">T_STORE_ADJUST_RECORD</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ADJUST_USER_ID" maxlength="50" datatype="String" type="COL" remark="调整人">
+        <mapingcol datatype="VARCHAR2">ADJUST_USER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_ID" maxlength="50" datatype="String" type="PK" remark="id">
+        <mapingcol datatype="VARCHAR2">ADJUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL" remark="调整部门">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_DATE" maxlength="20" datatype="DateTime" type="COL" remark="调整时间">
+        <mapingcol datatype="DATE">ADJUST_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_REASON" maxlength="200" datatype="String" type="COL" remark="调整原因">
+        <mapingcol datatype="VARCHAR2">ADJUST_REASON</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_CURID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADJUST_CURID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+	<Result_Code>0000</Result_Code>
+	<Error_Msg>交易成功</Error_Msg>
+	<Result_Data>
+		<Record_List>
+			<Record_Info>
+				<Test_No>100257424659</Test_No>
+				<Result_Date_Time>2015-05-12 11:30:00</Result_Date_Time>
+				<Item_name>白细胞计数</Item_name>
+				<Result>6.1</Result>
+				<Abnormal_Indicator/>
+				<Units>10^9/L</Units>
+				<Reference_Range>3.5 -- 9.5</Reference_Range>
+			</Record_Info>
+			<Record_Info>
+				<Test_No>100257424659</Test_No>
+				<Result_Date_Time>2015-05-12 11:30:00</Result_Date_Time>
+				<Item_name>红细胞计数</Item_name>
+				<Result>4.83</Result>
+				<Abnormal_Indicator/>
+				<Units>10^12/L</Units>
+				<Reference_Range>4 -- 5.5</Reference_Range>
+			</Record_Info>
+			<Record_Info>
+				<Test_No>100257424659</Test_No>
+				<Result_Date_Time>2015-05-12 11:30:00</Result_Date_Time>
+				<Item_name>红细胞压积</Item_name>
+				<Result>0.436</Result>
+				<Abnormal_Indicator/>
+				<Units>L/L</Units>
+				<Reference_Range>0.35 -- 0.49</Reference_Range>
+			</Record_Info>
+			<Record_Info>
+				<Test_No>100257424659</Test_No>
+				<Result_Date_Time>2015-05-12 11:30:00</Result_Date_Time>
+				<Item_name>血红蛋白</Item_name>
+				<Result>158.0</Result>
+				<Abnormal_Indicator/>
+				<Units>g/L</Units>
+				<Reference_Range>130 -- 175</Reference_Range>
+			</Record_Info>
+		</Record_List>
+	</Result_Data>
+</Response>

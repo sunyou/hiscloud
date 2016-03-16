@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TAppExam" mainattr="APPLYID">
+    <mapingenty type="table">T_APP_EXAM</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="APPLYID" maxlength="50" datatype="String" type="PK" remark="申请单编码">
+        <mapingcol datatype="VARCHAR2">APPLYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SPBODY" maxlength="50" datatype="String" type="COL" remark="检查部位">
+        <mapingcol datatype="VARCHAR2">SPBODY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTE" maxlength="50" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">NOTE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

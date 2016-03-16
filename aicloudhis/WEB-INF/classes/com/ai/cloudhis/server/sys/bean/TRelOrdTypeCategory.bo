@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TRelOrdTypeCategory" mainattr="UUID">
+    <mapingenty type="table">T_REL_ORDTYPE_CATEGORY</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="50" datatype="String" type="PK" remark="唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_TYPEID" maxlength="50" datatype="String" type="COL" remark="医嘱类型编码">
+        <mapingcol datatype="VARCHAR2">ORD_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_CATEID" maxlength="50" datatype="String" type="COL" remark="医嘱子类编码">
+        <mapingcol datatype="VARCHAR2">ORD_CATEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTEDES" maxlength="255" datatype="String" type="COL" remark="关系描述">
+        <mapingcol datatype="VARCHAR2">NOTEDES</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

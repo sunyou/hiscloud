@@ -1,0 +1,14 @@
+.validatebox-text,textarea {
+  border: 1px solid #c0c0c0;
+  vertical-align: middle;
+  padding: 1px 1px;
+  height: 18px;
+  line-height: 18px;
+}
+input[type="checkbox"],input[type="radio"] {
+  height: 17px;
+  line-height: 17px;
+  *width: 18px;
+  *height: 18px;
+  vertical-align: middle;
+}

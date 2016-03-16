@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QueryPrSub" mainattr="UUID">
+    <mapingenty type="query">select t.*, s.itemname, s.entid_producer, s.sales_price2, s.wholesales_price, s.warehous_facotr, s.warehous_unit, s.item_spec, s.item_common_name, (select g.entname from T_ent g where s.entid_producer = g.entid) producer_name from t_me_pr_sub t, T_Ord_Item s where s.itemid = t.itemid</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ROWNO" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ROWNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEMID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISPENS_UNIT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DISPENS_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISPENS_FACOTR" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DISPENS_FACOTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OLDWHOLESALES_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OLDWHOLESALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NEWWHOLESALES_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">NEWWHOLESALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OLDSALES_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OLDSALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NEWSALES_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">NEWSALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UNITNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UNITNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_REASON" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADJUST_REASON</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WHOLESALES_DIFFERENCE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">WHOLESALES_DIFFERENCE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALES_DIFFERENCE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SALES_DIFFERENCE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_DATETIME" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">ADJUST_DATETIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUSTID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADJUSTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEMNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTID_PRODUCER" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTID_PRODUCER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALES_PRICE2" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SALES_PRICE2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WHOLESALES_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">WHOLESALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WAREHOUS_FACOTR" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">WAREHOUS_FACOTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WAREHOUS_UNIT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WAREHOUS_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_SPEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_SPEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_COMMON_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_COMMON_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRODUCER_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PRODUCER_NAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

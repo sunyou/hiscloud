@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryTPaDiag" mainattr="UUID">
+    <mapingenty type="query">select a.*,decode(a.diagroleid,'00','主诊断','01','次要诊断','02','疾病诊断','03','症候诊断') diagrolename from t_pa_diag a</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADMIS_SERIALNO" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADMIS_SERIALNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAG_TYPEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DIAG_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ROWNO" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ROWNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAGROLEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DIAGROLEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENTID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERIALNO" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SERIALNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DIAGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAG_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DIAG_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAG_DESC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DIAG_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATE_INPUT" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DATE_INPUT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_INPUT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPID_INPUT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME_INPUT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPNAME_INPUT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">UPDATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_UPDATE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPID_UPDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME_UPDATE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPNAME_UPDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAGROLENAME" maxlength="12" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DIAGROLENAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

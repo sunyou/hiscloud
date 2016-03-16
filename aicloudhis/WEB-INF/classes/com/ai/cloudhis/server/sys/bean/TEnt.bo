@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TEnt" mainattr="ENTID">
+    <mapingenty type="table">T_ENT</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ENTID" maxlength="50" datatype="String" type="PK" remark="企业信息编码">
+        <mapingcol datatype="VARCHAR2">ENTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTNAME" maxlength="255" datatype="String" type="COL" remark="企业信息名称">
+        <mapingcol datatype="VARCHAR2">ENTNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="50" datatype="String" type="COL" remark="输入串">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISPRODUCER" maxlength="20" datatype="Long" type="COL" remark="是否为生产厂商">
+        <mapingcol datatype="NUMBER">ISPRODUCER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISSUPPLIER" maxlength="20" datatype="Long" type="COL" remark="是否为供应厂商">
+        <mapingcol datatype="NUMBER">ISSUPPLIER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENT_ZIP" maxlength="50" datatype="String" type="COL" remark="企业邮编">
+        <mapingcol datatype="VARCHAR2">ENT_ZIP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENT_ADDR" maxlength="255" datatype="String" type="COL" remark="企业地址">
+        <mapingcol datatype="VARCHAR2">ENT_ADDR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PHONE" maxlength="50" datatype="String" type="COL" remark="企业电话">
+        <mapingcol datatype="VARCHAR2">PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENT_FAX" maxlength="50" datatype="String" type="COL" remark="企业传真">
+        <mapingcol datatype="VARCHAR2">ENT_FAX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTACTOR" maxlength="50" datatype="String" type="COL" remark="联系人">
+        <mapingcol datatype="VARCHAR2">CONTACTOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISSTOP" maxlength="20" datatype="Long" type="COL" remark="是否停用">
+        <mapingcol datatype="NUMBER">ISSTOP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTE" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">NOTE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

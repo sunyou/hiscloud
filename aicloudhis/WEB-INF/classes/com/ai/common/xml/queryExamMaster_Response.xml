@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+	<Result_Code>0000</Result_Code>
+	<Error_Msg>交易成功</Error_Msg>
+	<Result_Data>
+		<Record_List>
+			<Record_Info>
+				<Patient_Id>00035557</Patient_Id>
+				<Exam_Date_Time>2015-05-12 10:30:00</Exam_Date_Time>
+				<Exam_Class>CT平扫</Exam_Class>
+				<Exam_Sub_Class/>
+				<Result_Status>报告已打印</Result_Status>
+				<Req_Date_Time>2015-05-12 10:30:00</Req_Date_Time>
+				<Reporter>楚苹苹</Reporter>
+				<Description>双肺纹理较清晰，肺野未见明显实变影。双肺门结构尚清晰。心影大小尚属正常范围之内。双侧膈面光整，肋膈角锐利。</Description>
+				<Impression>未见明显异常</Impression>
+				<Recommendation/>
+				<Exam_Para/>
+				<Patient_Name>李淑芬</Patient_Name>
+				<Id_No>330702197108020812</Id_No>
+				<Phone_Number>13860668822</Phone_Number>
+			</Record_Info>
+		</Record_List>
+	</Result_Data>
+</Response>

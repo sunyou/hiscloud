@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryDictionary" mainattr="ID">
+    <mapingenty type="query">select T.*, 
+(select description 
+    from t_dictionary b 
+   where b.value = t.upid and b.dic_type=t.dic_type) up_Description 
+from t_dictionary t</mapingenty>   <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ID" maxlength="22" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIC_TYPE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DIC_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DESCRIPTION" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DESCRIPTION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALUE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">VALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">UPID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GRADE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GRADE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEAFLAG" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LEAFLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STOPFLAG" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">STOPFLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_DESC" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UP_DESCRIPTION" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UP_DESCRIPTION</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

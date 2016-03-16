@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TRegister" mainattr="REGISTID">
+    <mapingenty type="table">T_REGISTER</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="REGISTID" maxlength="50" datatype="String" type="PK" remark="号别编码">
+        <mapingcol datatype="VARCHAR2">REGISTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGISTNAME" maxlength="255" datatype="String" type="COL" remark="号别名称">
+        <mapingcol datatype="VARCHAR2">REGISTNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGIST_TYPEID" maxlength="15" datatype="String" type="COL" remark="诊别类型">
+        <mapingcol datatype="VARCHAR2">REGIST_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID" maxlength="50" datatype="String" type="COL" remark="人员编码">
+        <mapingcol datatype="VARCHAR2">EMPID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME" maxlength="225" datatype="String" type="COL" remark="人员名称">
+        <mapingcol datatype="VARCHAR2">EMPNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所编码">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_HOSP" maxlength="225" datatype="String" type="COL" remark="所属诊所名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL" remark="所属科室编码">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="225" datatype="String" type="COL" remark="所属科室名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="50" datatype="String" type="COL" remark="输入串">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISSTOP" maxlength="20" datatype="Long" type="COL" remark="停止使用标志">
+        <mapingcol datatype="NUMBER">ISSTOP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUT_CODE" maxlength="50" datatype="String" type="COL" remark="号别输入码">
+        <mapingcol datatype="VARCHAR2">INPUT_CODE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

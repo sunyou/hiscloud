@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TAdjustSub" mainattr="SUBID">
+    <mapingenty type="table">T_ADJUST_SUB</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="SUBID" maxlength="50" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">SUBID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_ID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADJUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_CURID" maxlength="50" datatype="String" type="COL" remark="库存id">
+        <mapingcol datatype="VARCHAR2">ADJUST_CURID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BEFORE_QUANTITY" maxlength="20" datatype="Long" type="COL" remark="调整前数量">
+        <mapingcol datatype="NUMBER">BEFORE_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AFTER_QUANTITY" maxlength="20" datatype="Long" type="COL" remark="调整后数量">
+        <mapingcol datatype="NUMBER">AFTER_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BALANCE" maxlength="20" datatype="Long" type="COL" remark="差值">
+        <mapingcol datatype="NUMBER">BALANCE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEMID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

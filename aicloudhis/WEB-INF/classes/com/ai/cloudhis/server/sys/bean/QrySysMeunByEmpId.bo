@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QrySysMeunByEmpId" mainattr="FUNC_ID">
+    <mapingenty type="query">select distinct c.*, a.empid from t_sys_emp2role a, T_sys_role2menu b, t_sys_menu c where a.role_id = b.role_id and b.menu_id = c.func_order</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="FUNC_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">FUNC_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FUNC_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FUNC_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IMG_URL" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">IMG_URL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARENT_SEQ" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PARENT_SEQ</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEQ" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SEQ</mapingcol>
+      </attr>
+      <attr floatlength="0" name="URL" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">URL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SECURITY_URL" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SECURITY_URL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FUNC_ORDER" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">FUNC_ORDER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISSTOP" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ISSTOP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_LEAF" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">IS_LEAF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GRADE" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GRADE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

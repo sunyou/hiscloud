@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QueryClinicByDate" mainattr="CURDATE">
+    <mapingenty type="query">select t.curdate,sum(t.limit_resamount) limit_resamount,sum(t.usedres_amount) usedres_amount from t_pao_clinic t group by t.curdate</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CURDATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CURDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LIMIT_RESAMOUNT" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LIMIT_RESAMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USEDRES_AMOUNT" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">USEDRES_AMOUNT</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

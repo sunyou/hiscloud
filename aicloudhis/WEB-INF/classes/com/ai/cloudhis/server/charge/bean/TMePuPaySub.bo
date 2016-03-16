@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TMePuPaySub" mainattr="UUID">
+    <mapingenty type="table">T_ME_PU_PAY_SUB</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="50" datatype="String" type="PK" remark="唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIRECT" maxlength="20" datatype="Long" type="COL" remark="入库/退库">
+        <mapingcol datatype="NUMBER">DIRECT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UUIDST" maxlength="50" datatype="String" type="COL" remark="唯一编码(存储子表)">
+        <mapingcol datatype="VARCHAR2">UUIDST</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INOUTID" maxlength="50" datatype="String" type="COL" remark="库单编码">
+        <mapingcol datatype="VARCHAR2">INOUTID</mapingcol>
+      </attr>
+      <attr floatlength="2" name="AMOUNTOTAL" maxlength="8" datatype="Float" type="COL" remark="付款金额">
+        <mapingcol datatype="NUMBER">AMOUNTOTAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISPAYOFF" maxlength="20" datatype="Long" type="COL" remark="是否付清">
+        <mapingcol datatype="NUMBER">ISPAYOFF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYID" maxlength="50" datatype="String" type="COL" remark="付款编码">
+        <mapingcol datatype="VARCHAR2">PAYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYNOTE" maxlength="200" datatype="String" type="COL" remark="付款备注">
+        <mapingcol datatype="VARCHAR2">PAYNOTE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

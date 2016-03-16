@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QueryClinicInfo" mainattr="UUID">
+    <mapingenty type="query">select t.uuid,
+t.curdate,
+r.registid,
+t.week_typeid,
+(select description from t_dictionary  where dic_type='docTime' and value=t.date_typeid) date_typeid,
+t.limit_amount,
+t.used_amount,
+t.stop_flag,
+t.resstartno,
+t.usedres_amount,
+t.limit_resamount,
+t.orgid_hosp,
+t.orgname_hosp,
+t.orgid,
+t.orgname,
+r.registname,r.registname regist_typeid, r.empid, r.empname
+  from t_pao_clinic t, T_Register r
+ where t.registid = r.registid</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CURDATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CURDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGISTID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGISTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WEEK_TYPEID" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WEEK_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATE_TYPEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DATE_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LIMIT_AMOUNT" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LIMIT_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USED_AMOUNT" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">USED_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STOP_FLAG" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">STOP_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RESSTARTNO" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">RESSTARTNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USEDRES_AMOUNT" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">USEDRES_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LIMIT_RESAMOUNT" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LIMIT_RESAMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_HOSP" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGISTNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGISTNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGIST_TYPEID" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGIST_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME" maxlength="225" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPNAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

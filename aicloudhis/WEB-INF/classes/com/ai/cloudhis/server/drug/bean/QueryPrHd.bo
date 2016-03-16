@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QueryPrHd" mainattr="ADJUSTID">
+    <mapingenty type="query">select t.*,
+       (select o.orgname from T_Org o where o.orgid = t.adjust_orgid) orgname,
+       (select c.emp_name from t_Emp c where c.empid = t.adjust_userid) empname,
+       (select d.emp_name from t_Emp d where d.empid = t.check_userid) checkname
+  from t_me_pr_hd t
+</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ADJUSTID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADJUSTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_ORGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADJUST_ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUT_DATETIME" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">INPUT_DATETIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_DATETIME" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">ADJUST_DATETIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_USERID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADJUST_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHECK_USERID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CHECK_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISFINISHED" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ISFINISHED</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHECKNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CHECKNAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

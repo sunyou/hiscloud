@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TCodeType" mainattr="CODETYPEID">
+    <mapingenty type="table">T_CODE_TYPE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CODETYPEID" maxlength="50" datatype="String" type="PK" remark="编码类型ID">
+        <mapingcol datatype="VARCHAR2">CODETYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CODETYPENAME" maxlength="255" datatype="String" type="COL" remark="编码类型名称">
+        <mapingcol datatype="VARCHAR2">CODETYPENAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPCODE" maxlength="50" datatype="String" type="COL" remark="上级编码">
+        <mapingcol datatype="VARCHAR2">UPCODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STRUCT" maxlength="20" datatype="String" type="COL" remark="编码结构">
+        <mapingcol datatype="VARCHAR2">STRUCT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEFAULTCODEID" maxlength="50" datatype="String" type="COL" remark="默认编码ID">
+        <mapingcol datatype="VARCHAR2">DEFAULTCODEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTRVALUE0" maxlength="255" datatype="String" type="COL" remark="Ctrvalue0">
+        <mapingcol datatype="VARCHAR2">CTRVALUE0</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTRVALUE1" maxlength="255" datatype="String" type="COL" remark="CtrValue1">
+        <mapingcol datatype="VARCHAR2">CTRVALUE1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTRVALUE2" maxlength="255" datatype="String" type="COL" remark="CtrValue2">
+        <mapingcol datatype="VARCHAR2">CTRVALUE2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTRVALUE3" maxlength="255" datatype="String" type="COL" remark="CtrValue3">
+        <mapingcol datatype="VARCHAR2">CTRVALUE3</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

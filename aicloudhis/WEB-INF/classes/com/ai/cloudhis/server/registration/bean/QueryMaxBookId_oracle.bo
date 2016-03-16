@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QueryMaxBookId" mainattr="BOOK_ID">
+    <mapingenty type="query">select max(to_number(bookid)) book_id from t_patient_book</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="BOOK_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">BOOK_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

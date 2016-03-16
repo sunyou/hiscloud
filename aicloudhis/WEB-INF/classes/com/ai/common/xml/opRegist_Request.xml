@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Request>
+	<Hospital_Mark>1111</Hospital_Mark>
+	<Patient_Id>00035557</Patient_Id>
+	<Hid>330719196804253671</Hid>
+	<Dept_Code>00045101</Dept_Code>
+	<Dept_Name>皮肤科</Dept_Name>
+	<Doctor_Code>7889</Doctor_Code>
+	<Doctor_Name>贾雨村</Doctor_Name>
+	<Hb_Date>2014-05-12</Hb_Date>
+	<Hb_Time>14:30:00</Hb_Time>
+	<Am_Pm>下午</Am_Pm>
+	<Operate_Type>2</Operate_Type>
+	<Sum_Fee>3</Sum_Fee>
+	<Pay_Way>2</Pay_Way>
+	<Flow_No>22233071919671</Flow_No>
+</Request>

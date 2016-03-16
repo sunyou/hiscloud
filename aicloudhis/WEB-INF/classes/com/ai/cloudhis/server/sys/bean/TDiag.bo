@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TDiag" mainattr="DIAGID">
+    <mapingenty type="table">T_DIAG</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="DIAGID" maxlength="50" datatype="String" type="PK" remark="诊断疾病编码">
+        <mapingcol datatype="VARCHAR2">DIAGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAG_NAME" maxlength="255" datatype="String" type="COL" remark="诊断疾病名称">
+        <mapingcol datatype="VARCHAR2">DIAG_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAG_TYPEID" maxlength="50" datatype="String" type="COL" remark="诊断类型编码">
+        <mapingcol datatype="VARCHAR2">DIAG_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="50" datatype="String" type="COL" remark="输入串">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAG_VERSION" maxlength="50" datatype="String" type="COL" remark="诊断疾病版本号">
+        <mapingcol datatype="VARCHAR2">DIAG_VERSION</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

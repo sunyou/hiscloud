@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryTPatientIdentity" mainattr="PATIENT_IDENTITYID">
+    <mapingenty type="query">select a.*,(select patient_identityname from T_Patient_Identity where patient_identityid=a.upid) upname from T_Patient_Identity a</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PATIENT_IDENTITYID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_IDENTITYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_IDENTITYNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_IDENTITYNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GRADE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GRADE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UPID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEAF" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LEAF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UPNAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

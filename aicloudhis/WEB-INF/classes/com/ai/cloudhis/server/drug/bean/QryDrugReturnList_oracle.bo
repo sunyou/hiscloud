@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryDrugReturnList" mainattr="ITEMNAME">
+    <mapingenty type="query">select b.itemname,
+       b.dispens_Unit,
+      decode(a.returnflag, 1, '发药', -1, '退药') drug_Flag,
+       b.item_spec,
+       b.orgid_hosp,
+       a.ReturnFlag,
+       b.sales_Price,
+       a.uuid,
+       a.exec_datetime,
+       a.execdispens_quantity
+  from t_me_execute_record a, t_ord_item b
+ where a.itemid = b.itemid
+</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ITEMNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEMNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISPENS_UNIT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DISPENS_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DRUG_FLAG" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DRUG_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_SPEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_SPEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RETURNFLAG" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">RETURNFLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALES_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXEC_DATETIME" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EXEC_DATETIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXECDISPENS_QUANTITY" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">EXECDISPENS_QUANTITY</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

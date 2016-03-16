@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QueryAdjustSub" mainattr="SUBID">
+    <mapingenty type="query">select t.*, s.itemname, s.entid_producer, s.sales_price, s.sales_price2, s.dispens_unit, s.dispens_facotr, s.wholesales_price, s.warehous_facotr, s.warehous_unit, s.item_spec, s.item_common_name, d.invaliddate, d.batchcode, (select f.entname from t_Ent f where f.entid = s.entid_producer) entname from T_ADJUST_SUB t, t_me_st_cur d,t_ord_item s where s.itemid = d.itemid and t.adjust_curid=d.uuid</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="SUBID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SUBID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_ID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADJUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_CURID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADJUST_CURID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BEFORE_QUANTITY" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">BEFORE_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AFTER_QUANTITY" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">AFTER_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BALANCE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">BALANCE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEMID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEMNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTID_PRODUCER" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTID_PRODUCER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALES_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALES_PRICE2" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SALES_PRICE2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISPENS_UNIT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DISPENS_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISPENS_FACOTR" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DISPENS_FACOTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WHOLESALES_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">WHOLESALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WAREHOUS_FACOTR" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">WAREHOUS_FACOTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WAREHOUS_UNIT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WAREHOUS_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_SPEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_SPEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_COMMON_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_COMMON_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVALIDDATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">INVALIDDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BATCHCODE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BATCHCODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTNAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

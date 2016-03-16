@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TOrdItem" mainattr="ORD_ITEMID">
+    <mapingenty type="table">T_ORD_ITEM</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ORD_ITEMID" maxlength="50" datatype="String" type="PK" remark="唯一编码">
+        <mapingcol datatype="VARCHAR2">ORD_ITEMID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMID" maxlength="50" datatype="String" type="COL" remark="收费编码">
+        <mapingcol datatype="VARCHAR2">ITEMID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMNAME" maxlength="255" datatype="String" type="COL" remark="收费名称">
+        <mapingcol datatype="VARCHAR2">ITEMNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_COMMON_NAME" maxlength="255" datatype="String" type="COL" remark="通用名">
+        <mapingcol datatype="VARCHAR2">ITEM_COMMON_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_CHEMISTRY_NAME" maxlength="255" datatype="String" type="COL" remark="化学名">
+        <mapingcol datatype="VARCHAR2">ITEM_CHEMISTRY_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_SPEC" maxlength="50" datatype="String" type="COL" remark="规格">
+        <mapingcol datatype="VARCHAR2">ITEM_SPEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="255" datatype="String" type="COL" remark="别名">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_USAGEID" maxlength="50" datatype="String" type="COL" remark="默认用法">
+        <mapingcol datatype="VARCHAR2">ITEM_USAGEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_DOSEID" maxlength="50" datatype="String" type="COL" remark="剂型">
+        <mapingcol datatype="VARCHAR2">ITEM_DOSEID</mapingcol>
+      </attr>
+      <attr floatlength="2" name="SALES_PRICE" maxlength="8" datatype="Float" type="COL" remark="价格">
+        <mapingcol datatype="NUMBER">SALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="2" name="SALES_PRICE1" maxlength="8" datatype="Float" type="COL" remark="价格1">
+        <mapingcol datatype="NUMBER">SALES_PRICE1</mapingcol>
+      </attr>
+      <attr floatlength="2" name="SALES_PRICE2" maxlength="8" datatype="Float" type="COL" remark="价格2">
+        <mapingcol datatype="NUMBER">SALES_PRICE2</mapingcol>
+      </attr>
+      <attr floatlength="2" name="WHOLESALES_PRICE" maxlength="8" datatype="Float" type="COL" remark="购入价">
+        <mapingcol datatype="NUMBER">WHOLESALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_CATEID" maxlength="50" datatype="String" type="COL" remark="医嘱类别子类">
+        <mapingcol datatype="VARCHAR2">ORD_CATEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PHARMACY_CATE_TWOSUBID" maxlength="50" datatype="String" type="COL" remark="药理类别二级分类">
+        <mapingcol datatype="VARCHAR2">PHARMACY_CATE_TWOSUBID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PHARMACY_CATE_THREESUBID" maxlength="50" datatype="String" type="COL" remark="药理类别三级分类">
+        <mapingcol datatype="VARCHAR2">PHARMACY_CATE_THREESUBID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHARGE_CATEID" maxlength="50" datatype="String" type="COL" remark="收费类别子类">
+        <mapingcol datatype="VARCHAR2">CHARGE_CATEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTID_PRODUCER" maxlength="50" datatype="String" type="COL" remark="生产商">
+        <mapingcol datatype="VARCHAR2">ENTID_PRODUCER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTID_SUPPLIER" maxlength="50" datatype="String" type="COL" remark="供应商">
+        <mapingcol datatype="VARCHAR2">ENTID_SUPPLIER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISPENS_UNIT" maxlength="50" datatype="String" type="COL" remark="零售单位">
+        <mapingcol datatype="VARCHAR2">DISPENS_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="2" name="DISPENS_FACOTR" maxlength="8" datatype="Float" type="COL" remark="零售单位系数">
+        <mapingcol datatype="NUMBER">DISPENS_FACOTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WAREHOUS_UNIT" maxlength="50" datatype="String" type="COL" remark="入库单位">
+        <mapingcol datatype="VARCHAR2">WAREHOUS_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="2" name="WAREHOUS_FACOTR" maxlength="8" datatype="Float" type="COL" remark="入库单位系数">
+        <mapingcol datatype="NUMBER">WAREHOUS_FACOTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEDUNIT" maxlength="50" datatype="String" type="COL" remark="剂量单位">
+        <mapingcol datatype="VARCHAR2">MEDUNIT</mapingcol>
+      </attr>
+      <attr floatlength="2" name="MEDFACTOR" maxlength="8" datatype="Float" type="COL" remark="剂量系数">
+        <mapingcol datatype="NUMBER">MEDFACTOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BASIC_UNIT" maxlength="50" datatype="String" type="COL" remark="基本单位">
+        <mapingcol datatype="VARCHAR2">BASIC_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTROL_CATEID" maxlength="50" datatype="String" type="COL" remark="管制分类(含抗生素等级)">
+        <mapingcol datatype="VARCHAR2">CONTROL_CATEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACTIVEFLAG" maxlength="20" datatype="Long" type="COL" remark="是否启用">
+        <mapingcol datatype="NUMBER">ACTIVEFLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATETIME" maxlength="20" datatype="DateTime" type="COL" remark="创建时间">
+        <mapingcol datatype="DATE">CREATETIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_USERID" maxlength="50" datatype="String" type="COL" remark="创建操作员编码">
+        <mapingcol datatype="VARCHAR2">CREATE_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATETIME" maxlength="20" datatype="DateTime" type="COL" remark="修改时间">
+        <mapingcol datatype="DATE">UPDATETIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATE_USERID" maxlength="50" datatype="String" type="COL" remark="修改操作员编码">
+        <mapingcol datatype="VARCHAR2">UPDATE_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTE" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">NOTE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISMEDITEM" maxlength="20" datatype="Long" type="COL" remark="是否药品">
+        <mapingcol datatype="NUMBER">ISMEDITEM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_DEFAULT" maxlength="50" datatype="String" type="COL" remark="默认执行科室编码">
+        <mapingcol datatype="VARCHAR2">ORGID_DEFAULT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_DEFAULT" maxlength="50" datatype="String" type="COL" remark="默认执行科室名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME_DEFAULT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NATIONALDRUGS" maxlength="1" datatype="String" type="COL" remark="国家基本药物">
+        <mapingcol datatype="VARCHAR2">NATIONALDRUGS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

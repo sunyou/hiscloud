@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QueryStHd" mainattr="INOUTID">
+    <mapingenty type="query"> 
+select t.*,
+       (select sum(s.wholesales_amount)
+          from t_me_st_sub s
+         where s.inoutid = t.inoutid
+         group by s.inoutid) amount_total,
+       (select o.orgname from T_Org o where o.orgid = t.orgid) orgname_apply,
+          (select  a.emp_name from t_emp a where a.empid=t.inoutmake_userid) empname,
+             (select  f.emp_name from t_emp f where f.empid=t.inoutcheck_userid) checkname,
+       (select d.entname from T_Ent d where d.entid = t.entid) entname
+  from t_me_st_hd t</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="INOUTID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INOUTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIRECT" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DIRECT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INOUTDATETIME" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">INOUTDATETIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INOUTTYPEID" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INOUTTYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PURPOSE_ORGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PURPOSE_ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DOCUMENTNO" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DOCUMENTNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INOUTMAKE_USERID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INOUTMAKE_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INOUTCHECK_USERID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INOUTCHECK_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AMOUNT_TOTAL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">AMOUNT_TOTAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_APPLY" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME_APPLY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHECKNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CHECKNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTNAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

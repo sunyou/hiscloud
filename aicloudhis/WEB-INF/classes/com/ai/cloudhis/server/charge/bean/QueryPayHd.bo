@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QueryPayHd" mainattr="PAYID">
+    <mapingenty type="query">select t.*,
+       (select sum(b.amountotal)
+          from t_me_pu_pay_sub b
+         where b.payid = t.payid
+         group by b.inoutid) paied_Total,
+       (select a.emp_name from t_emp a where a.empid = t.payer) empname,
+        (select h.description
+          from t_Dictionary h
+         where h.value = t.payway
+           and h.dic_type = 'payway') payway_Name,
+       (select d.entname from T_Ent d where d.entid = t.entid) entname
+  from t_me_pu_pay_hd t</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PAYID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PAYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYAMOUNTTOAL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PAYAMOUNTTOAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYORGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PAYORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYER" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PAYER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYDATETIMER" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">PAYDATETIMER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OLDPAYID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OLDPAYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INOUTID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INOUTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYWAY" maxlength="2" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PAYWAY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAIED_TOTAL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PAIED_TOTAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYWAY_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PAYWAY_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTNAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="GB2312"?>
+<service-config default-ejb-context="boss20" default-web-context="boss20">
+<module file="service/appframe-pojo.service" use="true"/>
+<module file="service/attach.service" use="true"/>
+</service-config>
+

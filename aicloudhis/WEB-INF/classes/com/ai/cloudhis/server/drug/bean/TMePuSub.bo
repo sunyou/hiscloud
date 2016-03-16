@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TMePuSub" mainattr="UUID">
+    <mapingenty type="table">T_ME_PU_SUB</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="PK" remark="唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ROWNO" maxlength="20" datatype="Long" type="COL" remark="序号">
+        <mapingcol datatype="NUMBER">ROWNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UUID_PL" maxlength="32" datatype="String" type="COL" remark="唯一编码(药品计划子表)">
+        <mapingcol datatype="VARCHAR2">UUID_PL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMID" maxlength="50" datatype="String" type="COL" remark="项目编码">
+        <mapingcol datatype="VARCHAR2">ITEMID</mapingcol>
+      </attr>
+      <attr floatlength="2" name="QUANTITY" maxlength="8" datatype="Float" type="COL" remark="基本单位数量">
+        <mapingcol datatype="NUMBER">QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISPENS_UNIT" maxlength="50" datatype="String" type="COL" remark="零售单位名称">
+        <mapingcol datatype="VARCHAR2">DISPENS_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="2" name="DISPENS_QUANTITY" maxlength="8" datatype="Float" type="COL" remark="零售单位数量">
+        <mapingcol datatype="NUMBER">DISPENS_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="2" name="FACOTR" maxlength="8" datatype="Float" type="COL" remark="零售单位与基本单位转换序数">
+        <mapingcol datatype="NUMBER">FACOTR</mapingcol>
+      </attr>
+      <attr floatlength="2" name="AMOUNT_TOTAL" maxlength="8" datatype="Float" type="COL" remark="总金额">
+        <mapingcol datatype="NUMBER">AMOUNT_TOTAL</mapingcol>
+      </attr>
+      <attr floatlength="2" name="QUANTITY_IN" maxlength="8" datatype="Float" type="COL" remark="已入库数量(基本单位)">
+        <mapingcol datatype="NUMBER">QUANTITY_IN</mapingcol>
+      </attr>
+      <attr floatlength="2" name="PAIDAMOUNT" maxlength="8" datatype="Float" type="COL" remark="已支付金额">
+        <mapingcol datatype="NUMBER">PAIDAMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NEEDDATE" maxlength="20" datatype="DateTime" type="COL" remark="需要日期">
+        <mapingcol datatype="DATE">NEEDDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL" remark="库存地点">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UUID_PU" maxlength="32" datatype="String" type="COL" remark="采购单编码">
+        <mapingcol datatype="VARCHAR2">UUID_PU</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

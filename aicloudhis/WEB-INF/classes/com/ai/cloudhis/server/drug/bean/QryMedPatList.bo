@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryMedPatList" mainattr="PATIENTID">
+    <mapingenty type="query">select 
+a.patientid,
+date_format(min(c.rek_date),'%Y-%m-%d %H:%i:%s') fee_Data,
+a.icard,
+a.patient_name,
+a.patient_sexid,
+a.patient_sename,
+a.patient_telephone
+from t_patient a,t_me_sheet b,T_AccountRek c
+where 
+a.patientid=b.patientid and b.rekid=c.rekid
+and b.state in ('00','01') and b.cancel_typeid is null
+group by 
+a.patientid,
+a.icard,
+a.patient_name,
+a.patient_sexid,
+a.patient_sename,
+a.patient_telephone</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PATIENTID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FEE_DATA" maxlength="19" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FEE_DATA</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ICARD" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ICARD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_SEXID" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_SEXID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_SENAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_SENAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_TELEPHONE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_TELEPHONE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

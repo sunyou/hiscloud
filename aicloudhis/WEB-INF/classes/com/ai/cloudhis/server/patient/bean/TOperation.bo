@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TOperation" mainattr="APPLYID">
+    <mapingenty type="table">T_OPERATION</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="APPLYID" maxlength="50" datatype="String" type="PK" remark="申请单编码">
+        <mapingcol datatype="VARCHAR2">APPLYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAG_VERNO" maxlength="50" datatype="String" type="COL" remark="诊断编码版本">
+        <mapingcol datatype="VARCHAR2">DIAG_VERNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAGID_BEFOR" maxlength="50" datatype="String" type="COL" remark="术前诊断">
+        <mapingcol datatype="VARCHAR2">DIAGID_BEFOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAGNAME_BEFOR" maxlength="50" datatype="String" type="COL" remark="术前诊断名称">
+        <mapingcol datatype="VARCHAR2">DIAGNAME_BEFOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAGID_AFTER" maxlength="50" datatype="String" type="COL" remark="术后诊断">
+        <mapingcol datatype="VARCHAR2">DIAGID_AFTER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAGNAME_AFTER" maxlength="50" datatype="String" type="COL" remark="术后诊断名称">
+        <mapingcol datatype="VARCHAR2">DIAGNAME_AFTER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_OP" maxlength="50" datatype="String" type="COL" remark="手术主刀医师">
+        <mapingcol datatype="VARCHAR2">EMPID_OP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPID" maxlength="50" datatype="String" type="COL" remark="手术编码">
+        <mapingcol datatype="VARCHAR2">OPID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPNAME" maxlength="50" datatype="String" type="COL" remark="手术名称">
+        <mapingcol datatype="VARCHAR2">OPNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

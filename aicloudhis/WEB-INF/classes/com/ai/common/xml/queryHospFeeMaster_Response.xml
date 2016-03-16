@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+	<Result_Code>0000</Result_Code>
+	<Error_Msg>交易成功</Error_Msg>
+	<Result_Data>
+		<Record_List>
+			<Record_Info>
+				<Patient_Id>00035557</Patient_Id>
+				<Visit_Id>1</Visit_Id>
+				<Inp_No>20150512001</Inp_No>
+				<Patient_Name>李淑芬</Patient_Name>
+				<Id_No>330702197108020812</Id_No>
+				<InHospital_Date>2015-05-12</InHospital_Date>
+				<Dept_Name>皮肤科</Dept_Name>
+				<Illness_Name>皮肤瘙痒</Illness_Name>
+				<Treat_Doctor>贾雨村</Treat_Doctor>
+				<OutHospital_Date></OutHospital_Date>
+				<Settlement_Date></Settlement_Date>
+			</Record_Info>
+		</Record_List>
+	</Result_Data>
+</Response>

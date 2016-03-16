@@ -1,0 +1,1104 @@
+.aui body{font-size:13px;font-family:"微软雅黑";}
+/*CQ*/
+.aui .input-append .add-on{height:25px;}/*日历控件高度限定 CQ*/
+.aui input[type="checkbox"]{margin:-2px 0 0 0;}/*多选框靠下的问题 CQ*/
+.aui .dataTables_length label{position:absolute;bottom:0px;}/*待办弹出页面的每页显示问题 CQ*/
+.aui .dataTables_length label select{width:62px;border:1px solid #5b5d5f;}/*待办弹出页面的每页显示下拉框 CQ*/
+/*nav-tabs-task-more CQ*/
+.nav-tabs-task-more{background:#f2f2f2;border:1px solid #d3d3d3;border-bottom:none;}
+.nav-tabs-task-more li{border-bottom:1px solid #d3d3d3;}
+.aui .nav-tabs-task-more > li > a{color:#919191;font-size:13px;text-align:center;}
+.aui .nav-tabs-task-more > li> a:hover, .aui .nav-tabs-task-more > li> a:focus {color: #5c5c5c;}
+.aui .nav-tabs-task-more > li.active > a, .aui .nav-tabs-task-more > li.active > a:hover, .aui .nav-tabs-task-more > li.active > a:focus{color: #5c5c5c;font-weight:bold;}
+/*泡芙字体颜色 CQ*/
+.pop_t{color:#318c00;}
+.pop_c{color:#084fc3;}
+/*所有portlet添加背景和缩进值 CQ*/
+.aui .portlet-body{background-color:#ffffff;padding:5px;margin:8px 0 0 0;}
+/*只在首页加border CQ*/
+.aui #p_p_id_DtHealth_Spring_WAR_Doctor_D02_ClinicPromptportlet_,.aui #p_p_id_doctor_scientificresearch_WAR_Doctor_D06_ScientificResearchportlet_,.aui #p_p_id_d01_patientlist_WAR_Doctor_D01_PatientListportlet_,.aui #p_p_id_outPatientEvaluation_WAR_Doctor_D03_OutPatientEvaluationportlet_,.aui #p_p_id_InPatientEvaluation_WAR_Doctor_D04_InPatientEvaluationportlet_,.aui #p_p_id_OtherEvaluation_WAR_Doctor_D05_OtherEvaluationportlet_,.aui #p_p_id_doctor_scientificresearch_WAR_Doctor_D06_ScientificResearchportlet_,.aui #p_p_id_schedule_WAR_Common_C02_Scheduleportlet_,.aui #p_p_id_Common_C04_WorkList_WAR_Common_C04_WorkListportlet_,.aui #p_p_id_information_WAR_Common_C09_Informationportlet_,.aui #p_p_id_contacts_WAR_Common_C06_Contactsportlet_{
+	border-bottom:1px solid #dededf;
+	border-right:1px solid #dededf;}
+/*上一页下一页页码 CQ*/
+.pagination>li>a{cursor:pointer;border:1px solid #a4a4a4;color:#555;padding:2px 6px;margin:0 4px 0 0;}
+.pagination>li>a:hover{	text-decoration:none;background-color:#efefef;border:1px solid #a4a4a4;color:#555;}
+/*申请部分 CQ*/
+ul,li{list-style:none;}
+.box_cq{background:#fff; width:100%;height:110px;overflow:hidden;border-bottom:1px solid #dededf;border-right:1px solid #dededf;position:relative;/*border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;*/}
+.cont_btn_cq{width:34px; height:110px; position:absolute;background:#3399ff;text-align:center; vertical-align:middle; line-height:100px; color:#fff; font-weight:bold; cursor:pointer;transition:1s;-moz-transition:1s;/* Firefox 4 */-webkit-transition:1s;/* Safari 和 Chrome */-o-transition:1s;/* Opera */}
+.cont_btn_cq:hover{background:#8bc5ff;}
+.cont_l{left:0px;}
+.cont_r{right:0px;}
+.box_cq ul{margin:0px;padding:0px;}
+.w_box_cq{margin:0 0 0 34px;}
+.ul_cq li{width:140px; height:110px;border-right:1px dashed #e6e6e6; float:left;cursor:pointer;padding:12px 0 0 0;}
+.ul_cq li:hover{color:#fff;}
+.ul_cq .re_cq{font-size:12px; color:#a5a5a3;transition:0.5s;-moz-transition:0.5s;-webkit-transition:0.5s;-o-transition:0.5s; text-align:center;}
+.ul_cq .re_01{background:url(../images/dhcc/re_01.png) no-repeat center;}
+.ul_cq .re_01:hover{background:url(../images/dhcc/re_012.png) no-repeat #3399ff center;}
+.ul_cq .re_02{background:url(../images/dhcc/re_02.png) no-repeat center;}
+.ul_cq .re_02:hover{background:url(../images/dhcc/re_022.png) no-repeat #3399ff center;}
+.ul_cq .re_03{background:url(../images/dhcc/re_03.png) no-repeat center;}
+.ul_cq .re_03:hover{background:url(../images/dhcc/re_032.png) no-repeat #3399ff center;}
+.ul_cq .re_04{background:url(../images/dhcc/re_04.png) no-repeat center;}
+.ul_cq .re_04:hover{background:url(../images/dhcc/re_042.png) no-repeat #3399ff center;}
+.ul_cq .re_05{background:url(../images/dhcc/re_05.png) no-repeat center;}
+.ul_cq .re_05:hover{background:url(../images/dhcc/re_052.png) no-repeat #3399ff center;}
+/*临床提示字体颜色*/
+.clinic_font_zero{
+	color:#1bbc9b;
+}
+.clinic_font_zero:hover{
+	color:#129e81;
+}
+.clinic_font{
+	color:#ff7474;
+}
+.clinic_font:hover{
+	color:#e53e3e;
+}
+
+/*月历标题 CQ*/
+span.fc-header-title h2{
+	/*font-size:18px;
+	line-height:20px;*/
+}
+/*月历星期 CQ*/
+#_schedule_WAR_Common_C02_Scheduleportlet_calendarMonth .fc-day-header{
+	background:#69b4ff;
+	color:#fff;
+	height:30px;
+	line-height:30px;
+}
+#_schedule_WAR_Common_C02_Scheduleportlet_calendarMonth tbody .fc-sat,#_schedule_WAR_Common_C02_Scheduleportlet_calendarMonth tbody .fc-sun{
+	background:#fff6d1;
+}
+/*通讯录三个按钮 CQ*/
+.operatorCon .span5{cursor:pointer;margin:3px 0 0 0;}
+.operatorCon .span5 span{margin:0 4px 0 0;border:1px solid #a4a4a4;padding:2px 4px;}
+.operatorCon .span5 span:hover{background:#efefef;}
+/*左侧标签*/
+/*去掉Tabs大边框的样式 CQ*/
+.aui .nav-tabs>.active>a, .aui .nav-tabs>.active>a:hover, .aui .nav-tabs>.active>a:focus{border:none;}
+.aui .nav-tabs>li>a:hover, .aui .nav-tabs>li>a:focus{border:none;}
+.aui .nav-tabs>li>a{border:none;}
+.aui .nav-tabs>li{margin-bottom:-2px;}
+/*弹出待办页面的左侧样式 CQ*/
+
+/*Dialog弹出左侧滚动条+右侧大Div不显示滚动条 CQ*/
+.scroll_tabs{
+	height:360px;
+	overflow-y:auto;
+}
+.scroll_box{
+	height:400px;
+	overflow:hidden;
+}
+.scroll_ul{
+	padding:10px 0 0 0;
+}
+.scroll_right{
+	padding:10px 0 0 20px;
+}
+/*右侧内容与上方有10px空隙左侧10px空隙 CQ*/
+.dialog_top{margin:10px 0 0 0;padding:0 0 0 10px;}
+.aui .navbar-inner{
+	border:none;
+}
+.aui .navbar{
+	margin-bottom:0px;
+}
+/*Dialog的loading CQ*/
+.aui_loading{text-align:center;}
+/*首页的搜索框 CQ*/
+.aui h1 div select{
+	border:1px solid #5fafff;
+	height:26px;
+}
+.aui .site-title div input[type="text"]{
+	border:1px solid #5fafff;
+/*	background:url(../images/dhcc/select_top.png) no-repeat 170px;*/
+	height:26px;
+	padding:0 40px 0 0;
+}
+/*首页的搜索框 CQ*/
+.footer_cq{
+	background:#fff;
+	height:76px;
+	border-top:1px solid #e3e3e3;
+}
+.footer_cq span{
+	background:url(../images/dhcc/footer_logo.png) no-repeat;
+	width:192px;
+	height:39px;
+}
+.aui p{
+	text-align:center;
+	line-height:70px;
+}
+.aui h1{
+	margin:0;
+	max-height:77px;
+	min-height:77px;
+	height:77px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+/*Dialog*/
+.aui_header{
+	background:url(../images/dhcc/dialog_header.png) repeat-x;
+	height:39px;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(＃f9f9f9), to(＃d6d6d6));
+	background-image:-moz-linear-gradient(top, ＃f9f9f9,＃d6d6d6);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=＃f9f9f9,endColorstr=＃d6d6d6);
+}
+.aui_n{
+	background:#f9f9f9;
+}
+.aui_w,.aui_e{
+	background:url(../images/dhcc/dialog_w.png) repeat-x;
+}
+.aui .aui_close{
+	background-image:url(../images/dhcc/close.png);
+	height:25px;
+	width:25px;
+}
+.ui-dialog-buttonpane .ui-state-default,.ui-dialog-buttonpane  .ui-widget-content .ui-state-default, .ui-dialog-buttonpane .ui-widget-header .ui-state-default {
+    background: none repeat scroll 0 0 #1d95cc;
+    border: 1px solid #D3D3D3;
+    color: #FFFFFF;
+}
+/*CQ*/
+/**start 物资管理**/
+
+/*删除按钮*/
+.delButton{
+	background: url(../images/dhcc/del.png);
+	width:16px;
+	height:16px;
+	background-repeat: no-repeat;
+    background-position: center middle;
+}
+
+/*减号按钮*/
+.reductionButton{
+	display: inline-block;
+	height: 23px;
+	width: 17px;
+	border: 1px solid #e5e5e5;
+	text-align: center;
+	line-height: 23px;
+	color: #444;
+	position: relative;
+	float:left
+}
+
+/*文本框的样式*/
+.inputText{
+	width: 39px;
+	height: 15px;
+	line-height: 15px;
+	text-align: center;
+	padding: 4px 0;
+	background-color: #fff;
+}
+
+/*加号按钮*/
+.addButton{
+	display: inline-block;
+	height: 23px;
+	width: 17px;
+	border: 1px solid #e5e5e5;
+	text-align: center;
+	line-height: 23px;
+	color: #444;
+	position: absolute;
+}
+
+/**end 物资管理**/
+
+/*table表格的加载的位置*/
+.dataTables_processing {
+    background-color: white;
+    border: 1px solid #ddd;
+    color: #999;
+    font-size: 12px;
+    height: 30px;
+    left: 50%;
+    margin-left: -125px;
+    margin-top: -15px;
+    padding: 14px 0 2px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 200px;
+}
+
+/*start  菜单导航*/
+.aui .pagination{
+	margin:0px !important;
+	float:right !important;
+}
+
+.aui .pagination ul{
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0.05);
+}
+
+.aui .pagination ul > li > a{
+	padding:4px !important;
+	line-height: 16px;
+	color: #5b5d5f;
+}
+
+.aui .pagination ul > li > span{
+	padding:0px !important;
+	line-height: 16px;
+	color: #5b5d5f;
+}
+
+.nav{
+	margin-bottom:0px !important
+}
+
+.site-navigation{
+	/*background:#0072cf; CQ*/
+	height:62px !important
+}
+
+.aui #navigation .navbar-inner{
+	background: none repeat scroll 0 0 #3399ff;/*background: none repeat scroll 0 0 #0072cf; CQ*/
+	margin-bottom:0px;/*CQ*/
+}
+
+.navbar-nav{
+	line-height:42px !important;
+	
+}
+
+.aui #navigation .nav > li > a {
+    color: #fff !important;
+    text-shadow: 0 0 0 #f9f9f9 !important;
+}
+
+.aui #navigation .nav > .active > a{
+	color: #fff !important;
+    text-shadow: 0 0 0 #f9f9f9 !important;
+}
+
+.aui #navigation .nav li.active > a {
+    background-color: #0060c5 !important;
+    height:40px !important;
+}
+
+.aui #navigation .nav li.open > a {
+    background-color: #0060c5 !important;
+    height:40px !important;
+}
+
+.aui #navigation .nav > .active > a {
+    background-color: #138ade !important;
+    background-image: linear-gradient(#85c2ff 0%, #85c2ff 47%, #85c2ff 120%) !important;/*CQ*/
+    /* background-image: linear-gradient(#0060c5 0%, #0060c5 47%, #0060c5 120%) !important; CQ*/
+    box-shadow: none !important;
+}
+
+.aui #navigation .nav > li > a {
+    padding: 14px 15px 5px !important; 
+}
+
+/* .aui #navigation ul{
+	height:40px !important;
+} */
+
+/*end  菜单导航*/
+
+/*start 栅格系统的样式，字体*/
+.aui .row-fluid{
+	font-size:12px !important;
+	color:#5b5d5f !important;
+}
+
+.numFontColor{
+	font-size:14px;
+    font-weight: bold !important;
+}
+
+.numFontColorRed{
+	font-size:14px;
+	color:red;
+    font-weight: bold !important;
+}
+
+/*.aui .row-fluid [class*="span"] {
+	margin-left:0px !important;
+}*//*整体页面向左*/
+
+/*end 栅格系统的样式，字体*/
+
+/*表格字体的样式*/
+.table{
+	color:#747474 !important;
+}
+/*nav-tabs-task CQ*/
+.nav-tabs-task .dropdown-menu {
+  margin-top: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+@media (min-width: 768px) {
+  .nav-tabs-task-justified > li > a {
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .nav-tabs-task-justified > .active > a,
+  .nav-tabs-task-justified > .active > a:hover,
+  .nav-tabs-task-justified > .active > a:focus {
+    border-bottom-color: #fff;
+  }
+}
+.nav-tabs-task-justified {
+  border-bottom: 0;
+}
+.nav-tabs-task-justified > li > a {
+  margin-right: 0;
+  border-radius: 4px;
+}
+.nav-tabs-task-justified > .active > a,
+.nav-tabs-task-justified > .active > a:hover,
+.nav-tabs-task-justified > .active > a:focus {
+  border: 1px solid #ddd;
+}
+.nav-tabs-task {
+  border-bottom: 1px solid #ddd;
+}
+.nav-tabs-task > li {
+  float: left;
+  margin-bottom: -1px;
+}
+.nav-tabs-task > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+.nav-tabs-task > li > a:hover {
+  border-color: #eee #eee #ddd;
+}
+.nav-tabs-task > li.active > a,
+.nav-tabs-task > li.active > a:hover,
+.nav-tabs-task > li.active > a:focus {
+  color: #555;
+  cursor: default;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
+.nav-tabs-task.nav-justified {
+  width: 100%;
+  border-bottom: 0;
+}
+.nav-tabs-task.nav-justified > li {
+  float: none;
+}
+.nav-tabs-task.nav-justified > li > a {
+  margin-bottom: 5px;
+  text-align: center;
+}
+.nav-tabs-task.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+@media (min-width: 768px) {
+  .nav-tabs-task.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  .nav-tabs-task.nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
+.nav-tabs-task.nav-justified > li > a {
+  margin-right: 0;
+  border-radius: 4px;
+}
+.nav-tabs-task.nav-justified > .active > a,
+.nav-tabs-task.nav-justified > .active > a:hover,
+.nav-tabs-task.nav-justified > .active > a:focus {
+  border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+  .nav-tabs-task.nav-justified > li > a {
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .nav-tabs-task.nav-justified > .active > a,
+  .nav-tabs-task.nav-justified > .active > a:hover,
+  .nav-tabs-task.nav-justified > .active > a:focus {
+    border-bottom-color: #fff;
+  }
+}
+.aui .nav-tabs-task {
+    border-bottom: 1px solid #0072cf;
+}
+
+.aui .nav-tabs-task > li.active > a, .aui .nav-tabs-task > li.active > a:hover, .aui .nav-tabs-task > li.active > a:focus{
+	border-color: #0072cf #0072cf transparent;
+	color: #0072cf;
+    font-weight:bold;
+	border-width: 1px;
+}
+
+.aui .nav-tabs-task > li > a:hover, .aui .nav-tabs-task > li > a:focus {
+   border-color: #0072cf #0072cf transparent;
+   color: #0072cf;
+   background-color: white;
+   border-width: 1px;
+}
+.nav-tabs-task > li {
+  float: left;
+  margin-bottom: -1px;
+}
+.aui .nav-tabs-task > li > a{
+	color: #fff;
+	margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+/*start 工作列表*/
+.toDoList{
+	background:#3399ff;
+	color:#fff;
+	/* background: url(../images/dhcc/2.png);
+	height:33px;
+	background-repeat: no-repeat;
+    background-position: left top;
+    margin-bottom:8px;
+    padding-left:35px !important; */
+}
+.toReadList{
+	background:#69b4ff;
+	color:#fff;
+	/* background: url(../images/dhcc/3.png);
+	height:33px;
+	background-repeat: no-repeat;
+    background-position: left top;
+    padding-left:35px !important;
+    margin-bottom:8px */
+}
+.applyingList{
+	background:#8bc5ff;
+	color:#fff;
+	/* background: url(../images/dhcc/1.png);
+	height:33px;
+	background-repeat: no-repeat;
+    background-position: left top;
+    padding-left:35px !important;
+    margin-bottom:8px */
+}
+.newEmailList{
+	background:#bedfff;
+	color:#747474;
+	/* background: url(../images/dhcc/4.png);
+	height:33px;
+	background-repeat: no-repeat;
+    background-position: left top;
+    padding-left:35px !important; */
+}
+
+.task_more div a{
+	/*background:url(../images/dhcc/more.png); 
+	width:39px;
+	height:11px; */
+	position:absolute;
+	top:0px;
+	right:0px;
+	margin:20px 0 0 0;
+}
+.worklist > a{
+	color:#000 !important;
+	font-size:13px !important;
+	cursor:pointer !important;
+}
+
+.aui .nav-stacked > li.active > a{
+	border-width:0px;
+	color: #0072cf;
+}
+
+.aui .nav-stacked > li> a:hover, .aui .nav-stacked > li> a:focus {
+   border-width:0px;
+   color: #0072cf;
+   background-color: white;
+}
+
+.aui .nav-stacked > li > a{
+	color:#5b5d5f;
+	font-size:13px;
+	cursor:pointer;
+	line-height: 12px;
+}
+/*end 工作列表*/
+/*nav-tabs-task end CQ*/
+/*start tab的样式*/
+.aui .nav-tabs {
+    border-bottom: 2px solid #d6d6d6;/*#0072cf CQ*/
+}
+.aui .nav-tabs > li.active > a, .aui .nav-tabs > li.active > a:hover, .aui .nav-tabs > li.active > a:focus{
+	/*border-color: #0072cf #0072cf transparent; CQ*/
+	background:url(../../images/index/tab_bottom.png) no-repeat bottom;
+	color: #0072cf;
+    font-weight:bold;
+	/*border-width: 1px; CQ 在院患者Tabss*/
+}
+
+.aui .nav-tabs > li > a:hover, .aui .nav-tabs > li > a:focus {
+   /*border-color: #0072cf #0072cf transparent; CQ*/
+   background:url(../../images/index/tab_bottom.png) no-repeat bottom;
+   color: #0072cf;
+   background-color: white;
+   /*border-width: 1px; CQ 在院患者Tabss*/
+}
+
+
+.aui .nav-tabs > li > a{
+	color: #5b5d5f;
+}
+
+/*end tab的样式*/
+
+/* start 条件查询*/
+
+.dhcc-nav-pills > li {
+  float: left;
+}
+
+/*鼠标放上的效果*/
+.aui .dhcc-nav-pills > li > a:hover, .aui .dhcc-nav-pills > li > a:focus {
+   background-color: #ffe9db;
+   color: #e66c1f;
+   cursor:pointer;
+}
+
+.dhcc-nav-pills > li > a {
+  padding-top: 4px;
+  padding-bottom: 2px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color:#e66c1f;
+  cursor:pointer;
+  line-height: 14px;
+  margin-right: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/*选中*/
+.dhcc-nav-pills > .active > a,
+.dhcc-nav-pills > .active > a:hover,
+.dhcc-nav-pills > .active > a:focus {
+   background-color: #ffe9db;
+   color: #e66c1f;
+   cursor:pointer;
+}
+/* end 条件查询*/
+
+/*start 栅格系统*/
+  /* line 614, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid {
+    width: 100%;
+    *zoom: 1;
+  }
+  /* line 15, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid:before, .row-fluid:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  /* line 22, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid:after {
+    clear: both;
+  }
+  /* line 617, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid [class*="span"] {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 0px;
+    *margin-left: 0px;
+  }
+  /* line 623, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid [class*="span"] {
+    margin-left: 0 !important;
+  }
+  /* line 628, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid .controls-row [class*="span"] + [class*="span"] {
+    margin-left: 2.5641%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid .span1 {
+    width: 5.98291%;
+    *width: 5.92971%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid .span2 {
+    width: 14.52991%;
+    *width: 14.47672%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid .span3 {
+    width: 23.07692%;
+    *width: 23.02373%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid .span4 {
+    width: 31.62393%;
+    *width: 31.57074%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid .span5 {
+    width: 40.17094%;
+    *width: 40.11775%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid .span6 {
+    width: 48.71795%;
+    *width: 48.66476%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid .span7 {
+    width: 57.26496%;
+    *width: 57.21177%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid .span8 {
+    width: 65.81197%;
+    *width: 65.75877%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid .span9 {
+    width: 74.35897%;
+    *width: 74.30578%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid .span10 {
+    width: 82.90598%;
+    *width: 82.85279%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid .span11 {
+    width: 91.45299%;
+    *width: 91.3998%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .dhcc-row-fluid .span12 {
+    width: 100%;
+    *width: 99.94681%;
+  }
+/*end 栅格系统*/
+
+
+/*start 患者列表显示详细信息栅格系统*/
+
+	
+  /* line 614, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid {
+    width: 100%;
+    *zoom: 1;
+  }
+  /* line 15, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid:before, .row-fluid:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  /* line 22, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid:after {
+    clear: both;
+  }
+  /* line 617, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid [class*="span"] {/*泡芙内部的颜色色值*/
+    display: block;
+    width: 100%;
+    min-height: 24px !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 2.5641%;
+    *margin-left: 2.51091%;
+    color: #318c00;
+  }
+  
+  .patient-dhcc-row-fluid [class*="span"] span {
+	color:#084fc3;
+	padding-left:5px;
+  }
+  
+  .patient-dhcc-row-fluid [class*="span"] a {
+	border-style:solid;
+	border-width:1px; 
+	border-color: #00bbe8;
+	background-image: linear-gradient(#ffffff 0%, #e2f2ff 100%);
+	padding:4px;
+	
+  }
+  /* line 623, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid [class*="span"]:first-child {
+    margin-left: 0;
+  }
+  /* line 628, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid .controls-row [class*="span"] + [class*="span"] {
+    margin-left: 2.5641%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid .span1 {
+    width: 5.98291%;
+    *width: 5.92971%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid .span2 {
+    width: 14.52991%;
+    *width: 14.47672%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid .span3 {
+    width: 23.07692%;
+    *width: 23.02373%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid .span4 {
+    width: 31.62393%;
+    *width: 31.57074%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid .span5 {
+    width: 40.17094%;
+    *width: 40.11775%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid .span6 {
+    width: 48.71795%;
+    *width: 48.66476%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid .span7 {
+    width: 57.26496%;
+    *width: 57.21177%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid .span8 {
+    width: 65.81197%;
+    *width: 65.75877%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid .span9 {
+    width: 74.35897%;
+    *width: 74.30578%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid .span10 {
+    width: 82.90598%;
+    *width: 82.85279%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid .span11 {
+    width: 91.45299%;
+    *width: 91.3998%;
+  }
+  /* line 640, ../../../../alloy-bootstrap/lib/_mixins.scss */
+  .patient-dhcc-row-fluid .span12 {
+    width: 100%;
+    *width: 99.94681%;
+  }
+/*end 患者列表显示详细信息栅格系统*/
+
+/*分组条件的*/
+.grouping{
+	color:#e66c1f;
+	cursor:pointer;
+}
+
+
+/*临床提示的图标*/
+.clinicPromptTitle{
+	background: url(../../images/index/gztx.png);/*CQ clinicPromptTitle*/
+	height:84px;
+	width:120px;
+	background-repeat: no-repeat;
+    background-position: center top;
+    float: left;
+    margin-right:12px;/*CQ*/
+}
+
+/*start 日程的*/
+.scheduleTitle {
+	background: url(../../images/index/schedule.png);
+	height: 35px;
+	width: 40px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	float: left;
+}
+
+.scheduleTitleFont{
+	color:#0072cf;
+	font-size:14px;
+	font-weight:bold;
+	padding-top:6px;
+	float: left;
+}
+
+.scheduleTitleMonth{
+	color:#12c2ce;
+	font-size:13px;
+	cursor:pointer;
+	padding-right:12px;
+}
+
+.fc-state-default{
+	background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+}
+
+/*end 日程的*/
+
+
+
+/*门诊指标的图标*/
+.outPatientEvaluationTitle {
+	background: url(../../images/index/mzzb.png);/*CQ outPatientEvaluation*/
+	height: 84px;
+	width: 120px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	float: left;
+	margin-right: 12px;
+}
+
+/*住院指标的图标*/
+.inPatientEvaluationTitle {
+	background: url(../images/dhcc/zyzb.png);/*CQ inPatientEvaluation*/
+	height: 84px;
+	width: 120px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	float: left;
+	margin-right: 12px;
+}
+
+/*其它指标的图标*/
+.otherEvaluationTitle {
+	background: url(../../images/index/sfzb.png);/*CQ otherEvaluation*/
+	height:84px;
+	width: 120px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	float: left;
+	margin-right: 12px;
+}
+
+/*通讯录的图标*/
+.contactTitle{
+	background: url(../images/dhcc/contact.png);
+	height:35px;
+	width:40px;
+	background-repeat: no-repeat;
+    background-position: left top;
+    float:left;
+    margin-right:5px;
+}
+
+.contactAddCommtent{
+	background: url(../images/dhcc/contactBg.png);
+	background-repeat: no-repeat;
+    background-position: left bottom;
+    padding-left:220px;
+}
+
+/*新建联系人*/
+.contactAddContanct{
+	padding-top:8px;
+	padding-right:12px;
+}
+
+/*输入框的高度*/
+.aui select, .aui textarea, .aui input[type="text"], .aui input[type="password"], .aui input[type="datetime"], .aui input[type="datetime-local"], .aui input[type="date"], .aui input[type="month"], .aui input[type="time"], .aui input[type="week"], .aui input[type="number"], .aui input[type="email"], .aui input[type="url"], .aui input[type="search"], .aui input[type="tel"], .aui input[type="color"], .aui .uneditable-input{
+	height:25px;
+}
+/*start 列表*/
+.aui .table {
+	margin-bottom: 12px;
+    margin-top: 5px;
+}
+.aui .table th, .aui .table td{
+	border-top:0px;
+	/*border-bottom: 1px solid #dddddd;*/
+	/*cursor:pointer;*/
+	padding:4px;
+	font-size:12px !important;
+}
+
+.aui .table th {
+	font-weight: normal;
+}
+
+.aui .table th a, .aui .table td a {
+	/*border-bottom: 1px solid #dddddd;*/
+	cursor:pointer;
+}
+
+.table > thead > tr > th {
+    border-bottom: 1px solid #ddd;
+    vertical-align: bottom;
+}
+
+.aui .table > tbody > tr > td > input[type="button"]  {
+   color:#3596e7;
+	background-image: linear-gradient(to bottom, #dff2ff, #dff2ff);
+	font-size:12px;
+}
+
+.aui .tableCursor{
+	margin-bottom: 12px;
+    margin-top: 5px;
+	width:120%;
+}
+.aui .tableCursor th, .aui .tableCursor td{
+	border-top:0px;
+	/*border-bottom: 1px solid #dddddd;*/
+	cursor:pointer;
+	padding:4px;
+	font-size:12px !important;
+}
+
+.aui .tableCursor th {
+	font-weight: normal;
+}
+
+.tableFontColor{
+	color:#86B629;
+	font-size:12px;
+}
+/*end 列表*/
+
+.buttonClass{
+	color:#3596e7;
+	background-image: linear-gradient(to bottom, #dff2ff, #dff2ff);
+}
+
+
+/*start 传染病样式*/
+
+.aui .dhcc-undoEpidemic > li > a{
+	color:#919191;/*左侧标签字体颜色 #b2b2b2*/
+	font-size:13px;
+	
+}
+/*选中*/
+.aui .dhcc-undoEpidemic li >a.unreadMsg{
+	/*background: url(../images/dhcc/msg.png); CQ*/
+	background-repeat: no-repeat;
+    background-position: left middle;
+   	/*padding-left:25px;
+   	padding-top: 5px;
+   	margin-bottom: 10px; CQ未读消息*/
+}
+
+/* .aui .dhcc-undoEpidemic li.active>a,.aui .dhcc-undoEpidemic li.active>a:hover,.aui .dhcc-undoEpidemic li.active>a:focus
+	{
+	background: url(../images/dhcc/msg.png);
+	background-repeat: no-repeat;
+	background-position: left middle;
+	padding-left:25px;
+} */
+
+.aui .dhcc-undoEpidemic > li> a:hover, .aui .dhcc-undoEpidemic > li> a:focus {
+   color: #0072cf;
+   background-color: white;
+   border:0px;
+}
+
+.aui .dhcc-undoEpidemic > li.active > a, .aui .dhcc-undoEpidemic > li.active > a:hover, .aui .dhcc-undoEpidemic > li.active > a:focus{
+	color: #0072cf;
+	font-weight:normal;
+}
+
+ .aui .dhcc-undoEpidemic li >a.notReport{
+	/*background: url(../images/dhcc/notReport.png); CQ*/
+	background-repeat: no-repeat;
+    background-position: left middle;
+   	/*padding-left:25px;
+   	padding-top: 5px;
+   	margin-bottom: 10px; CQ此处不可定义选中文字样式 确诊未报*/
+}
+
+/* .aui .dhcc-undoEpidemic li.active>a.notReport,.aui .dhcc-undoEpidemic li.active>a.notReport:hover,.aui .dhcc-undoEpidemic li.active>a.notReport:focus
+	{
+	background: url(../images/dhcc/rtReport.png);
+	background-repeat: no-repeat;
+	background-position: left middle;
+	height: 18px;
+} */
+
+.aui .dhcc-undoEpidemic li>a.rtReport{
+	/*background: url(../images/dhcc/rtReport.png); CQ*/
+	background-repeat: no-repeat;
+    background-position: left middle;
+   	/*padding-left:25px;
+   	padding-top: 5px;
+   	margin-bottom: 10px; CQ*/
+}
+
+/* .aui .dhcc-undoEpidemic li.active>a.rtReport,.aui .dhcc-undoEpidemic li.active>a.rtReport:hover,.aui .dhcc-undoEpidemic li.active>a.rtReport:focus
+	{
+	background: url(../images/dhcc/rtReport.png);
+	background-repeat: no-repeat;
+	background-position: left middle;
+	height: 18px;
+}  */
+
+.male{
+	background: url(../images/dhcc/men.png);
+	background-repeat: no-repeat;
+    background-position: left middle;
+    width:80px;
+    height:80px;
+}
+
+.female{
+	background: url(../images/dhcc/women.png);
+	background-repeat: no-repeat;
+    background-position: left middle;
+    width:80px;
+    height:80px;
+}
+
+.buttonUndoEpidemicClass{
+	color:white !important;
+	background-color: #0071ce;
+	padding:8px;
+	margin:5px;
+	border-radius: 5px;	
+}
+
+.aui .row-fluid .undoEpidemiBold{
+	font-weight:bold;
+	padding-right:5px;
+}
+/*end 传染病样式*/
+
+.retrieve{
+/*	background: url(../images/dhcc/iconfont-fangdajing.png);*/
+	background-repeat: no-repeat;
+    background-position: center middle;
+    height: 16px;
+    margin-top: 10px;
+    width: 16px;
+}

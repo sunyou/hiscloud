@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TAppendInfoTemplate" mainattr="UUID">
+    <mapingenty type="table">T_APPENDINFO_TEMPLATE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="50" datatype="String" type="PK" remark="唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TEMPLATENAME" maxlength="50" datatype="String" type="COL" remark="病历模板名称">
+        <mapingcol datatype="VARCHAR2">TEMPLATENAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TEMPLATEDESC" maxlength="255" datatype="String" type="COL" remark="病历模板描述">
+        <mapingcol datatype="VARCHAR2">TEMPLATEDESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TEMPLATE_TYPEID" maxlength="50" datatype="String" type="COL" remark="病历模板类型">
+        <mapingcol datatype="VARCHAR2">TEMPLATE_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APPEND_TYPEID" maxlength="50" datatype="String" type="COL" remark="主诉现病史;">
+        <mapingcol datatype="VARCHAR2">APPEND_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APPEND_CONTENT" maxlength="255" datatype="String" type="COL" remark="附加信息内容">
+        <mapingcol datatype="VARCHAR2">APPEND_CONTENT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRIVTYPEID" maxlength="50" datatype="String" type="COL" remark="医嘱权限类型">
+        <mapingcol datatype="VARCHAR2">PRIVTYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL" remark="科室编码">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID" maxlength="50" datatype="String" type="COL" remark="人员编码">
+        <mapingcol datatype="VARCHAR2">EMPID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

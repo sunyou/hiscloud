@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TKnOrd" mainattr="ORDDICID">
+    <mapingenty type="table">T_KN_ORD</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ORDDICID" maxlength="50" datatype="String" type="PK" remark="医嘱套编码">
+        <mapingcol datatype="VARCHAR2">ORDDICID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDDICNAME" maxlength="255" datatype="String" type="COL" remark="医嘱套名称">
+        <mapingcol datatype="VARCHAR2">ORDDICNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_TYPEID" maxlength="50" datatype="String" type="COL" remark="医嘱类型">
+        <mapingcol datatype="VARCHAR2">ORD_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRIVTYPEID" maxlength="50" datatype="String" type="COL" remark="医嘱权限类型">
+        <mapingcol datatype="VARCHAR2">PRIVTYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP_BELOG" maxlength="50" datatype="String" type="COL" remark="医嘱套所属诊所">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP_BELOG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_BELONG" maxlength="50" datatype="String" type="COL" remark="医嘱套所属科室编码">
+        <mapingcol datatype="VARCHAR2">ORGID_BELONG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USERID_BELONG" maxlength="50" datatype="String" type="COL" remark="医嘱套人员编码">
+        <mapingcol datatype="VARCHAR2">USERID_BELONG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="50" datatype="String" type="COL" remark="输入串">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FREQID" maxlength="50" datatype="String" type="COL" remark="医嘱频率">
+        <mapingcol datatype="VARCHAR2">FREQID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_USAGEID" maxlength="50" datatype="String" type="COL" remark="医嘱用法类型编码">
+        <mapingcol datatype="VARCHAR2">ITEM_USAGEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TIMES_QUANTITY" maxlength="6" datatype="Integer" type="COL" remark="医嘱付数">
+        <mapingcol datatype="NUMBER">TIMES_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="2" name="AMOUNT_TOTAL" maxlength="8" datatype="Float" type="COL" remark="总金额">
+        <mapingcol datatype="NUMBER">AMOUNT_TOTAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDDICNOTE" maxlength="1000" datatype="String" type="COL" remark="医嘱字典的描述">
+        <mapingcol datatype="VARCHAR2">ORDDICNOTE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISSTOP" maxlength="20" datatype="Long" type="COL" remark="是否停用标志">
+        <mapingcol datatype="NUMBER">ISSTOP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATETIME" maxlength="20" datatype="DateTime" type="COL" remark="修改时间">
+        <mapingcol datatype="DATE">UPDATETIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATE_USERID" maxlength="50" datatype="String" type="COL" remark="修改操作员编码">
+        <mapingcol datatype="VARCHAR2">UPDATE_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_CATEID" maxlength="50" datatype="String" type="COL" remark="医嘱类别子类">
+        <mapingcol datatype="VARCHAR2">ORD_CATEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_DEFAULT" maxlength="50" datatype="String" type="COL" remark="默认执行科室编码">
+        <mapingcol datatype="VARCHAR2">ORGID_DEFAULT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_DEFAULT" maxlength="50" datatype="String" type="COL" remark="默认执行科室名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME_DEFAULT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISDISPLAY" maxlength="20" datatype="Long" type="COL" remark="是否默认显示">
+        <mapingcol datatype="NUMBER">ISDISPLAY</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

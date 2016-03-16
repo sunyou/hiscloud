@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TPharmacyCategory" mainattr="PHARMACY_CATEID">
+    <mapingenty type="table">T_PHARMACY_CATEGORY</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PHARMACY_CATEID" maxlength="50" datatype="String" type="PK" remark="药理分类编码">
+        <mapingcol datatype="VARCHAR2">PHARMACY_CATEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PHARMACY_CATENAME" maxlength="255" datatype="String" type="COL" remark="药理分类名称">
+        <mapingcol datatype="VARCHAR2">PHARMACY_CATENAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPCODE" maxlength="50" datatype="String" type="COL" remark="上级编码">
+        <mapingcol datatype="VARCHAR2">UPCODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GRADE" maxlength="8" datatype="Long" type="COL" remark="级次">
+        <mapingcol datatype="NUMBER">GRADE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEAF" maxlength="20" datatype="Long" type="COL" remark="是否叶子结点">
+        <mapingcol datatype="NUMBER">LEAF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISSTOP" maxlength="20" datatype="Long" type="COL" remark="是否停用">
+        <mapingcol datatype="NUMBER">ISSTOP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTE" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">NOTE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="THospApproveHistory" mainattr="APPROVALWATERID">
+    <mapingenty type="table">T_HOSP_APPROVE_HISTORY</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="APPROVALWATERID" maxlength="50" datatype="String" type="PK" remark="审批流水">
+        <mapingcol datatype="VARCHAR2">APPROVALWATERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UUID" maxlength="50" datatype="String" type="COL" remark="唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UUID_APPROVAL" maxlength="50" datatype="String" type="COL" remark="审批唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID_APPROVAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UUID_HOSP" maxlength="50" datatype="String" type="COL" remark="机构信息唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="机构编码">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_HOSP" maxlength="50" datatype="String" type="COL" remark="机构名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APPROVESTATUE" maxlength="15" datatype="String" type="COL" remark="机构申请状态">
+        <mapingcol datatype="VARCHAR2">APPROVESTATUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATDATE" maxlength="20" datatype="DateTime" type="COL" remark="操作时间">
+        <mapingcol datatype="DATE">OPERATDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATUSERID" maxlength="32" datatype="String" type="COL" remark="操作人编码">
+        <mapingcol datatype="VARCHAR2">OPERATUSERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATUSERNAME" maxlength="255" datatype="String" type="COL" remark="操作人名称">
+        <mapingcol datatype="VARCHAR2">OPERATUSERNAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

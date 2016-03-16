@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryTKnOrdStandList" mainattr="UUID">
+    <mapingenty type="query">select b.uuid,
+       b.dtordgrid,
+       a.orddicid,
+       a.ord_Typeid,
+       a.ord_Cateid,
+       a.isstop,
+       a.inputstr,
+       a.orddicname,
+       a.orddicnote,
+       a.amount_total
+  from t_Kn_Ord_Stand a, t_kn_ord_grp_sub_stand b
+ where a.orddicid = b.orddicid</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DTORDGRID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DTORDGRID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDDICID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORDDICID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_TYPEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_CATEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_CATEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISSTOP" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ISSTOP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDDICNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORDDICNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDDICNOTE" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORDDICNOTE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AMOUNT_TOTAL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">AMOUNT_TOTAL</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

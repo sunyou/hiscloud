@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TSysMenu" mainattr="FUNC_ID">
+    <mapingenty type="table">T_SYS_MENU</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="FUNC_ID" maxlength="50" datatype="String" type="COL" remark="菜单id">
+        <mapingcol datatype="VARCHAR2">FUNC_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FUNC_NAME" maxlength="50" datatype="String" type="COL" remark="菜单名">
+        <mapingcol datatype="VARCHAR2">FUNC_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IMG_URL" maxlength="50" datatype="String" type="COL" remark="菜单图片路径">
+        <mapingcol datatype="VARCHAR2">IMG_URL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARENT_SEQ" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PARENT_SEQ</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEQ" maxlength="50" datatype="String" type="PK" remark="递增id">
+        <mapingcol datatype="VARCHAR2">SEQ</mapingcol>
+      </attr>
+      <attr floatlength="0" name="URL" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">URL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SECURITY_URL" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SECURITY_URL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FUNC_ORDER" maxlength="12" datatype="Long" type="COL" remark="排序">
+        <mapingcol datatype="NUMBER">FUNC_ORDER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISSTOP" maxlength="1" datatype="String" type="COL" remark="是否停用,（1=公用菜单，2=管理菜单，0=停用）">
+        <mapingcol datatype="VARCHAR2">ISSTOP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_LEAF" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">IS_LEAF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GRADE" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GRADE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

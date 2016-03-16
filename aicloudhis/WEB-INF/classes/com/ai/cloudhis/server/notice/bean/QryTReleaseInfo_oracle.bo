@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryTReleaseInfo" mainattr="INFOID">
+    <mapingenty type="query">select a.infoid,
+       a.infotitle,
+       to_char(a.infocontent) infocontent,
+       a.infotypeid,
+       a.infostatue,
+       to_char(a.createdate, 'yyyy-MM-dd hh24:mm:ss') createdate,
+       a.createuserid,
+       a.createusername,
+       to_char(a.updatedate, 'yyyy-MM-dd hh24:mm:ss') updatedate,
+       a.updateuserid,
+       a.updateusername,
+       a.orgid_hosp
+  from t_release_info a</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="INFOID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INFOID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFOTITLE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INFOTITLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFOCONTENT" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INFOCONTENT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFOTYPEID" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INFOTYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFOSTATUE" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INFOSTATUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATEDATE" maxlength="19" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CREATEDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATEUSERID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CREATEUSERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATEUSERNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CREATEUSERNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATEDATE" maxlength="19" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UPDATEDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATEUSERID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UPDATEUSERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATEUSERNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UPDATEUSERNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

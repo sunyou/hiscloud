@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Request>
+	<Patient_Id>00035557</Patient_Id>
+	<Requested_Date_Time>2015-05-12 10:30:00</Requested_Date_Time>
+	<Hospital_Mark>11111</Hospital_Mark>
+	<Patient_Name>李淑芬</Patient_Name>
+	<Id_No>330702197108020812</Id_No>
+	<Phone_Number>13860668822</Phone_Number>
+</Request>

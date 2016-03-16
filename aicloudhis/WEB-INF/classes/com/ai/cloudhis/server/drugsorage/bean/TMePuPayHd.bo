@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TMePuPayHd" mainattr="PAYID">
+    <mapingenty type="table">T_ME_PU_PAY_HD</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PAYID" maxlength="50" datatype="String" type="PK" remark="付款编码">
+        <mapingcol datatype="VARCHAR2">PAYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTID" maxlength="50" datatype="String" type="COL" remark="供应商">
+        <mapingcol datatype="VARCHAR2">ENTID</mapingcol>
+      </attr>
+      <attr floatlength="2" name="PAYAMOUNTTOAL" maxlength="8" datatype="Float" type="COL" remark="付款总金额">
+        <mapingcol datatype="NUMBER">PAYAMOUNTTOAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYORGID" maxlength="50" datatype="String" type="COL" remark="付款科室">
+        <mapingcol datatype="VARCHAR2">PAYORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYER" maxlength="50" datatype="String" type="COL" remark="付款人">
+        <mapingcol datatype="VARCHAR2">PAYER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYDATETIMER" maxlength="20" datatype="DateTime" type="COL" remark="付款时间">
+        <mapingcol datatype="DATE">PAYDATETIMER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OLDPAYID" maxlength="50" datatype="String" type="COL" remark="原付款编码">
+        <mapingcol datatype="VARCHAR2">OLDPAYID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYWAY" maxlength="2" datatype="String" type="COL" remark="付款方式">
+        <mapingcol datatype="VARCHAR2">PAYWAY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INOUTID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INOUTID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

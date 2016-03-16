@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TPaRegister" mainattr="SERIALNO">
+    <mapingenty type="table">T_PA_REGISTER</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="SERIALNO" maxlength="50" datatype="String" type="PK" remark="挂号流水号">
+        <mapingcol datatype="VARCHAR2">SERIALNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENTID" maxlength="50" datatype="String" type="COL" remark="患者编码">
+        <mapingcol datatype="VARCHAR2">PATIENTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL" remark="诊所科室编码">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="50" datatype="String" type="COL" remark="诊所科室名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SORTNUM" maxlength="20" datatype="Long" type="COL" remark="排队顺序号">
+        <mapingcol datatype="NUMBER">SORTNUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGISTID" maxlength="50" datatype="String" type="COL" remark="挂号号别">
+        <mapingcol datatype="VARCHAR2">REGISTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_TYPEID" maxlength="50" datatype="String" type="COL" remark="患者类型">
+        <mapingcol datatype="VARCHAR2">PATIENT_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_DIAG" maxlength="50" datatype="String" type="COL" remark="医生编码">
+        <mapingcol datatype="VARCHAR2">EMPID_DIAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME_DIAG" maxlength="50" datatype="String" type="COL" remark="医生名称">
+        <mapingcol datatype="VARCHAR2">EMPNAME_DIAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGIST_TYPEID" maxlength="50" datatype="String" type="COL" remark="挂号类型">
+        <mapingcol datatype="VARCHAR2">REGIST_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATE_INPUT" maxlength="20" datatype="DateTime" type="COL" remark="登记日期">
+        <mapingcol datatype="DATE">DATE_INPUT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_INPUT" maxlength="50" datatype="String" type="COL" remark="登记人编码">
+        <mapingcol datatype="VARCHAR2">EMPID_INPUT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME_INPUT" maxlength="50" datatype="String" type="COL" remark="登记人名称">
+        <mapingcol datatype="VARCHAR2">EMPNAME_INPUT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATE_CANC" maxlength="20" datatype="DateTime" type="COL" remark="作废日期">
+        <mapingcol datatype="DATE">DATE_CANC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_CANC" maxlength="50" datatype="String" type="COL" remark="作废编码">
+        <mapingcol datatype="VARCHAR2">EMPID_CANC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME_CANC" maxlength="50" datatype="String" type="COL" remark="作废人名称">
+        <mapingcol datatype="VARCHAR2">EMPNAME_CANC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATETYPEID" maxlength="50" datatype="String" type="COL" remark="日期分组类型编码">
+        <mapingcol datatype="VARCHAR2">DATETYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATETYPENAME" maxlength="50" datatype="String" type="COL" remark="日期分组类型名称">
+        <mapingcol datatype="VARCHAR2">DATETYPENAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALIDDATE1" maxlength="20" datatype="DateTime" type="COL" remark="此号开始的有效日期">
+        <mapingcol datatype="DATE">VALIDDATE1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALIDDATE2" maxlength="20" datatype="DateTime" type="COL" remark="此号结束的有效日期">
+        <mapingcol datatype="DATE">VALIDDATE2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BOOKID" maxlength="50" datatype="String" type="COL" remark="预约登记号">
+        <mapingcol datatype="VARCHAR2">BOOKID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADMISSION_STATUE" maxlength="15" datatype="String" type="COL" remark="就诊状态(门诊、接诊)">
+        <mapingcol datatype="VARCHAR2">ADMISSION_STATUE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

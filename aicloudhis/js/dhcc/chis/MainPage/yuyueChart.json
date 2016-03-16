@@ -1,0 +1,12 @@
+{"chart":{"caption":"已就诊人数仪表图","numbersuffix":"人","unescapeLinks":"0","bgAlpha":"100","bgColor":"FFFFFF,FFFFFF","borderColor":"#EFE7D3","borderAlpha":"100",
+"showAboutMenuItem":"0","baseFont":"微软雅黑","baseFontSize":"11","palette":"3","yaxisminvalue":"","upperlimit":"200","lowerlimit":"0","gaugeouterradius":"120",
+"gaugeinnerradius":"60%","subCaption":"","origw":"350","origh":"350","gaugestartangle":"240","gaugeendangle":"-60","useroundedges":"","showborder":"",
+"linethickness":"","numvdivlines":"","legendborderalpha":"","showpercentageinlabel":"","chartleftmargin":"","chartrightmargin":"","canvasbordercolor":"",
+"xaxisminvalue":"","xaxismaxvalue":"","yaxismaxvalue":"","is3d":"","showformbtn":"","viewmode":"","drawanchors":"","refreshInterval":""},
+"colorrange":{
+"color":[{"minvalue":"0","maxvalue":"50","code":""},
+{"minvalue":"50","maxvalue":"100","code":""},
+{"minvalue":"100","maxvalue":"150","code":""},
+{"minvalue":"150","maxvalue":"200","code":""}]
+},
+"dials":{"dial":{"value":"0","bgcolor":"","basewidth":"10","borderalpha":"","topwidth":"1","radius":"","id":"MyDial1","showvalue":"1","valuey":"250"}}}

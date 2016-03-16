@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="dbsource" name="Dict">
+    <mapingenty type="table">SYS_DICTITEM</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="DICT_NAME" maxlength="48" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">DICT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_NAME" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_NO" maxlength="30" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">ITEM_NO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARENT_ITEM_NO" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PARENT_ITEM_NO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_ORDER" maxlength="20" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ITEM_ORDER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_STATE" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">ITEM_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_LEVEL" maxlength="20" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ITEM_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_DESC" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_NAME_PY" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_NAME_PY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_NAME_PYCAP" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_NAME_PYCAP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_USER" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CREATE_USER</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

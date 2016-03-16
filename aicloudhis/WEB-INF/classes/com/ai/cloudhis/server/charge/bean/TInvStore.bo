@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TInvStore" mainattr="UUID">
+    <mapingenty type="table">T_INV_STORE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="PK" remark="唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVTYPEID" maxlength="50" datatype="String" type="COL" remark="发票类型">
+        <mapingcol datatype="VARCHAR2">INVTYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_INV" maxlength="50" datatype="String" type="COL" remark="票据操作人员">
+        <mapingcol datatype="VARCHAR2">EMPID_INV</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEFTCOUNT" maxlength="20" datatype="Long" type="COL" remark="剩余票据号数量">
+        <mapingcol datatype="NUMBER">LEFTCOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVNOW" maxlength="50" datatype="String" type="COL" remark="票据当前号">
+        <mapingcol datatype="VARCHAR2">INVNOW</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVEND" maxlength="50" datatype="String" type="COL" remark="结束发票号">
+        <mapingcol datatype="VARCHAR2">INVEND</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所编码">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_HOSP" maxlength="255" datatype="String" type="COL" remark="所属诊所名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL" remark="所属科室编码">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="255" datatype="String" type="COL" remark="所属科室名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

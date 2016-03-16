@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryNoChargePatient" mainattr="PATIENTID">
+    <mapingenty type="query"> select a.patientid,
+        a.patient_name,
+        a.patient_ename,
+        a.patient_sename,
+        a.patient_telephone,
+        a.orgid_hosp,
+        a.create_userid,
+        (select description
+           from t_dictionary
+          where dic_type = 'gender'
+            and value = patient_sexid) patient_sexid,
+        a.inputstr,
+        to_char(birth_date, 'yyyy-mm-dd') birth_date,
+        (select to_char(max(e.ord_date), 'yyyy-mm-dd hh24:mi:ss')
+           from t_ord e
+          where e.admis_serialno = b.admis_serialno) ord_date,
+ b.serialno
+   from t_patient a, T_Paadm b
+  where a.patientid = b.patientid
+    and exists (select 1
+           from t_ord c
+          where b.admis_serialno = c.admis_serialno
+            AND REK_STATUS = 1
+            AND EXEC_FLAG = 1)
+</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PATIENTID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_ENAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_ENAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_SENAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_SENAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_TELEPHONE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_TELEPHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_USERID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CREATE_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENT_SEXID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PATIENT_SEXID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BIRTH_DATE" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BIRTH_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_DATE" maxlength="19" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERIALNO" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SERIALNO</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

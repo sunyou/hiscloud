@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="THospApprove" mainattr="UUID">
+    <mapingenty type="table">T_HOSP_APPROVE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="50" datatype="String" type="PK" remark="唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UUID_HOSP" maxlength="50" datatype="String" type="COL" remark="机构信息唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="机构编码">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_HOSP" maxlength="50" datatype="String" type="COL" remark="机构名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APPROVESTATUE" maxlength="15" datatype="String" type="COL" remark="机构审状态">
+        <mapingcol datatype="VARCHAR2">APPROVESTATUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATEDATE" maxlength="20" datatype="DateTime" type="COL" remark="创建时间">
+        <mapingcol datatype="DATE">CREATEDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATEUSERID" maxlength="32" datatype="String" type="COL" remark="创建人编码">
+        <mapingcol datatype="VARCHAR2">CREATEUSERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATEUSERNAME" maxlength="255" datatype="String" type="COL" remark="创建人名称">
+        <mapingcol datatype="VARCHAR2">CREATEUSERNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATEDATE" maxlength="20" datatype="DateTime" type="COL" remark="修改时间">
+        <mapingcol datatype="DATE">UPDATEDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATEUSERID" maxlength="32" datatype="String" type="COL" remark="修改人编码">
+        <mapingcol datatype="VARCHAR2">UPDATEUSERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATEUSERNAME" maxlength="255" datatype="String" type="COL" remark="修改人名称">
+        <mapingcol datatype="VARCHAR2">UPDATEUSERNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APPROVEALERTS" maxlength="1000" datatype="String" type="COL" remark="审批提醒信息">
+        <mapingcol datatype="VARCHAR2">APPROVEALERTS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

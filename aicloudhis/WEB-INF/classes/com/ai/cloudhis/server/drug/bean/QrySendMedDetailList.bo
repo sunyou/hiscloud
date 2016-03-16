@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QrySendMedDetailList" mainattr="AMOUNT_TOTAL">
+    <mapingenty type="query">select 
+a.amount_total,
+a.factor dispens_Facotr,
+a.unit_quantity dispens_Quantity,
+a.unit_name dispens_Unit,
+b.entid_producer,
+b.entid_producer entname,
+b.item_common_name,
+b.item_spec,
+b.itemid,
+b.itemname,
+b.note,
+a.ordid,
+a.orgid_exec,
+b.sales_price,
+a.uuid uuidordsub,
+b.wholesales_price,
+a.rowno
+from
+t_order_sub a,t_ord_item b
+where a.itemid=b.itemid</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="AMOUNT_TOTAL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">AMOUNT_TOTAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISPENS_FACOTR" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DISPENS_FACOTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISPENS_QUANTITY" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DISPENS_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISPENS_UNIT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DISPENS_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTID_PRODUCER" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTID_PRODUCER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_COMMON_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_COMMON_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_SPEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEM_SPEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEMID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEMNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">NOTE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORDID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_EXEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_EXEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALES_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UUIDORDSUB" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UUIDORDSUB</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WHOLESALES_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">WHOLESALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ROWNO" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ROWNO</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

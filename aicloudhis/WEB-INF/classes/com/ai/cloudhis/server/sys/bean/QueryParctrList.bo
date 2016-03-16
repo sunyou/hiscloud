@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QueryParctrList" mainattr="CTR_TYPEID">
+    <mapingenty type="query">select a.value ctr_Typeid,a.dic_type,a.description ctr_Type_Name,b.value id,b.description parameter from t_dictionary a ,t_dictionary b where  a.id=b.upid order by b.value
+</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CTR_TYPEID" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CTR_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIC_TYPE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DIC_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTR_TYPE_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CTR_TYPE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ID" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARAMETER" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PARAMETER</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

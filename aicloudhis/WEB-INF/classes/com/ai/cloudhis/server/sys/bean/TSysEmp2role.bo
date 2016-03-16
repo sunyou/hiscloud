@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TSysEmp2role" mainattr="ROLE_ID">
+    <mapingenty type="table">T_SYS_EMP2ROLE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ROLE_ID" maxlength="50" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">ROLE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID" maxlength="32" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">EMPID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DESCRIPTION" maxlength="500" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DESCRIPTION</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

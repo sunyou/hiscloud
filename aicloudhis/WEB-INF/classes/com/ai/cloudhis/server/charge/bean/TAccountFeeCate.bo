@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TAccountFeeCate" mainattr="ACCOUNT_FEEID">
+    <mapingenty type="table">T_ACCOUNTFEE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ACCOUNT_FEEID" maxlength="50" datatype="String" type="COL" remark="记账费用编码">
+        <mapingcol datatype="VARCHAR2">ACCOUNT_FEEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMID" maxlength="50" datatype="String" type="COL" remark="项目编码">
+        <mapingcol datatype="VARCHAR2">ITEMID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMNAME" maxlength="50" datatype="String" type="COL" remark="项目名称">
+        <mapingcol datatype="VARCHAR2">ITEMNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STANDARD" maxlength="50" datatype="String" type="COL" remark="项目规格">
+        <mapingcol datatype="VARCHAR2">STANDARD</mapingcol>
+      </attr>
+      <attr floatlength="2" name="SALESPRICE" maxlength="8" datatype="Float" type="COL" remark="项目零售价">
+        <mapingcol datatype="NUMBER">SALESPRICE</mapingcol>
+      </attr>
+      <attr floatlength="2" name="PURCHASEPRICE" maxlength="8" datatype="Float" type="COL" remark="项目购入价">
+        <mapingcol datatype="NUMBER">PURCHASEPRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHARGE_CATEID" maxlength="50" datatype="String" type="COL" remark="收费子类">
+        <mapingcol datatype="VARCHAR2">CHARGE_CATEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISPENS_UNIT" maxlength="50" datatype="String" type="COL" remark="包装单位名称">
+        <mapingcol datatype="VARCHAR2">DISPENS_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="2" name="DISPENS_QUANTITY" maxlength="8" datatype="Float" type="COL" remark="包装单位数量">
+        <mapingcol datatype="NUMBER">DISPENS_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BASIC_UNIT" maxlength="50" datatype="String" type="COL" remark="基本单位名称">
+        <mapingcol datatype="VARCHAR2">BASIC_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="2" name="BASIC_QUANTITY" maxlength="8" datatype="Float" type="COL" remark="基本单位数量">
+        <mapingcol datatype="NUMBER">BASIC_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="2" name="FACOTR" maxlength="8" datatype="Float" type="COL" remark="基本单位和包装单位换算序数">
+        <mapingcol datatype="NUMBER">FACOTR</mapingcol>
+      </attr>
+      <attr floatlength="2" name="QUANTITY_EXEC" maxlength="8" datatype="Float" type="COL" remark="已执行的数量(基本包装单位)">
+        <mapingcol datatype="NUMBER">QUANTITY_EXEC</mapingcol>
+      </attr>
+      <attr floatlength="2" name="AMOUNT_TOTAL" maxlength="8" datatype="Float" type="COL" remark="患者总金额">
+        <mapingcol datatype="NUMBER">AMOUNT_TOTAL</mapingcol>
+      </attr>
+      <attr floatlength="2" name="AMOUNT_PATI" maxlength="8" datatype="Float" type="COL" remark="患者支付金额">
+        <mapingcol datatype="NUMBER">AMOUNT_PATI</mapingcol>
+      </attr>
+      <attr floatlength="2" name="AMOUNT_PAYTYPE" maxlength="8" datatype="Float" type="COL" remark="患者记账金额">
+        <mapingcol datatype="NUMBER">AMOUNT_PAYTYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="COL" remark="唯一编码(医嘱明细表)">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDID" maxlength="50" datatype="String" type="COL" remark="医嘱编码">
+        <mapingcol datatype="VARCHAR2">ORDID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ROWNO_ORDERSUB" maxlength="20" datatype="Long" type="COL" remark="序号(医嘱明细表)">
+        <mapingcol datatype="NUMBER">ROWNO_ORDERSUB</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_EXEC" maxlength="50" datatype="String" type="COL" remark="执行科室编码">
+        <mapingcol datatype="VARCHAR2">ORGID_EXEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_EXEC" maxlength="50" datatype="String" type="COL" remark="执行科室名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME_EXEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL" remark="开立科室编码">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="255" datatype="String" type="COL" remark="开立科室名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所编码">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_HOSP" maxlength="225" datatype="String" type="COL" remark="所属诊所名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME_HOSP</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

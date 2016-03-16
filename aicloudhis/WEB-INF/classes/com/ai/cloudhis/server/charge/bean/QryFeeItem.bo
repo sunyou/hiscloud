@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryFeeItem" mainattr="SERIALNO">
+    <mapingenty type="query">  
+   select d.rowno,
+          d.uuid,
+          d.itemid,
+          d.itemname,
+          d.itemspec,
+          d.unit_quantity,
+          d.unit_name,
+          d.sales_price,
+          d.amount_total,
+          d.purchase_Price,
+          d.basic_Unit,
+          d.quantity,
+          d.factor,
+          c.serialno,
+          c.ordid,
+          c.ord_typeid,
+          c.ord_name,
+          c.ord_date,
+          c.empid_doct,
+          c.empname_doct,
+          c.orgId_exec,
+          c.orgname_exec,
+          c.orgid,
+          c.orgname,
+          c.exec_flag,
+          c.admis_serialno,
+          c.rek_status
+     from t_ord c, t_order_sub d
+    where c.ordid = d.ordid</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ROWNO" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ROWNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEMID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEMNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMSPEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ITEMSPEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UNIT_QUANTITY" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">UNIT_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UNIT_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UNIT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALES_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AMOUNT_TOTAL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">AMOUNT_TOTAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PURCHASE_PRICE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PURCHASE_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BASIC_UNIT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BASIC_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="QUANTITY" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FACTOR" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">FACTOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERIALNO" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SERIALNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORDID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_TYPEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORD_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">ORD_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_DOCT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPID_DOCT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME_DOCT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMPNAME_DOCT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_EXEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_EXEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_EXEC" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME_EXEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXEC_FLAG" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">EXEC_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADMIS_SERIALNO" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ADMIS_SERIALNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REK_STATUS" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">REK_STATUS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

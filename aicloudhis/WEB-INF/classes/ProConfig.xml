@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="GB2312"?>
+<proconfig>
+    <DataSrcList>
+         <DataSrc>
+            <name>aihis</name>
+            <type>DBCP</type>
+            <!-- <dbType>ORACLE</dbType>
+            <srcUrl>jdbc:oracle:thin:@192.168.1.101:1521:orcl</srcUrl> -->
+            <dbType>MYSQL</dbType>
+            <srcUrl>jdbc:mysql://192.168.1.101:3306/aihis?useUnicode=true&amp;characterEncoding=utf-8</srcUrl>
+            <minLimit>0</minLimit>
+            <maxLimit>5</maxLimit>
+            <userName>aihis</userName>
+            <password>{o}aihisAbc</password>
+            <propString>maxWait=3000;maxIdle=50</propString>
+        </DataSrc>
+    </DataSrcList>
+    
+    <transactionlist default-transaction="local" independence-transaction="local"
+                     container-implclass="com.ai.appframe2.transaction.TransactionLocal">
+        <transaction name="local" implclass="com.ai.appframe2.transaction.TransactionLocal"
+                     default-datasource="aihis">
+            <DataSrcLink ailas-name="aihis" actul-name="aihis"></DataSrcLink>
+        </transaction>
+    </transactionlist>
+
+    <service-mapping>
+
+        <service name="com.ai.cloudhis"
+                 service-type="singleton" transaction-name="local" transaction-type="join" datasource-name="aihis"/>
+
+    </service-mapping>
+
+</proconfig>

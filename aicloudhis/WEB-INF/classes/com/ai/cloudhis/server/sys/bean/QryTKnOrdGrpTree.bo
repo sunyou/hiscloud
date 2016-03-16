@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryTKnOrdGrpTree" mainattr="DTORDGRID">
+    <mapingenty type="query">select t.*, b.orddicid
+  from t_kn_ord_grp t, t_kn_ord_grp_sub b
+ where b.dtordgrid(+) = t.dtordgrid</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="DTORDGRID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DTORDGRID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDGRNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORDGRNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDGRDES" maxlength="1000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORDGRDES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGEUSERID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGEUSERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRIVTYPEID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PRIVTYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GRPFLAG" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GRPFLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UPID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GRADE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GRADE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEAF" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LEAF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDDICID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORDDICID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

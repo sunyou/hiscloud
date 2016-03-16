@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryTScheduleInfo" mainattr="INFOID">
+    <mapingenty type="query">select infoid,
+       title,
+       content,
+       hour,
+       minute,
+       to_char(startdate, 'yyyy-mm-dd') startdate,
+       to_char(enddate, 'yyyy-mm-dd') enddate,
+       infostatue,
+       to_char(createdate, 'yyyy-mm-dd') createdate,
+       createuserid,
+       createusername,
+       to_char(updatedate, 'yyyy-mm-dd') updatedate,
+       updateuserid,
+       updateusername,
+       orgid_hosp,
+       is_desk_remind
+  from T_schedule_info t</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="INFOID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INFOID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TITLE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TITLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTENT" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONTENT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOUR" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">HOUR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MINUTE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">MINUTE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STARTDATE" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STARTDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENDDATE" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENDDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFOSTATUE" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INFOSTATUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATEDATE" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CREATEDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATEUSERID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CREATEUSERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATEUSERNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CREATEUSERNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATEDATE" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UPDATEDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATEUSERID" maxlength="32" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UPDATEUSERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATEUSERNAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UPDATEUSERNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_DESK_REMIND" maxlength="2" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">IS_DESK_REMIND</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

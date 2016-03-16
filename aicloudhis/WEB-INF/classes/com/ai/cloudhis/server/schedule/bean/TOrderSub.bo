@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TOrderSub" mainattr="UUID">
+    <mapingenty type="table">T_ORDER_SUB</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="PK" remark="唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDID" maxlength="50" datatype="String" type="COL" remark="医嘱编码">
+        <mapingcol datatype="VARCHAR2">ORDID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ROWNO" maxlength="20" datatype="Long" type="COL" remark="序号">
+        <mapingcol datatype="NUMBER">ROWNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMID" maxlength="50" datatype="String" type="COL" remark="项目编码">
+        <mapingcol datatype="VARCHAR2">ITEMID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMNAME" maxlength="255" datatype="String" type="COL" remark="项目名称">
+        <mapingcol datatype="VARCHAR2">ITEMNAME</mapingcol>
+      </attr>
+      <attr floatlength="2" name="QUANTITY" maxlength="8" datatype="Float" type="COL" remark="基本单位数量">
+        <mapingcol datatype="NUMBER">QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="2" name="UNIT_QUANTITY" maxlength="8" datatype="Float" type="COL" remark="包装单位数量">
+        <mapingcol datatype="NUMBER">UNIT_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UNIT_NAME" maxlength="50" datatype="String" type="COL" remark="包装单位名称">
+        <mapingcol datatype="VARCHAR2">UNIT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="2" name="PERMED_QUANTITY" maxlength="8" datatype="Float" type="COL" remark="每次剂量数">
+        <mapingcol datatype="NUMBER">PERMED_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEDUNIT_NAME" maxlength="50" datatype="String" type="COL" remark="剂量单位名称">
+        <mapingcol datatype="VARCHAR2">MEDUNIT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="2" name="PER_QUANTITY" maxlength="8" datatype="Float" type="COL" remark="每次基本数量">
+        <mapingcol datatype="NUMBER">PER_QUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BASIC_UNIT" maxlength="50" datatype="String" type="COL" remark="基本单位名称">
+        <mapingcol datatype="VARCHAR2">BASIC_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTUNIT_SIGN" maxlength="15" datatype="String" type="COL" remark="(0:剂量单位;1:基本单位)">
+        <mapingcol datatype="VARCHAR2">INPUTUNIT_SIGN</mapingcol>
+      </attr>
+      <attr floatlength="2" name="MEDFACTOR" maxlength="8" datatype="Float" type="COL" remark="基本单位和剂量单位换算序数">
+        <mapingcol datatype="NUMBER">MEDFACTOR</mapingcol>
+      </attr>
+      <attr floatlength="2" name="FACTOR" maxlength="8" datatype="Float" type="COL" remark="基本单位和包装单位换算序数">
+        <mapingcol datatype="NUMBER">FACTOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FREQID" maxlength="50" datatype="String" type="COL" remark="使用频次">
+        <mapingcol datatype="VARCHAR2">FREQID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USAGEID" maxlength="50" datatype="String" type="COL" remark="用法编码">
+        <mapingcol datatype="VARCHAR2">USAGEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USAGENAME" maxlength="50" datatype="String" type="COL" remark="用法名称">
+        <mapingcol datatype="VARCHAR2">USAGENAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FREQUNIT" maxlength="50" datatype="String" type="COL" remark="疗程单位">
+        <mapingcol datatype="VARCHAR2">FREQUNIT</mapingcol>
+      </attr>
+      <attr floatlength="2" name="FREQQUANTITY" maxlength="8" datatype="Float" type="COL" remark="疗程数">
+        <mapingcol datatype="NUMBER">FREQQUANTITY</mapingcol>
+      </attr>
+      <attr floatlength="2" name="SALES_PRICE" maxlength="8" datatype="Float" type="COL" remark="零售价">
+        <mapingcol datatype="NUMBER">SALES_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="2" name="PURCHASE_PRICE" maxlength="8" datatype="Float" type="COL" remark="购入价">
+        <mapingcol datatype="NUMBER">PURCHASE_PRICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEMSPEC" maxlength="50" datatype="String" type="COL" remark="规格">
+        <mapingcol datatype="VARCHAR2">ITEMSPEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_GROUPNO" maxlength="50" datatype="String" type="COL" remark="项目组号">
+        <mapingcol datatype="VARCHAR2">ORD_GROUPNO</mapingcol>
+      </attr>
+      <attr floatlength="2" name="AMOUNT_TOTAL" maxlength="8" datatype="Float" type="COL" remark="患者总金额">
+        <mapingcol datatype="NUMBER">AMOUNT_TOTAL</mapingcol>
+      </attr>
+      <attr floatlength="2" name="AMOUNT_PATI" maxlength="8" datatype="Float" type="COL" remark="患者支付金额">
+        <mapingcol datatype="NUMBER">AMOUNT_PATI</mapingcol>
+      </attr>
+      <attr floatlength="2" name="AMOUNT_PAYTYPE" maxlength="8" datatype="Float" type="COL" remark="患者记账金额">
+        <mapingcol datatype="NUMBER">AMOUNT_PAYTYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_EXEC" maxlength="50" datatype="String" type="COL" remark="执行科室编码">
+        <mapingcol datatype="VARCHAR2">ORGID_EXEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME_EXEC" maxlength="50" datatype="String" type="COL" remark="执行科室名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME_EXEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL" remark="开立科室编码">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="50" datatype="String" type="COL" remark="开立科室名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

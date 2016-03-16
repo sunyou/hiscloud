@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TMePrHd" mainattr="ADJUSTID">
+    <mapingenty type="table">T_ME_PR_HD</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ADJUSTID" maxlength="32" datatype="String" type="PK" remark="调价编码">
+        <mapingcol datatype="VARCHAR2">ADJUSTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_ORGID" maxlength="50" datatype="String" type="COL" remark="调价科室">
+        <mapingcol datatype="VARCHAR2">ADJUST_ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUT_DATETIME" maxlength="20" datatype="DateTime" type="COL" remark="输入时间">
+        <mapingcol datatype="DATE">INPUT_DATETIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_DATETIME" maxlength="20" datatype="DateTime" type="COL" remark="调价时间">
+        <mapingcol datatype="DATE">ADJUST_DATETIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_USERID" maxlength="50" datatype="String" type="COL" remark="调价人">
+        <mapingcol datatype="VARCHAR2">ADJUST_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHECK_USERID" maxlength="50" datatype="String" type="COL" remark="审核人">
+        <mapingcol datatype="VARCHAR2">CHECK_USERID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISFINISHED" maxlength="20" datatype="Long" type="COL" remark="调价完成">
+        <mapingcol datatype="NUMBER">ISFINISHED</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

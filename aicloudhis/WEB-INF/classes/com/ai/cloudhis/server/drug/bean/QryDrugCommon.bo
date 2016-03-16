@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="QryDrugCommon" mainattr="ITEMNAME">
+    <mapingenty type="query">select '' itemname,'' dispens_Unit,'' drug_Flag,'' item_spec,'' orgid_hosp,'' return_Flag,'' sales_Price from dual</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ITEMNAME" maxlength="0" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">ITEMNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISPENS_UNIT" maxlength="0" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">DISPENS_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DRUG_FLAG" maxlength="0" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">DRUG_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ITEM_SPEC" maxlength="0" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">ITEM_SPEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="0" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RETURN_FLAG" maxlength="0" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">RETURN_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALES_PRICE" maxlength="0" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">SALES_PRICE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TSysCf" mainattr="SCID">
+    <mapingenty type="table">T_SYS_CF</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="SCID" maxlength="50" datatype="String" type="PK" remark="系统配置编码">
+        <mapingcol datatype="VARCHAR2">SCID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONFIGKEY" maxlength="50" datatype="String" type="COL" remark="配置名称">
+        <mapingcol datatype="VARCHAR2">CONFIGKEY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCDES" maxlength="255" datatype="String" type="COL" remark="配置描述">
+        <mapingcol datatype="VARCHAR2">SCDES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALUE" maxlength="1000" datatype="String" type="COL" remark="配置数值">
+        <mapingcol datatype="VARCHAR2">VALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALUEDES" maxlength="255" datatype="String" type="COL" remark="数值意义">
+        <mapingcol datatype="VARCHAR2">VALUEDES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALUETYPE" maxlength="20" datatype="Long" type="COL" remark="值类型">
+        <mapingcol datatype="NUMBER">VALUETYPE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

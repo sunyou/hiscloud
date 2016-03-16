@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TKnOrdGrpSubStand" mainattr="DTORDGRID">
+    <mapingenty type="table">T_KN_ORD_GRP_SUB_STAND</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="PK" remark="唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTEDES" maxlength="1000" datatype="String" type="COL" remark="描述">
+        <mapingcol datatype="VARCHAR2">NOTEDES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SORTMARK" maxlength="20" datatype="Long" type="COL" remark="排序编号">
+        <mapingcol datatype="NUMBER">SORTMARK</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LINKFLAG" maxlength="20" datatype="Long" type="COL" remark="链接标示(是否是从全院字典链接)">
+        <mapingcol datatype="NUMBER">LINKFLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DTORDGRID" maxlength="50" datatype="String" type="COL" remark="医嘱组编码">
+        <mapingcol datatype="VARCHAR2">DTORDGRID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORDDICID" maxlength="50" datatype="String" type="COL" remark="医嘱套编码">
+        <mapingcol datatype="VARCHAR2">ORDDICID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

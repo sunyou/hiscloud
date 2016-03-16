@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="gb2312"?>
+<AIConfig>
+	<ConfigKind name="AppFrameInit">
+		<ConfigItem name="ProjectConfigFile" remarks="项目配置文件">ProConfig.xml</ConfigItem>
+		<ConfigItem name="IdGeneratorClass" remarks="数据对象唯一标识管理器实现类">com.ai.appframe2.bo.IdGeneratorImpl52</ConfigItem>
+		<ConfigItem name="DataStoreClass" remarks="数据存储管理器实现类">com.ai.appframe2.bo.DataStoreImpl</ConfigItem>
+		<ConfigItem name="MainWebPageUrl" remarks="web程序主页面url">/webframe/shdesktopui/WebAppFrameSet.jsp</ConfigItem>
+		<ConfigItem name="LoginOutPageUrl" remarks="web框架的Loginout页面url">/webframe/Loginout.jsp</ConfigItem>
+		<ConfigItem name="LoginInPageUrl" remarks="web框架的Loginout页面url">/index.jsp</ConfigItem>
+		<ConfigItem name="UserManagerClass" remarks="用户登陆的实现类">com.ai.frame.loginmgr.demo.UserMangerDemoImpl</ConfigItem>
+
+		<ConfigItem name="ENHANCE_PACKAGE" remarks="需要增强的包"></ConfigItem>
+		<ConfigItem name="CHANNEL_ID" remarks="渠道编号">100</ConfigItem>
+		<ConfigItem name="AuthTimeOut" remarks="SSO认证超时时间(秒)">1800</ConfigItem>
+		<ConfigItem name="AuthRefreshTime" remarks="SSO认证刷新时间(秒)">120</ConfigItem>
+		<ConfigItem name="CenterFactoryClass" remarks="多中心管理器实现类">com.ai.appframe2.multicenter.CenterFactoryDefault
+		</ConfigItem>
+		<ConfigItem name="IS_MULTI_CENTER" remarks="是否多中心管理">N</ConfigItem>
+	</ConfigKind>
+
+
+	<ConfigKind name="HttpExpireConfig">
+		<ConfigItem name="EXPIRE_ON_OFF_SWITCH" remarks="打开和关闭超时设置功能(ON/OFF),如无此项默认为ON">ON</ConfigItem>
+		<ConfigItem name="*.gif" remarks="访问后8个小时内客户端有效">A28800</ConfigItem>
+		<ConfigItem name="*.png" remarks="访问后8个小时内客户端有效">A28800</ConfigItem>
+		<ConfigItem name="*.jpg" remarks="访问后8个小时内客户端有效">A28800</ConfigItem>
+		<ConfigItem name="*.jpeg" remarks="访问后8个小时内客户端有效">A28800</ConfigItem>
+		<ConfigItem name="*.js" remarks="访问后2个小时内客户端有效">A28800</ConfigItem>
+		<ConfigItem name="*.vbs" remarks="访问后2个小时内客户端有效">A28800</ConfigItem>
+		<ConfigItem name="*.swf" remarks="访问后2个小时内客户端有效">A28800</ConfigItem>
+		<ConfigItem name="*.css" remarks="访问后2个小时内客户端有效">A28800</ConfigItem>
+		<ConfigItem name="*/frm-index.jsp" remarks="访问后2个小时内客户端有效">A28800</ConfigItem>
+	</ConfigKind>
+
+	<ConfigKind name="HttpCompressMimeType" remarks="压缩filter需要压缩的文件匹配">
+		<ConfigItem name="COMPRESS_ON_OFF_SWITCH" remarks="打开和关闭超时设置功能(ON/OFF),如无此项默认为ON">OFF</ConfigItem>
+		<ConfigItem name="COMPRESS_THRESHOLD" remarks="压缩filter需要压缩的文件最小size，单位字节byte">10</ConfigItem>
+		<ConfigItem name="GZIP_MIME_TYPE" remarks="是压缩filter需要压缩的文件匹配,以,分割">*.*,/business/*</ConfigItem>
+	</ConfigKind>
+	
+	
+	
+	<ConfigKind name="HostipalConfig" remarks="智慧医疗项目配置">
+		<ConfigItem name="MenuImageSavePath" remarks="菜单图片保存路径,相对工程路径">/content/sysmanage/menuImage</ConfigItem>
+		
+		<ConfigItem name="BatchUploadFileDir" remarks="批量文件上传文件存放路径">/home/devweb/up_down_thread/filefolder</ConfigItem>
+		<ConfigItem name="BatchUploadLogDir" remarks="批量文件上传处理日志存放路径">/home/devweb/up_down_thread/filefolder</ConfigItem>
+		 
+		<ConfigItem name="BatchDownloadConditionStoreDir" remarks="批量文件下载查询条件存放路径">/home/devweb/up_down_thread/filefolder</ConfigItem>
+		<ConfigItem name="FILE_CACHE_FOLDER" remarks="缓存目录">object_cache/fds/</ConfigItem>
+		<ConfigItem name="BatchDownloadFileResultDir" remarks="批量文件下载文件生成结果存放路径">/home/devweb/up_down_thread/filefolder</ConfigItem>
+		
+		<ConfigItem name="MAPPServerPath" remarks="MAPP报表服务器的HTTP路径">http://192.168.1.130:8080/mapp/bus/reportData!previewG10004Report.action</ConfigItem>
+	</ConfigKind>
+	
+	
+	
+</AIConfig>

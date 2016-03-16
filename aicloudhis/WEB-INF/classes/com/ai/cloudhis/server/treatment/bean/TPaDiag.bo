@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TPaDiag" mainattr="UUID">
+    <mapingenty type="table">T_PA_DIAG</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="PK" remark="唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADMIS_SERIALNO" maxlength="50" datatype="String" type="COL" remark="就诊流水号">
+        <mapingcol datatype="VARCHAR2">ADMIS_SERIALNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAG_TYPEID" maxlength="50" datatype="String" type="COL" remark="诊断类型">
+        <mapingcol datatype="VARCHAR2">DIAG_TYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ROWNO" maxlength="20" datatype="Long" type="COL" remark="序号">
+        <mapingcol datatype="NUMBER">ROWNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAGROLEID" maxlength="50" datatype="String" type="COL" remark="患者诊断角色编码">
+        <mapingcol datatype="VARCHAR2">DIAGROLEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PATIENTID" maxlength="50" datatype="String" type="COL" remark="患者编码">
+        <mapingcol datatype="VARCHAR2">PATIENTID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERIALNO" maxlength="50" datatype="String" type="COL" remark="挂号流水号">
+        <mapingcol datatype="VARCHAR2">SERIALNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID_HOSP" maxlength="50" datatype="String" type="COL" remark="所属诊所">
+        <mapingcol datatype="VARCHAR2">ORGID_HOSP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGID" maxlength="50" datatype="String" type="COL" remark="诊所科室编码">
+        <mapingcol datatype="VARCHAR2">ORGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGNAME" maxlength="50" datatype="String" type="COL" remark="诊所科室名称">
+        <mapingcol datatype="VARCHAR2">ORGNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAGID" maxlength="50" datatype="String" type="COL" remark="疾病编码">
+        <mapingcol datatype="VARCHAR2">DIAGID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAG_NAME" maxlength="50" datatype="String" type="COL" remark="疾病名称">
+        <mapingcol datatype="VARCHAR2">DIAG_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIAG_DESC" maxlength="50" datatype="String" type="COL" remark="疾病描述">
+        <mapingcol datatype="VARCHAR2">DIAG_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATE_INPUT" maxlength="20" datatype="DateTime" type="COL" remark="开立时间">
+        <mapingcol datatype="DATE">DATE_INPUT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_INPUT" maxlength="50" datatype="String" type="COL" remark="开立人编码">
+        <mapingcol datatype="VARCHAR2">EMPID_INPUT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME_INPUT" maxlength="50" datatype="String" type="COL" remark="开立人名称">
+        <mapingcol datatype="VARCHAR2">EMPNAME_INPUT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPDATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="修改时间">
+        <mapingcol datatype="DATE">UPDATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPID_UPDATE" maxlength="50" datatype="String" type="COL" remark="修改人编码">
+        <mapingcol datatype="VARCHAR2">EMPID_UPDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPNAME_UPDATE" maxlength="50" datatype="String" type="COL" remark="修改人名称">
+        <mapingcol datatype="VARCHAR2">EMPNAME_UPDATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

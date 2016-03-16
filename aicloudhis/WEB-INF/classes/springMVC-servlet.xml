@@ -1,0 +1,133 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <context:property-placeholder location="classpath:*.properties"/>
+
+    <!--扫描@Controller-->
+    <context:component-scan base-package="com.ai.cloudhis.web.controller">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+    </context:component-scan>
+
+    <!-- 视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- REST中根据URL后缀自动判定Content-Type及相应的View -->
+    <bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+        <property name="mediaTypes">
+            <value>
+                json=application/json
+                xml=application/xml
+            </value>
+        </property>
+    </bean>
+
+    <!-- 参数转换器 -->
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <!--日期转换器-->
+                <bean class="com.ai.cloudhis.web.converter.StringToDateConverter"/>
+                <bean class="com.ai.cloudhis.web.converter.StringToTimestampConverter"/>
+            </set>
+        </property>
+    </bean>
+    <mvc:annotation-driven content-negotiation-manager="contentNegotiationManager"
+                           conversion-service="conversionService">
+        <mvc:message-converters register-defaults="true">
+            <!-- 将StringHttpMessageConverter的默认编码设为UTF-8 -->
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <constructor-arg value="UTF-8"/>
+            </bean>
+            <!-- 将Jackson2HttpMessageConverter的默认格式化输出设为true -->
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="prettyPrint" value="true"/>
+            </bean>
+        </mvc:message-converters>
+
+    </mvc:annotation-driven>
+
+    <!-- 文件上传相关 -->
+    <!--<bean id="multipartResolver"-->
+          <!--class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+        <!--<property name="defaultEncoding" value="UTF-8"/>-->
+        <!--<property name="maxUploadSize" value="104857600"/>-->
+    <!--</bean>-->
+
+    <mvc:interceptors>
+        <mvc:interceptor>    
+            <mvc:mapping path="/patientManage/**"/>   
+            <mvc:mapping path="/template/**"/>                   
+            <mvc:mapping path="/frame/mainFrame.html"/> 
+            <mvc:mapping path="/index.html"/> 
+            <bean class="com.ai.cloudhis.web.interceptor.UserHolderInterceptor">
+                 
+            </bean>
+        </mvc:interceptor>
+        
+        <mvc:interceptor>
+            <mvc:mapping path="/frame/mainFrame.html"/>
+            <mvc:mapping path="/patientManage/**"/>  
+            <mvc:mapping path="patientMessage/**"/>  
+            <mvc:mapping path="/agencyManage/**"/>
+			<mvc:mapping path="/bookManage/**"/>
+			<mvc:mapping path="/chargeManage/**"/>
+			<mvc:mapping path="/drugsAdjustPrice/**"/>
+			<mvc:mapping path="/drugStorageSummary/**"/>
+			<mvc:mapping path="/infoManage/**"/>
+			<mvc:mapping path="/purchaseManage/**"/>
+			<mvc:mapping path="/outPatient/**"/>
+			<mvc:mapping path="/sendMedicine/**"/>
+			<mvc:mapping path="/pharmacyManage/**"/>
+			<mvc:mapping path="/schedule/**"/>
+			<mvc:mapping path="/clinicTemplate/**"/>
+			<mvc:mapping path="/hosp/**"/>
+			<mvc:mapping path="/ordTemplate/**"/>
+			<mvc:mapping path="/privilege/**"/>
+			<mvc:mapping path="/relation/**"/>
+			<mvc:mapping path="/template/**"/>
+			<mvc:mapping path="/chineseMedicine/**"/>
+			<mvc:mapping path="/doctortemplate/**"/>
+			<mvc:mapping path="/inspection/**"/>
+			<mvc:mapping path="/orderpermit/**"/>
+			<mvc:mapping path="/ordSave/**"/>
+			<mvc:mapping path="/searchOrd/**"/>
+			<mvc:mapping path="/treatment/**"/>
+			<mvc:mapping path="/tregisterplan/**"/>
+			<mvc:mapping path="/westernMedicine/**"/>
+			<mvc:mapping path="/tregisterplan/**"/>
+            
+             
+            <bean class="com.ai.cloudhis.web.interceptor.LoginInterceptor">
+             
+            </bean>
+        </mvc:interceptor>
+
+        <mvc:interceptor>
+            <mvc:mapping path="/aihis/**"/>
+            <bean class="com.ai.cloudhis.web.interceptor.ParamInterceptor">
+                <property name="domain" value="${aihis.domain.name}"/>
+            </bean>
+        </mvc:interceptor>
+
+
+        
+    </mvc:interceptors>
+
+    <!--解决静态资源的访问问题-->
+    <!--<mvc:resources location="/statics/" mapping="/statics/**" cache-period="10000000"/>-->
+    <!--<mvc:default-servlet-handler/>-->
+
+    <bean class="com.ai.cloudhis.web.ApplicationContextHolder"></bean>
+
+</beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TSysRole2Meun" mainattr="ROLE_ID">
+    <mapingenty type="table">T_SYS_ROLE2MENU</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ROLE_ID" maxlength="50" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">ROLE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MENU_ID" maxlength="50" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">MENU_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

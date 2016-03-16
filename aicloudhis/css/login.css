@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend{margin:0;padding:0;}
+body,button,input,select,textarea{font: 14px/1.5 arial,"Microsoft Yahei","黑体","Hiragino Sans GB",sans-serif;}
+ul,ol{list-style:none;}
+a{ color: #666; text-decoration: none; }
+
+.cloud_hole{width:100%;height:656px;float:left;background:url(../images/login_bg.jpg) no-repeat scroll center center transparent;}
+.cloud_wbk{width:1000px;margin:0 auto;}
+.cloud_top{width:100%;height:58px;float:left;margin-top:20px;}
+.cloud_main{width:100%;float:left;margin-top:20px;}
+.cloud_main_left{width:355px;height:482px;float:left;}
+.cloud_main_right{width:550px;height:430px;float:right;border-radius:10px;background:#fafdff;}
+.cloud_loginTop{width:100%;height:50px;float:left;line-height:50px;border-radius:10px 10px 0 0;background:#67afd4;font-size:18px;color:#ffffff;}
+.cloud_loginTop p{padding-left:70px;}
+
+.cloud_center{width:400px;float:left;margin-left:70px;}
+.cloud_inwk{position:relative;width:400px;height:55px;float:left;margin-top:30px;border:1px solid #afd5e8;border-radius:3px;background:#def2fb;overflow:hidden;}
+.cloud_inwk,.cloud_inwk:before,.cloud_inwk:after{
+	-webkit-box-sizing:border-box;
+     -moz-box-sizing:border-box;
+          box-sizing:border-box;}
+.cloud_inwk i{position:absolute;width:55px;height:55px;left:0;top:0;z-index:2;}
+.login_icon1{display:inline-block;width:26px;height:28px;background:#3c98c8 url(../images/l_icon1.png) no-repeat scroll 14px 12px;}
+.login_icon2{display:inline-block;width:22px;height:30px;background:#3c98c8 url(../images/l_icon2.png) no-repeat scroll 16px 12px;}
+.cloud_inwk input{position:absolute;border:0;width:390px;height:52px;line-height:52px;left:0;top:0;font-size:18px;text-indent:66px;color:#444444;z-index:1;background:#def2fb;}
+
+.cloud_duigou{width:100%;height:28px;float:left;margin-top:16px;}
+.cloud_duigou a{display:block;}
+.cloud_check_no{display:inline-block;width:28px;height:28px;float:left;background:url(../images/l_icon3.png) no-repeat scroll 0 0;}
+.cloud_check_ok{display:inline-block;width:28px;height:28px;float:left;background:url(../images/l_icon3.png) no-repeat scroll 0 -28px;}
+.cloud_span01{display:block;height:28px;float:left;line-height:28px;padding-left:6px;color:#666666;font-size:18px;}
+.cloud_forget{height:28px;float:right;color:#666666;font-size:18px;}
+
+.cloud_button{width:100%;height:50px;float:left;margin-top:30px;line-height:50px;text-align:center;background:#3c98c8;font-size:20px;border-radius:5px;}
+.cloud_button a{display:block;color:#ffffff;}
+
+.cloud_bottom{width:100%;float:left;margin-top:20px;color:#999999;text-align:center;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

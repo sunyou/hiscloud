@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TCode" mainattr="CODETYPEID">
+    <mapingenty type="table">T_CODE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CODETYPEID" maxlength="50" datatype="String" type="COL" remark="编码类型">
+        <mapingcol datatype="VARCHAR2">CODETYPEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CODEID" maxlength="50" datatype="String" type="COL" remark="编码">
+        <mapingcol datatype="VARCHAR2">CODEID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CODENAME" maxlength="255" datatype="String" type="COL" remark="编码名称">
+        <mapingcol datatype="VARCHAR2">CODENAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CODEVALUE" maxlength="255" datatype="String" type="COL" remark="编码值">
+        <mapingcol datatype="VARCHAR2">CODEVALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPUTSTR" maxlength="255" datatype="String" type="COL" remark="输入码">
+        <mapingcol datatype="VARCHAR2">INPUTSTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CODEDEFAULTVALUE" maxlength="255" datatype="String" type="COL" remark="编码默认值">
+        <mapingcol datatype="VARCHAR2">CODEDEFAULTVALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UPCODE" maxlength="50" datatype="String" type="COL" remark="上级编码">
+        <mapingcol datatype="VARCHAR2">UPCODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GRADE" maxlength="20" datatype="Long" type="COL" remark="级次">
+        <mapingcol datatype="NUMBER">GRADE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEAF" maxlength="20" datatype="Long" type="COL" remark="是否为叶节点">
+        <mapingcol datatype="NUMBER">LEAF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STOPFLAG" maxlength="20" datatype="Long" type="COL" remark="停止标志">
+        <mapingcol datatype="NUMBER">STOPFLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SORTNO" maxlength="20" datatype="Long" type="COL" remark="排序号">
+        <mapingcol datatype="NUMBER">SORTNO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTRVALUE0" maxlength="255" datatype="String" type="COL" remark="CtrValue0">
+        <mapingcol datatype="VARCHAR2">CTRVALUE0</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTRVALUE1" maxlength="255" datatype="String" type="COL" remark="CtrValue1">
+        <mapingcol datatype="VARCHAR2">CTRVALUE1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTRVALUE2" maxlength="255" datatype="String" type="COL" remark="CtrValue2">
+        <mapingcol datatype="VARCHAR2">CTRVALUE2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTRVALUE3" maxlength="255" datatype="String" type="COL" remark="CtrValue3">
+        <mapingcol datatype="VARCHAR2">CTRVALUE3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTRVALUE4" maxlength="255" datatype="String" type="COL" remark="CtrValue4">
+        <mapingcol datatype="VARCHAR2">CTRVALUE4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTRVALUE5" maxlength="255" datatype="String" type="COL" remark="CtrValue5">
+        <mapingcol datatype="VARCHAR2">CTRVALUE5</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTRVALUE6" maxlength="255" datatype="String" type="COL" remark="CtrValue6">
+        <mapingcol datatype="VARCHAR2">CTRVALUE6</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTRVALUE7" maxlength="255" datatype="String" type="COL" remark="CtrValue7">
+        <mapingcol datatype="VARCHAR2">CTRVALUE7</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTRVALUE8" maxlength="255" datatype="String" type="COL" remark="CtrValue8">
+        <mapingcol datatype="VARCHAR2">CTRVALUE8</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTRVALUE9" maxlength="255" datatype="String" type="COL" remark="CtrValue9">
+        <mapingcol datatype="VARCHAR2">CTRVALUE9</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="PK" remark="唯一编码">
+        <mapingcol datatype="VARCHAR2">UUID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

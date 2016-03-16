@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aihis" name="TFrequecy" mainattr="ID">
+    <mapingenty type="table">T_FREQUECY</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ID" maxlength="6" datatype="Integer" type="PK" remark="唯一编码">
+        <mapingcol datatype="NUMBER">ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FREQID" maxlength="32" datatype="String" type="COL" remark="频次编码">
+        <mapingcol datatype="VARCHAR2">FREQID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FREQ_NAME" maxlength="50" datatype="String" type="COL" remark="频次名称">
+        <mapingcol datatype="VARCHAR2">FREQ_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FREQ_NOTE" maxlength="255" datatype="String" type="COL" remark="频次描述">
+        <mapingcol datatype="VARCHAR2">FREQ_NOTE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FREQ_DEG" maxlength="6" datatype="Integer" type="COL" remark="频次次数">
+        <mapingcol datatype="NUMBER">FREQ_DEG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FREQCN" maxlength="6" datatype="Integer" type="COL" remark="频次数目">
+        <mapingcol datatype="NUMBER">FREQCN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FREQ_UNIT" maxlength="50" datatype="String" type="COL" remark="频次单位">
+        <mapingcol datatype="VARCHAR2">FREQ_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FREQ_TIME_ACT" maxlength="255" datatype="String" type="COL" remark="执行时间">
+        <mapingcol datatype="VARCHAR2">FREQ_TIME_ACT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INTERVAL_DAYS" maxlength="6" datatype="Integer" type="COL" remark="间隔天数">
+        <mapingcol datatype="NUMBER">INTERVAL_DAYS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

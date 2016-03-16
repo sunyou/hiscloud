@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+	<Result_Code>0000</Result_Code>
+	<Error_Msg>交易成功</Error_Msg>
+	<Result_Data>
+		<Record_List>
+			<Record_Info>
+				<Item_No>20150512001</Item_No>
+				<Patient_Id>00035557</Patient_Id>
+				<Visit_No>22973689</Visit_No>
+				<Item_Name>CT平扫</Item_Name>
+				<Item_Class>检查</Item_Class>
+				<Pay_Costs>198</Pay_Costs>
+				<Visit_Date>2015-05-12</Visit_Date>
+				<Presc_No>12312322</Presc_No>
+				<Serial_No>20150512001</Serial_No>
+				<Units>次</Units>
+				<Price>198</Price>
+				<Amount>1</Amount>
+				<Item_Spec>/</Item_Spec>
+				<Performed_By>CT室</Performed_By>
+				<Ordered_By>皮肤科</Ordered_By>
+			</Record_Info>
+			<Record_Info>
+				<Item_No>20150512002</Item_No>
+				<Patient_Id>00035557</Patient_Id>
+				<Visit_No>22973689</Visit_No>
+				<Item_Name>生化全套</Item_Name>
+				<Item_Class>检验</Item_Class>
+				<Pay_Costs>208</Pay_Costs>
+				<Visit_Date>2015-05-12</Visit_Date>
+				<Presc_No></Presc_No>
+				<Serial_No>20150512002</Serial_No>
+				<Units>次</Units>
+				<Price>208</Price>
+				<Amount>1</Amount>
+				<Item_Spec>/</Item_Spec>
+				<Performed_By>检验科</Performed_By>
+				<Ordered_By>皮肤科</Ordered_By>
+			</Record_Info>
+		</Record_List>
+	</Result_Data>
+</Response>
