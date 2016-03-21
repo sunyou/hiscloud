@@ -7,7 +7,7 @@
             <!-- <dbType>ORACLE</dbType>
             <srcUrl>jdbc:oracle:thin:@192.168.1.101:1521:orcl</srcUrl> -->
             <dbType>MYSQL</dbType>
-            <srcUrl>jdbc:mysql://10.1.235.97:3999/aihis?useUnicode=true&amp;characterEncoding=utf-8</srcUrl>
+            <srcUrl>jdbc:mysql://10.1.235.97:4000/aihis?useUnicode=true&amp;characterEncoding=utf-8</srcUrl>
             <minLimit>0</minLimit>
             <maxLimit>5</maxLimit>
             <userName>aihis</userName>
