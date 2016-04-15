@@ -1,0 +1,10 @@
+*{margin:0;padding:0}html,body {width:100%;height:100%;font-family:"Verdana","Microsoft Yahei","ºÚÌå";font-size:12px;line-height:20px;background:#ffffff;color:#454545;}a {font-family:"Verdana","Microsoft Yahei","ºÚÌå";font-size:12px;color:#454545;text-decoration:none;}a:hover {font-family:"Verdana","Microsoft Yahei","ºÚÌå";font-size:12px;color:#ce4e4e;text-decoration:none;}dl,dt,dd,h1,h2,h3,h4,h5,h6,p,ul,ul li,form,input,button,textarea {margin:0;padding:0;list-style-type:none;}img,form,input,button,textarea {border:0;outline:none;}img {display:block;}
+.clear {zoom:1;clear:both;}.clear:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;overflow:hidden}.fl {float:left}.fr {float:right}.hide {display:none;}.oh {overflow:hidden;}
+
+	/* suspend */
+.suspend {width:40px;height:198px;position:fixed;overflow:hidden;z-index:9999;}
+.suspend dl {width:400px;height:559px;border-radius:25px 0 0 25px;padding-left:40px;box-shadow:0 0 5px #e4e8ec;}
+.suspend dl dt {width:400px;height:559px;background:#ccc;position:absolute;top:0;left:0;cursor:pointer;}
+.suspend dl dd {}
+.suspend dl dd.left {width:400px;height:559px;background:#ffffff;}
+* html .suspend {position:absolute;left:expression(eval(document.documentElement.scrollRight));top:expression(eval(document.documentElement.scrollTop+200))}

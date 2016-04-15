@@ -51,7 +51,7 @@
             <a id="printBtn" href="#" target="_blank" data-options="iconCls:'chis-print'" 
                                                                   class="linkbutton" onclick='print();'>打印当前页</a>    
               -->  
-           <button class="btn btn-primary btn-sm" type="button" onclick="javascript:selectClick()">查&nbsp;询</button>&nbsp; 
+           <button class="btn btn-success btn-sm" type="button" onclick="javascript:selectClick()">查&nbsp;询</button>&nbsp; 
            <button id="printBtn" href="#" target="_blank" type="button" 
                                                        class="btn btn-info btn-sm" onclick='print();'>打印当前页</button>                                                                               
 		</form>

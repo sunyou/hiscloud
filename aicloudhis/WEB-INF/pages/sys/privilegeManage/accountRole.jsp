@@ -22,7 +22,7 @@
 		<form id="aR">
 			  登录名：<input class="validatebox" type="text" id="accountName" style="width:100px;height:20px">     
                                       姓名： <input class="validatebox" type="text" id="empName" style="width:100px;height:20px">
-           <button type="button" class="btn btn-primary btn-sm" onclick="javascript:searchAccount()">查 询</button>  
+           <button type="button" class="btn btn-success btn-sm" onclick="javascript:searchAccount()">查 询</button>  
 <%--           <button type="button" class="btn btn-success btn-sm" onclick="javascript:searchAccount()">新增</button>  --%>
 <%--           <button type="button" class="btn btn-info btn-sm" onclick="javascript:searchAccount()">修改</button> --%>
 <%--           <button type="button" class="btn btn-danger btn-sm" onclick="javascript:searchAccount()">删除</button> --%>

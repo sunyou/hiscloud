@@ -25,8 +25,16 @@
 <body style="overflow: hidden;" >
 <table style="width:100%;height:490px;" border=0 >
 	<tr><td style="width:300px; padding: 0px; margin: 0px;">
+		<div style="width:300px;margin-top:-55px;">
 			<div style="width:288px;" class="panel-header"><div class="panel-title" style="font-size: 12px;">取药患者列表</div></div>
-			<div style="width:300px;">
+				<!-- 病人基本信息table -->
+				<table id="patInfoDg" style="height:490px;"> </table>
+				<!-- 病人基本信息table结束 -->		
+		</div>		
+	</td>
+	<td style="width:900px; padding: 0px; margin: 0px;">
+		<div style="width:888px;" class="panel-header"><div class="panel-title" style="font-size: 12px;">发药明细</div>
+			
 				<div id="tbLeft">
 					<label>检索：</label>
 					<select id="patCbg" class="combogrid" style="width: 120px;"
@@ -45,17 +53,15 @@
 					</select>			
 					<a href="javascript:void(0)" class="linkbutton" style="width:60px;" data-options="iconCls:'chis-query',plain:true" onclick="findPatient()">查询</a>
 				</div>
-				<!-- 病人基本信息table -->
-				<table id="patInfoDg"> </table>
-				<!-- 病人基本信息table结束 -->				
-			</div>  
-	</td>
-	<td style="width:900px; padding: 0px; margin: 0px;">
-		<div style="width:888px;" class="panel-header"><div class="panel-title" style="font-size: 12px;">发药明细</div></div>
+				<div>
+					<!-- 配药table -->
+					<table id="OrderDg"></table>
+				</div> 
+		</div>
+		<div style="width:888px;" class="panel-header"><div class="panel-title" style="font-size: 12px;">药品信息</div>
 			<div>
-				<!-- 配药table -->
-				<table id="OrderDg"></table>
-			</div> 
+				<table id="MedInfoDg" style="width:100%;"></table>
+			</div>
 		</div>
 	</td></tr>
 </table>
@@ -69,7 +75,7 @@
 				出生日期：<span id="patBirthDate" style="font-weight: bold; color: blue;"></span>&nbsp; 
 				证件号码：<span id="patidCard" style="font-weight: bold; color: blue;"> </span>&nbsp;&nbsp;&nbsp;
 				<!-- <a href="javascript:void(0)" class="linkbutton" data-options="iconCls:'chis-drug'" onclick="sendMed()">发药</a> -->
-				<button type="button" class="btn btn-primary btn-sm"  style="width:55px;" onclick="sendMed();">发    药</button>
+				<button type="button" class="btn btn-success btn-sm"  style="width:55px;" onclick="sendMed();">发    药</button>
 			</td>
 			
 		</tr>

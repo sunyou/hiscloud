@@ -35,50 +35,51 @@
 		<tr>
 			<td style="width:310px;padding: 0px; margin: 0px;">
 				<div style="width:298px;" class="panel-header"><div class="panel-title" style="font-size: 12px;">患者退费医嘱单信息</div></div>
-				<div id="leftside" >
-					<div id="leftToolbar">
-						<!-- <select id="queryConditionSelect"
-							style="width: 65px; height: 22px; padding-bottom: 2px;"
-							name="dto.accountfee.orgName">
-							<option value="patient.patient_name">姓名</option>
-							<option value="patient.icard">身份证</option>
-							<option value="rek.rekid">结算单</option>
-						</select> --> 
-						<label>检索：</label><div id="nameValueDiv" style="width:120px; display:inline"><select id="patCbg" class="combogrid" style="width: 120px;"
-							data-options="
-								pagination: true,
-								panelWidth: 310,
-		       		    		panelHeight: 340,
-								textField:'patientName',
-								idField:'patientid',
-								hasDownArrow:false,
-								mode: 'remote',
-								url: '${ctx}/patientManage/getPatientList.ajax',
-								method:'post',
-								onSelect: function(rowIndex, rowData){queryBillList2(rowIndex, rowData)},
-								columns: [[
-									{field:'patientName',title:'姓名',width:70,align:'center'},
-									{field:'patientSename',title:'性别',width:40,align:'center'},
-									{field:'birthDate',title:'出生日期',width:90,align:'center'},
-									{field:'icard',title:'证件号码',width:150,align:'center'}
-								]],
-								fitColumns: true">
-						</select></div>
-						<!-- <input  id="queryValueText" style="width: 120px;display: none"> -->
-						 <a href="javascript:void(0)" class="linkbutton"
-							style="width: 60px;"
-							data-options="iconCls:'chis-query',plain:true" onclick="queryBillList()">查询</a>
-					</div>
+				
 					<!-- 结算记录table -->
 					<table id="reks"></table>
 					<!-- 结算记录table结束 -->
-				</div>
 			</td>
 			<!-- 右边 -->
 			<td style="width:889px; padding: 0px; margin: 0px;" >
 				<div style="width:878px;" class="panel-header"><div class="panel-title" style="font-size: 12px;">退费明细</div></div>
 				<div id="rightside">
 					<div id="rightToolbar">
+						<div id="leftside" >
+							<div id="leftToolbar">
+								<!-- <select id="queryConditionSelect"
+									style="width: 65px; height: 22px; padding-bottom: 2px;"
+									name="dto.accountfee.orgName">
+									<option value="patient.patient_name">姓名</option>
+									<option value="patient.icard">身份证</option>
+									<option value="rek.rekid">结算单</option>
+								</select> --> 
+								<label>检索：</label><div id="nameValueDiv" style="width:120px; display:inline"><select id="patCbg" class="combogrid" style="width: 120px;"
+									data-options="
+										pagination: true,
+										panelWidth: 310,
+				       		    		panelHeight: 340,
+										textField:'patientName',
+										idField:'patientid',
+										hasDownArrow:false,
+										mode: 'remote',
+										url: '${ctx}/patientManage/getPatientList.ajax',
+										method:'post',
+										onSelect: function(rowIndex, rowData){queryBillList2(rowIndex, rowData)},
+										columns: [[
+											{field:'patientName',title:'姓名',width:70,align:'center'},
+											{field:'patientSename',title:'性别',width:40,align:'center'},
+											{field:'birthDate',title:'出生日期',width:90,align:'center'},
+											{field:'icard',title:'证件号码',width:150,align:'center'}
+										]],
+										fitColumns: true">
+								</select></div>
+								<!-- <input  id="queryValueText" style="width: 120px;display: none"> -->
+								 <a href="javascript:void(0)" class="linkbutton"
+									style="width: 60px;"
+									data-options="iconCls:'chis-query',plain:true" onclick="queryBillList()">查询</a>
+							</div>
+						</div>
 						<table border=0 style="width: 100%; font-size: 14px;">
 							<tr>
 								<td style="width: 70%;">
@@ -87,7 +88,7 @@
 								出生日期：<span id="patBirthDate" style="font-weight: bold; color: blue;"></span>&nbsp; 
 								移动电话：<span id="patidCard" style="font-weight: bold; color: blue;"></span>&nbsp; 
 								<!-- <a href="javascript:void(0)" id="refundBtn" class="linkbutton" data-options="iconCls:'chis-cost'" onclick="refundFeeDlg()">退费</a> -->
-								<button id="refundBtn" type="button" class="btn btn-primary btn-sm"  style="width:55px;" onclick="refundFeeDlg();">退    费</button>
+								<button id="refundBtn" type="button" class="btn btn-success btn-sm"  style="width:55px;" onclick="refundFeeDlg();">退    费</button>
 								</td>
 							</tr>
 						</table>

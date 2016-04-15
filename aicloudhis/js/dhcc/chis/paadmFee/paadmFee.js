@@ -6,7 +6,7 @@ $(function() {
 		$CommonUI.destoryPoshytip($("#tbLeft"));
 	});
 	//患者基本信息datagrid
-	var options_pat = { toolbar: "#tbLeft", height: 460, width: 300, border: true, singleSelect: true, pagination: false, rownumbers: false,
+	var options_pat = { height: 460, width: 300, border: true, singleSelect: true, pagination: false, rownumbers: false,
 						fitColumns: true,
 						//单击左侧行记录事件
 						onClickRow: function(rowIndex, rowData) {
@@ -97,6 +97,11 @@ $(function() {
 		if(event.keyCode == 173 || event.keyCode == 109){//负号键
 			return false;
 		}
+	});
+	//未收费列表自动加载当天未收费病人 add at 2016/04/12,需要修改后台方法
+	$CommonUI.getDataGrid('#patInfoDg').datagrid({
+		url:$WEB_ROOT_PATH + "/patientManage/getNoChargePatientList.ajax",
+		queryParams:{ "patientName": "","page": 1, "rows": 15}
 	});
 });
 

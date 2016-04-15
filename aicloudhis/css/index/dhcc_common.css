@@ -547,8 +547,9 @@ span.fc-header-title h2{
 .aui .nav-tabs > li.active > a, .aui .nav-tabs > li.active > a:hover, .aui .nav-tabs > li.active > a:focus{
 	/*border-color: #0072cf #0072cf transparent; CQ*/
 	background:url(../../images/index/tab_bottom.png) no-repeat bottom;
-	color: #0072cf;
+	color: #037551;
     font-weight:bold;
+    font-size:15px;
 	/*border-width: 1px; CQ 在院患者Tabss*/
 }
 
@@ -849,7 +850,7 @@ span.fc-header-title h2{
 }
 
 .scheduleTitleFont{
-	color:#0072cf;
+	color:#037551;
 	font-size:14px;
 	font-weight:bold;
 	padding-top:6px;
@@ -942,7 +943,7 @@ span.fc-header-title h2{
 	/*border-bottom: 1px solid #dddddd;*/
 	/*cursor:pointer;*/
 	padding:4px;
-	font-size:12px !important;
+	font-size:14px !important;
 }
 
 .aui .table th {
@@ -952,6 +953,7 @@ span.fc-header-title h2{
 .aui .table th a, .aui .table td a {
 	/*border-bottom: 1px solid #dddddd;*/
 	cursor:pointer;
+	color:#037551;
 }
 
 .table > thead > tr > th {

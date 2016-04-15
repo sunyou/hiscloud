@@ -29,8 +29,18 @@
 <table style="width:100%;height:490px;" border=0 >
 	<tr><td style="width:310px;padding: 0px; margin: 0px;">
 			<div style="width:298px;" class="panel-header"><div class="panel-title" style="font-size: 12px;">退药医嘱单列表</div></div>
-			<div style="width:310px;">
-				<div id="tbLeft">
+			<div style="width:310px;margin-top: -100px;">
+				
+				<!-- 病人基本信息table -->
+				<table id="patInfoDg"> </table>
+				<!-- 病人基本信息table结束 -->				
+			</div>  
+	</td>
+	<td style="width:889px; padding: 0px; margin: 0px;">
+		<div style="width:878px;" class="panel-header"><div class="panel-title" style="font-size: 12px;">退药明细</div>
+		<fieldset>
+			
+			<div id="tbLeft">
 					<label>检索：</label>
 					<select id="patCbg" class="combogrid" style="width: 120px;"
 						data-options="panelWidth: 300, panelHeight: 150, textField:'patientName',
@@ -48,14 +58,12 @@
 					]],">
 					</select>		
 					<a href="javascript:void(0)" class="linkbutton" style="width:60px;" data-options="iconCls:'chis-query',plain:true" onclick="findPatient()">查询</a>
+					<a href="javascript:void(0)" class="linkbutton" style="width:80px;" data-options="iconCls:'chis-add',plain:true" onclick="">下一位</a>
+					<div style="float:right;">
+						<a href="javascript:void(0)" class="linkbutton" style="width:120px;" data-options="iconCls:'chis-remove',plain:true" onclick="">退药历史查询</a>
+					</div>
 				</div>
-				<!-- 病人基本信息table -->
-				<table id="patInfoDg"> </table>
-				<!-- 病人基本信息table结束 -->				
-			</div>  
-	</td>
-	<td style="width:889px; padding: 0px; margin: 0px;">
-		<div style="width:878px;" class="panel-header"><div class="panel-title" style="font-size: 12px;">退药明细</div></div>
+		</fieldset>
 			<div>
 				<!-- 配药table -->
 				<table id="OrderDg"></table>
@@ -74,7 +82,7 @@
 				出生日期：<span id="patBirthDate" style="font-weight: bold; color: blue;"></span>&nbsp; 
 				移动电话：<span id="patidCard" style="font-weight: bold; color: blue;"> </span>&nbsp;&nbsp;&nbsp;
 				<!-- <a href="javascript:void(0)" id="backMedBtn" class="linkbutton" data-options="iconCls:'chis-drug'" onclick="backMed()">退药</a> -->
-				<button id="backMedBtn" type="button" class="btn btn-primary btn-sm"  style="width:55px;" onclick="backMed();">退    药</button>
+				<button id="backMedBtn" type="button" class="btn btn-success btn-sm"  style="width:55px;" onclick="backMed();">退    药</button>
 			</td>
 			
 		</tr>

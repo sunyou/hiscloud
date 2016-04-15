@@ -63,7 +63,7 @@
 		   	是否按批次：<input type="radio" id="1" name="radio" value="1"  />&nbsp;是&nbsp;
 		             <input type="radio" id="2" name="radio" value="2" checked="checked" />&nbsp;否&nbsp; 
 			<label id="bacth" style="display: none;">批次：<input id='number' class='validatebox' name='dto.meStCurListVo.batchcode' style="width: 120px" /></label>&nbsp;
-			<a class="btn btn-primary btn-sm" type="button" onclick="javascript:selectClick()" >查询</a>&nbsp;&nbsp;
+			<a class="btn btn-success btn-sm" type="button" onclick="javascript:selectClick()" >查询</a>&nbsp;&nbsp;
 		</form>
 	</div>
 	<table id="show">

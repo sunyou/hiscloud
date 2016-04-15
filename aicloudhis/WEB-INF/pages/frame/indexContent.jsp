@@ -54,6 +54,7 @@
 	 font-size:12px;
 	  border:1px solid #FFFFFF;
 	}
+	.span3 a{color:#f60;}
 </style> 
 
 </head>
@@ -76,16 +77,16 @@
 			<div class="clinicPromptTitle span2"></div> 
 				<div class="span10" id=""> 
 					<div class="row-fluid dhcc-row-fluid" id=""> 
-						<div id="" class="span3"> 预约待诊 :<span style="color:#930000;font-size:15px" id="bookWaitingCount"></span> 人 </div> 
-						<div id="" class="span3"> 登记待诊 :<span style="color:#930000;font-size:15px" id="regWaitingCount"></span> 人 </div> 
-						<div id="" class="span3"> 已收费 :<span style="color:#930000;font-size:15px" id="chargedMoney"></span> 元 </div> 
-						<div id="" class="span3"> 未收费 : <span style="color:#930000;font-size:15px" id="unchargeMoney"></span>  元 </div> 
-						<div id="" class="span3"> 待诊中 :<span style="color:#930000;font-size:15px" id="treatmentingCount"></span>人 </div> 
-						<!-- <div id="" class="span3"> 就诊中 :<span style="color:#930000;font-size:15px" id="treatmentingCount"></span> 人 </div>  -->
-						<div id="" class="span3"> 已就诊 :<span style="color:#930000;font-size:15px" id="treatmentedCount"></span> 人 </div> 
-						<!-- <div id="" class="span3"> 已开医嘱 :<span style="color:#930000;font-size:15px" id="docAdviceCount"></span>条 </div>
-						<div id="" class="span3"> 待回访 : <span style="color:#930000;font-size:15px" id="visitWaitingCount"></span>人 </div>
-						<div id="" class="span3"> 发药 :<span style="color:#930000;font-size:15px" id="dispensingCount"></span> 人 </div>  -->
+						<div id="" class="span3"> 预约待诊 :<span style="color:#00a06d;font-size:15px" id="bookWaitingCount"></span> 人 </div> 
+						<div id="" class="span3"> 登记待诊 :<span style="color:#00a06d;font-size:15px" id="regWaitingCount"></span> 人 </div> 
+						<div id="" class="span3"> 已收费 :<span style="color:#00a06d;font-size:15px" id="chargedMoney"></span> 元 </div> 
+						<div id="" class="span3"> 未收费 : <span style="color:#00a06d;font-size:15px" id="unchargeMoney"></span>  元 </div> 
+						<div id="" class="span3"> 待诊中 :<span style="color:#00a06d;font-size:15px" id="treatmentingCount"></span>人 </div> 
+						<!-- <div id="" class="span3"> 就诊中 :<span style="color:#00a06d;font-size:15px" id="treatmentingCount"></span> 人 </div>  -->
+						<div id="" class="span3"> 已就诊 :<span style="color:#00a06d;font-size:15px" id="treatmentedCount"></span> 人 </div> 
+						<!-- <div id="" class="span3"> 已开医嘱 :<span style="color:#00a06d;font-size:15px" id="docAdviceCount"></span>条 </div>
+						<div id="" class="span3"> 待回访 : <span style="color:#00a06d;font-size:15px" id="visitWaitingCount"></span>人 </div>
+						<div id="" class="span3"> 发药 :<span style="color:#00a06d;font-size:15px" id="dispensingCount"></span> 人 </div>  -->
 					</div> 
 				</div> 
 			</div>
@@ -159,28 +160,28 @@
 			<div class="span10" id=""> 
 				<div class="row-fluid dhcc-row-fluid" id=""> 
 					<div id=""> 
-						<div class="span3"> 门诊人次 :<span style="color:#930000;font-size:15px" id="outPatientNum"></span> </div>
+						<div class="span3"> 门诊人次 :<span style="color:#00a06d;font-size:15px" id="outPatientNum"></span> </div>
 					</div> 
 					<div id=""> 
-						<div class="span3"> 总收入 :<span style="color:#930000;font-size:15px" id="totalIncome"></span> 元 </div> 
+						<div class="span3"> 总收入 :<span style="color:#00a06d;font-size:15px" id="totalIncome"></span> 元 </div> 
 					</div> 
 					<div id=""> 
-						<div class="span3"> 次均费用 :<span style="color:#930000;font-size:15px" id="averageCost"></span> 元 </div> 
+						<div class="span3"> 次均费用 :<span style="color:#00a06d;font-size:15px" id="averageCost"></span> 元 </div> 
 					</div> 
 					<div id=""> 
-						<div class="span3"> 出诊次数 :<span style="color:#930000;font-size:15px" id="visitCount"></span> </div> 
+						<div class="span3"> 出诊次数 :<span style="color:#00a06d;font-size:15px" id="visitCount"></span> </div> 
 					</div> 
 					<div id=""> 
-						<div class="span3"> 预约率 :<span style="color:#930000;font-size:15px" id="bookRate"></span> </div> 
+						<div class="span3"> 预约率 :<span style="color:#00a06d;font-size:15px" id="bookRate"></span> </div> 
 					</div> 
 					<div id=""> 
-						<div class="span3"> 回访次数 :<span style="color:#930000;font-size:15px" id="returnVisitCount"></span> </div> 
+						<div class="span3"> 回访次数 :<span style="color:#00a06d;font-size:15px" id="returnVisitCount"></span> </div> 
 					</div> 
 					<div id=""> 
-						<div class="span3"> 发药 :<span style="color:#930000;font-size:15px" id="dispensingCount_out"></span>人 </div> 
+						<div class="span3"> 发药 :<span style="color:#00a06d;font-size:15px" id="dispensingCount_out"></span>人 </div> 
 					</div>
 					<div id=""> 
-						<div class="span3"> 处方数 :<span style="color:#930000;font-size:15px" id="prescriptionCount"></span> </div> 
+						<div class="span3"> 处方数 :<span style="color:#00a06d;font-size:15px" id="prescriptionCount"></span> </div> 
 					</div> 
 					<div id=""> </div> 
 					<div id=""> 
@@ -219,22 +220,22 @@
 			<div class="span10" id=""> 
 				<div class="row-fluid dhcc-row-fluid" id=""> 
 					<div id=""> 
-						<div class="span3"> 应收金额 :<span style="color:#930000;font-size:15px" id="receivableMoney"></span> 元  </div> 
+						<div class="span3"> 应收金额 :<span style="color:#00a06d;font-size:15px" id="receivableMoney"></span> 元  </div> 
 					</div> 
 					<div id=""> 
-						<div class="span3"> 实收金额 :<span style="color:#930000;font-size:15px" id="paidMoney"></span> 元 </div> 
+						<div class="span3"> 实收金额 :<span style="color:#00a06d;font-size:15px" id="paidMoney"></span> 元 </div> 
 					</div> 
 					<div id=""> 
-						<div class="span3"> 欠费金额 :<span style="color:#930000;font-size:15px" id="arrearageMoney"></span>元</div> 
+						<div class="span3"> 欠费金额 :<span style="color:#00a06d;font-size:15px" id="arrearageMoney"></span>元</div> 
 					</div> 
 					<div id=""> 
-						<div class="span3"> 优惠金额 :<span style="color:#930000;font-size:15px" id="preferentialMoney"></span>元</div> 
+						<div class="span3"> 优惠金额 :<span style="color:#00a06d;font-size:15px" id="preferentialMoney"></span>元</div> 
 					</div> 
 					<div id=""> 
-						<div class="span3"> 现金支付 :<span style="color:#930000;font-size:15px" id="cashMoney"></span> 元</div> 
+						<div class="span3"> 现金支付 :<span style="color:#00a06d;font-size:15px" id="cashMoney"></span> 元</div> 
 					</div> 
 					<div id=""> 
-						<div class="span3"> 其他支付 :<span style="color:#930000;font-size:15px" id="otherMoney"></span> 元 </div> 
+						<div class="span3"> 其他支付 :<span style="color:#00a06d;font-size:15px" id="otherMoney"></span> 元 </div> 
 					</div> 
 					
 					<div id=""> </div> 

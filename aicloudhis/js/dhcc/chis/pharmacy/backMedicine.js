@@ -9,7 +9,7 @@ $(function() {
 	$CommonUI.getDataGrid('#patInfoDg').datagrid({
 		height: 460, 
 		width: '100%', 
-		toolbar: "#tbLeft",
+		/*toolbar: "#tbLeft",*/
 		singleSelect: true,
 		pagination: false,
 		fitColumns: true,

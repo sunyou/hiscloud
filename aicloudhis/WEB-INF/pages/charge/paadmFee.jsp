@@ -29,48 +29,51 @@
 <table style="width: 1200px;">
 	<tr><td style="width: 300px;padding: 0px;">
 			<div style="width:288px;" class="panel-header"><div class="panel-title" style="font-size: 12px;">未收费患者列表</div></div>
-			<div id="leftside" style="margin-right: 0px;">
-			<div id="tbLeft">
-				<label>检索：</label><select id="patCbg"
-						class="combogrid" style="width: 120px;"
-						data-options="
-						pagination: true,
-						panelWidth: 310,
-       		    		panelHeight: 340,
-						textField:'patientName',
-						hasDownArrow:false,
-						mode: 'remote', 
-                        url: '${ctx}/patientManage/getPatientList.ajax',
-						method:'post',
-						columns: [[
-							{field:'patientName',title:'姓名',width:70,align:'center'},
-							{field:'patientSename',title:'性别',width:40,align:'center'},
-							{field:'birthDate',title:'出生日期',width:90,align:'center'},
-							{field:'icard',title:'证件号码',width:150,align:'center'}
-						]],
-						fitColumns: true
-					">
-				</select>							
-				<a href="javascript:void(0)" class="linkbutton" style="width:60px;" data-options="iconCls:'chis-query',plain:true" onclick="findPatient(); return false;">查询</a>
-			</div>
+			
 			<!-- 病人基本信息table -->
 			<table id="patInfoDg"> </table>
 			<!-- 病人基本信息table结束 -->	
-			</div>
 		</td>
 		<!-- 右边 -->
 		<td style="width: 900px;padding: 0px;">
 			<div style="width:888px;" class="panel-header"><div class="panel-title" style="font-size: 12px;">费用明细</div></div>
 			<div id="infomsg" style="display: block;">
+				<div id="leftside" style="margin-right: 0px;">
+					<div id="tbLeft">
+						<label>检索：</label><select id="patCbg"
+								class="combogrid" style="width: 120px;"
+								data-options="
+								pagination: true,
+								panelWidth: 310,
+				     		    		panelHeight: 340,
+								textField:'patientName',
+								hasDownArrow:false,
+								mode: 'remote', 
+				                      url: '${ctx}/patientManage/getPatientList.ajax',
+								method:'post',
+								columns: [[
+									{field:'patientName',title:'姓名',width:70,align:'center'},
+									{field:'patientSename',title:'性别',width:40,align:'center'},
+									{field:'birthDate',title:'出生日期',width:90,align:'center'},
+									{field:'icard',title:'证件号码',width:150,align:'center'}
+								]],
+								fitColumns: true
+							">
+						</select>							
+						<a href="javascript:void(0)" class="linkbutton" style="width:60px;" data-options="iconCls:'chis-query',plain:true" onclick="findPatient(); return false;">查询</a>
+					</div>
+				</div>
 				<table border=0 style="width: 100%; font-size: 14px;">
 					<tr>
 						<td style="width: 70%;">
 						患者姓名：<span id="patName" style="font-weight: bold; color: blue;"> </span>&nbsp; 
 						性别：<span id="patSex" style="font-weight: bold; color: blue;"> </span>&nbsp;
 						出生日期：<span id="patBirthDate" style="font-weight: bold; color: blue;"> </span>&nbsp; 
+						科室：<span id="" style="font-weight: bold; color: blue;"> </span>&nbsp; 
+						联系电话：<span id="" style="font-weight: bold; color: blue;"> </span>&nbsp; 
 						<!-- <a href="javascript:void(0)" class="linkbutton" data-options="iconCls:'chis-cost'" onclick="getTotalPrice(); return false;">结算</a>
 						 -->
-						 <button type="button" class="btn btn-primary btn-sm"  style="width:55px;" onclick="getTotalPrice();">结    算</button>
+						 <button type="button" class="btn btn-success btn-sm"  style="width:55px;" onclick="getTotalPrice();">结    算</button>
 						 </td>
 						<td align="center"><span style="font-weight: bold;">云诊所   demo</span></td>
 					</tr>

@@ -13,7 +13,7 @@ height:100%;
 
 #wrapper {
 	padding: 0 5em 0;/*��2em*/
-	background:url(../../images/index/bg.png) repeat;/*CQ*/
+	background:url(../../images/index/bg.png) repeat-x #f3f5f5;/*CQ*/
 	/*background-color:red; CQ����*/
 	@include respond-to(phone) {
 		padding-left: 0.5em;

@@ -267,11 +267,30 @@
 		<table id="doclist"></table>
 	</div> -->
 	<div id="leftSide" style="width: 25%;height:100%;float:left" align="left">
+		
+		<div style="margin-top:10px; margin-bottom: 5px">
+<!-- 			<a href="javascript:void(0)" id="refresh" class="linkbutton" data-options="iconCls:'chis-refresh',plain:true" style="float: right">刷新</a>
+-->			<label style="font-size:16px;margin-left: 0px;"><input id="wait" name="selectPatientType" type="radio" value="1" checked="checked"/>待接诊</label> 
+			<%--<label style="font-size:16px;margin-left: 0px;"><input id="treating" name="selectPatientType" type="radio" value="2" />已接诊</label> 
+			--%><input id="begindate" type="text" style="width: 95px;" class="datebox" data-options=""></input>
+			<a href="javascript:void(0)" id="treatsearchBtn" class="linkbutton" data-options="iconCls:'chis-query',plain:true" style="" onclick="treatsearch()" >查询</a>
+		</div>
+		<!-- <div style="margin-top:3px;">
+			<label  style="height: 24px;font-size:13px;" ></label>
+		</div> -->
+		<!-- <div style="margin-top:5px;">
+			<a href="javascript:nameQuery()" class="linkbutton" style="float: right; margin-left:3px;"  data-options="iconCls:'icon-search',plain:true">查询</a>
+			<label style="font-size:15px; margin-left: 10px;" title="诊疗病人">接诊查询:</label>
+			<input class="validatebox" id="patientName2" type="text" style="width: 150px;"onkeydown="entersearch()" />
+		</div> -->
+	    <table id="patientList" style="height: 441px;width:310px;"></table>
+	</div>
+	<div id="rightSide" style="width: 73%; height: 100%;float:left;margin-left:10px">
 		<div style="height: auto;margin-top: 10px;" id="poshytip">
-			<a href="javascript:createPatient()" class="linkbutton" style="float: right; margin-left:3px;" data-options="iconCls:'chis-user',plain:true">登记</a>
 			<!-- <a href="javascript:patRegister()" class="linkbutton" style="float: right; margin-left:3px;" data-options="iconCls:'icon-ok',plain:true">挂号</a> -->
 			<a href="javascript:directTreatment()" class="linkbutton" style="float: right; margin-left:3px;" data-options="iconCls:'chis-right',plain:true">接诊</a> 
-			<label style="font-size:15px; margin-left: 5px;">患者检索:</label>
+			<a href="javascript:createPatient()" class="linkbutton" style="float: right; margin-left:3px;" data-options="iconCls:'chis-user',plain:true">登记</a>
+			<label style="font-size:15px; margin-left: 10px;">患者检索:</label>
 	   		<select id="patientComboGrid" class="combogrid" style="width:100px" data-options="
 		        panelWidth: 310,
 		        panelHeight: 340,
@@ -292,24 +311,6 @@
 			">
 			</select>
 		</div> 
-		<div style="margin-top:10px; margin-bottom: 5px">
-<!-- 			<a href="javascript:void(0)" id="refresh" class="linkbutton" data-options="iconCls:'chis-refresh',plain:true" style="float: right">刷新</a>
--->			<label style="font-size:16px;margin-left: 0px;"><input id="wait" name="selectPatientType" type="radio" value="1" checked="checked"/>待接诊</label> 
-			<label style="font-size:16px;margin-left: 0px;"><input id="treating" name="selectPatientType" type="radio" value="2" />已接诊</label> 
-			<input id="begindate" type="text" style="width: 95px;" class="datebox" data-options=""></input>
-			<a href="javascript:void(0)" id="treatsearchBtn" class="linkbutton" data-options="iconCls:'chis-query',plain:true" style="" onclick="treatsearch()" >查询</a>
-		</div>
-		<!-- <div style="margin-top:3px;">
-			<label  style="height: 24px;font-size:13px;" ></label>
-		</div> -->
-		<!-- <div style="margin-top:5px;">
-			<a href="javascript:nameQuery()" class="linkbutton" style="float: right; margin-left:3px;"  data-options="iconCls:'icon-search',plain:true">查询</a>
-			<label style="font-size:15px; margin-left: 10px;" title="诊疗病人">接诊查询:</label>
-			<input class="validatebox" id="patientName2" type="text" style="width: 150px;"onkeydown="entersearch()" />
-		</div> -->
-	    <table id="patientList" style="height: 441px;width:310px;"></table>
-	</div>
-	<div id="rightSide" style="width: 73%; height: 100%;float:left;margin-left:10px">
 		<iframe id="TreatFrame" style="border:0;width: 100%;height:100%" src="${ctx}/treatment/showTreamentPerson.html"></iframe>
 	</div>
 </body>

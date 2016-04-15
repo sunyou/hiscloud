@@ -140,7 +140,8 @@ function loadBasicInfo(patientid){
 			$('#phoneSpan').html(d["rows"][0].patientTelephone);//联系电话
 			$('#patientIdentitynameSpan').html(d["rows"][0].patientIdentityname);//患者身份
 			$('#unfoldOrFold').show();
-			$('#openDetailsDlg').css("display","block");
+			//$('#openDetailsDlg').css("display","block");
+			$('#openDetailsDlg').show();//at 2016/04/12
 	});
 }
 

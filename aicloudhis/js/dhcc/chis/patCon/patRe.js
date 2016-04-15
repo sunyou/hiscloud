@@ -54,7 +54,8 @@ $(function(){
 	     			{title : "症状",field : "diagName",width : 150,align : 'center',hidden:true},
 	     			{title : "操作",field : "lookRecord",width : 120,align : 'center',formatter:function(value,row,index){
 	     				var familyAddress=row.provinCesid+row.cityid+row.cityaeraid+row.streetinfo;
-	     				return a = '<a href="javascript:void(0)" onclick="treats(\''+row.patientid+'\')">诊疗</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="javascript:void(0)" onclick="look(\''+row.patientid+'\',\''+familyAddress+'\')">就诊记录</a>';
+	     				//return a = '<a href="javascript:void(0)" onclick="treats(\''+row.patientid+'\')">诊疗</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="javascript:void(0)" onclick="look(\''+row.patientid+'\',\''+familyAddress+'\')">就诊记录</a>';
+	     				return a = '<a href="javascript:void(0)" onclick="look(\''+row.patientid+'\',\''+familyAddress+'\')">就诊记录</a>';
 	     			}}]];
 	var queryParams = {page : 1,rows : 15};
 	var url = $WEB_ROOT_PATH + '/patientManage/getPatientList.ajax';

@@ -456,7 +456,7 @@ function checkuser(){
 	        success: function(data){
 	        	var errorCode=data.rows[0].errorCode;
 	        	if (errorCode==0){
-	        		location.assign($WEB_ROOT_PATH+"/frame/mainFrame.html");	        		
+	        		location.assign($WEB_ROOT_PATH+"/frame/index.html");	        		
 	        	} else {
 	        		$CommonUI.alert(data.rows[0].errorMessage);
 	        	} 

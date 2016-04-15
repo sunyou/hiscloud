@@ -40,7 +40,7 @@
 						<font style="font-family: '宋体', Simsun;">起始日期:</font><input id="startime" class="datebox" data-options="editable:false" style="width: 120px;" />
 						<font style="font-family: '宋体', Simsun;">终止日期:</font><input id="endtime" class="datebox" data-options="editable:false" style="width: 120px;" />
 						
-						<a id="btn" href="javascript:nocheck()" type="button" class="btn btn-primary btn-sm"><font style="color: white;">统计</font></a>
+						<a id="btn" href="javascript:nocheck()" type="button" class="btn btn-success btn-sm"><font style="color: white;">统计</font></a>
 				
 			</fieldset>
 		

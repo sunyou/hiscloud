@@ -36,7 +36,7 @@
 				data-options="editable:false">
 					</select>&nbsp;&nbsp;&nbsp;
 					<!-- <a href="javascript:searchSchedulereports()"   type="button" class="btn btn-info btn-sm">查询</a> -->
-					<button onclick="javascript:searchSchedulereports()"   type="button" class="btn btn-primary btn-sm">查询</button>
+					<button onclick="javascript:searchSchedulereports()"   type="button" class="btn btn-success btn-sm">查询</button>
 				</form>
 				
 				</div>

@@ -28,9 +28,20 @@
 .pagination span {
     font-size: 11px;
 }
+fieldset{
+	width:97%;
+}
 </style> 
 </head>
 <body>
+	<div style="float:right;height:30px; margin-top: 5px;color:red;">
+		<!-- <label style="font-size:18px;font-weight:bold">回访:</label>
+		<br> -->
+		<!-- 以下内容已脱离原来form，应该增加js事件 -->
+		复诊：<input type="checkbox" id="referral" name='appendInfoList[8].appendContent'/>
+		下次随访日期:<input class="datebox" id="returnVisitDate" style="height: 25px; width: 90px">
+		<!-- <a href="javascript:returnTreat()" style="align: inline;">确定</a> -->
+	</div><br>
 	<div id="infomsg" style="font-size:15px;display:block;background:white;margin-left: 3px;">
 		<fieldset>
 			<legend>患者信息</legend>
@@ -43,12 +54,13 @@
 				年龄：<span id="ageSpan" style="font-weight: bold;color: blue;"> </span>
 				移动电话：<span id="phoneSpan" style="font-weight: bold;color: blue;"> </span>
 				患者身份：<span id="patientIdentitynameSpan" style="font-weight: bold;color: blue;"> </span>
+				科室：<span id="" style="font-weight: bold;color: blue;"> </span>
+				主治医师：<span id="" style="font-weight: bold;color: blue;"> </span>
 				<!-- 诊断：<span id="diagnosesSpan" style="font-weight: bold;color: blue;"> </span> -->
-			</div>
-			<div style="position: absolute; right: 2px;top: 12px;float: right">
-				<a href="javascript:loadPatientDetailInfo()" id="unfoldOrFold" style="display: none">详细信息</a>
-				<a href="javascript:openDetailsDlg()" id="openDetailsDlg" style="display: none">历次就诊</a>
-				
+				<div style="right: 2px;top: 12px;float: right;">
+					<a href="javascript:loadPatientDetailInfo()" id="unfoldOrFold" style="display: none">详细信息</a>
+					<a href="javascript:openDetailsDlg()" id="openDetailsDlg" style="display: none">历次就诊</a>
+				</div>
 			</div>
 		</fieldset>
 	</div>
@@ -63,7 +75,7 @@
 		<a href="javascript:importTemplate()" class="linkbutton" style="position: absolute; right: 360px;top: 2px;float: right" data-options="iconCls:'chis-template'" style="float: right">模板</a> -->
 		<div  title="门诊病历" style="padding: 0; margin: 0" data-options="fit:true">
 		  <form id="appendInfoForm" method="post">
-			<div id="complainedAndcurrentDiseasesDiv" style="margin:10 0 10 10;height: 100px;">
+			<div id="complainedAndcurrentDiseasesDiv" style="margin:10 0 10 10;height: 80px;">
 				<div id="hiddenuid" style="display:none;"></div>
 				<div id="hiddenadmisSerialnos" style="display:none;"></div>
 				<div id="hiddenserialnos" style="display:none;"></div>
@@ -104,7 +116,7 @@
 						</select>
 						<!-- <input id="patientRhythm" class="combobox" name="appendInfoList[4].appendContent" readonly="true" data-options="width:60, valueField:'id',textField:'text',data:[{id: '1',text: '心律齐'},{id: '2',text: '心律不齐'},{id: '3',text: '绝对不齐'}]" /> -->
 					</div>
-					<div style="float:left;width:120px;height:30px">低压/高压:&nbsp;
+					<div style="float:left;width:120px;height:30px">伸缩压/舒张压:&nbsp;
 						<input id="patientDBP" style="border:none;border-bottom:1px solid black;width: 40px" type="text" style="width: 40px" name="appendInfoList[5].appendContent"
 						onkeyup="if($('#hiddenpatientId').val()!=null&&$('#hiddenpatientId').val()!=''){this.value=this.value.replace(/[^\d.]/g,'').substr(0, 3)}else{alert('请先接诊一个患者'); this.value=''}"/></div>
 					<div style="float:left;width:120px;height:30px">/
@@ -133,13 +145,7 @@
 					 <table id="diagnosisGrid">
 					 </table>
 				</div>
-				<div style="float:left;height:30px; margin-top: 5px;">
-					<!-- <label style="font-size:18px;font-weight:bold">回访:</label>
-					<br> -->
-					复诊：<input type="checkbox" id="referral" name='appendInfoList[8].appendContent'/>
-					下次随访日期:<input class="datebox" id="returnVisitDate" style="height: 25px; width: 90px">
-					<!-- <a href="javascript:returnTreat()" style="align: inline;">确定</a> -->
-				</div>
+				
 				<div id="diagimpTemplateDlg" class="dialog" title="诊断模板" data-options="closed:true" style="width:730px;height:430px;padding:10px">
 					别名检索:<input id="diagtemplatesearch" type="text" style="width: 150px;"  /> 
 					<!-- <a href="javascript:void(0)" id="diagtemsearchBtn" class="linkbutton" data-options="iconCls:'chis-query'" style="" onclick="diagsearch()">查询</a>

@@ -98,10 +98,10 @@ function Getmenuinfo(id){
 					}
 					if(childrenBean.children.length !== 0){
 						pages[src]=name;
-						a ='<a onclick=changeUrl("'+src+'","'+name+'") class="f001 has-submenu" href="javascript:void(0)"><span class="sub-arrow">+</span><span class="f1"></span><div style="font-family: \'微软雅黑\'; font-size: 13px;">'+ name +'</div></a>';
+						a ='<a onclick=changeUrl("'+src+'","'+name+'") class="f001 has-submenu" href="javascript:void(0)"><span class="sub-arrow">+</span><span class="f1"></span><div style="font-family: \'微软雅黑\'; font-size: 15px;">'+ name +'</div></a>';
 					}else{
 						pages[src]=name;
-						a ='<a href="javascript:void(0)" onclick=changeUrl("'+src+'","'+name+'") class="f001"><span class="f1"></span><div style="font-family: \'微软雅黑\'; font-size: 13px;">'+ name +'</div></a>';
+						a ='<a href="javascript:void(0)" onclick=changeUrl("'+src+'","'+name+'") class="f001"><span class="f1"></span><div style="font-family: \'微软雅黑\'; font-size: 15px;">'+ name +'</div></a>';
 					} 
 					var firstmenu = $(li).append(a);
 					$(mainul).append(firstmenu);
@@ -122,10 +122,10 @@ function Getmenuinfo(id){
 							
 							if(funcChildrenBean.children.length !== 0){
 								pages[secondsrc]=secondname;
-								asub ='<a href="javascript:void(0)" onclick=changeUrl("'+secondsrc+'","'+secondname+'") class="cs-navi-tab" style="font-family: \'微软雅黑\'; font-size: 13px;"><span class="sub-arrow">+</span>'+ secondname +'</a>';
+								asub ='<a href="javascript:void(0)" onclick=changeUrl("'+secondsrc+'","'+secondname+'") class="cs-navi-tab" style="font-family: \'微软雅黑\'; font-size: 15px;"><span class="sub-arrow">+</span>'+ secondname +'</a>';
 							}else{
 								pages[secondsrc]=secondname;
-								asub ='<a href="javascript:void(0)" onclick=changeUrl("'+secondsrc+'","'+secondname+'") class="cs-navi-tab" style="font-family: \'微软雅黑\'; font-size: 13px;">'+ secondname +'</a>';
+								asub ='<a href="javascript:void(0)" onclick=changeUrl("'+secondsrc+'","'+secondname+'") class="cs-navi-tab" style="font-family: \'微软雅黑\'; font-size: 15px;">'+ secondname +'</a>';
 							}
 							if(funcChildrenBean.children.length !== 0){
 								var thirdulsub = '<ul class="sub-menu sm-nowrap" style="display: none; width: auto; top: auto; left: 0px; margin-left: 129px; margin-top: -43px; min-width: 10em; max-width: 20em;">';
@@ -137,7 +137,7 @@ function Getmenuinfo(id){
 									var thirdname=lastChildrenBean.funcName;
 									var thirdli = '<li id="menu-item-113">';
 									pages[thirdsrc]=thirdname;
-									var thirda= '<a href="javascript:void(0)" onclick=changeUrl("'+thirdsrc+'","'+thirdname+'") class="cs-navi-tab" style="font-family: \'微软雅黑\'; font-size: 13px;"  href="#">'+ thirdname +'</a>';
+									var thirda= '<a href="javascript:void(0)" onclick=changeUrl("'+thirdsrc+'","'+thirdname+'") class="cs-navi-tab" style="font-family: \'微软雅黑\'; font-size: 15px;"  href="#">'+ thirdname +'</a>';
 									var thirdstr = thirdli + thirda + '</li>';
 									thirdul +=thirdstr;
 								});
@@ -232,8 +232,9 @@ $(function(){
 <style type="text/css">
 menu_name{
 font-family: '微软雅黑'; 
-font-size: 13px;
+font-size: 15px;
 }
+.sub-menu a:Hover{ background:#07965e;}
 
 </style>
 </head>
@@ -243,13 +244,13 @@ font-size: 13px;
      <div id="heading"> 
    <!--   <h1 class="site-title">  -->
    <h1>
-     <a class="logo custom-logo" href="#" title="Go to 云诊所系统" style="margin-top:3px"> <img alt="云诊所系统" height="35" src="${ctx}/images/mainImages/index_logo.png" width="166" /> </a>
+     <a class="logo custom-logo" href="#" title="Go to 云诊所系统" style="margin-top:3px"> <img alt="云诊所系统" height="35" src="${ctx}/images/mainImages/index_logo.png" /> </a>
      <div id="myState" style="float:right;padding-right:50px;margin-top:0px;font-size:12px">
 	      <div id="myState" style="float:right;padding-right:50px;margin-top:0px;font-size:12px"> 
-	                   欢迎您！<font color="#D2691E">${userHolder.user.orgnameHosp}</font>&nbsp;&nbsp;
-	      <font color="#AB82FF">${userHolder.user.orgname}</font>&nbsp;&nbsp;
-	      <font color="#0000EE">${userHolder.user.empName}</font>&nbsp;&nbsp;
-	      <button class="btn btn-info btn-sm" type="button" onclick="showPasswordPop()">修改密码</button>&nbsp;&nbsp;
+	                   欢迎您！<font color="#f60">${userHolder.user.orgnameHosp}</font>&nbsp;&nbsp;
+	      <font color="#028a5f">${userHolder.user.orgname}</font>&nbsp;&nbsp;
+	      <font color="#028a5f">${userHolder.user.empName}</font>&nbsp;&nbsp;
+	      <button class="btn btn-success btn-sm" type="button" onclick="showPasswordPop()">修改密码</button>&nbsp;&nbsp;
 	      <button type="button" class="btn btn-danger btn-sm" onclick="logout()">退出</button>
 	      </div>
       </div>   

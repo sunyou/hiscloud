@@ -19,6 +19,18 @@
 <script type="text/javascript" src="${ctx}/js/dhcc/chis/sicker/sickerMgr.js"></script>	
 </head>
 <body style="overflow:hidden">
+<fieldset style="height: 225px">
+	<legend style="color:red">预约登记</legend>
+		<div id="tb">
+	       	 姓名<input class="validatebox" id="patientName" type="text" style="height: 25px; width: 100px">
+			移动电话<input class="validatebox" id="patientTelephone"  type="text" style="height: 25px; width: 100px">
+			<button class="btn btn-success btn-sm" type="button" onclick="RegisterQuery()" style="padding-bottom: 3px; padding-top: 3px; width: 70px">查&nbsp;询</button>
+			<!-- <a href="javascript:RegisterQuery()"  class="linkbutton" data-options="iconCls:'chis-query'">查询</a> -->
+			<span style="color: red">请查询患者信息进行预约登记;若无患者登记信息,请先进行</span> <a href="javascript:void(0)" onclick="redirect2PatientReg();">
+							   <span style="color: blue">患者登记</span></a>
+		</div>
+	<table id="patientinfo"></table> 
+</fieldset>
 <fieldset style="height: 225px;">
 	<legend style="color:red">已预约</legend>
 		<div id="tb1">
@@ -26,23 +38,12 @@
 			移动电话<input class="validatebox" id="patientTelephone1"  type="text" style="height: 25px; width: 100px">
 			预约初始日期<input class="datebox" id="startDate" style="height: 25px; width: 90px" data-options="editable:false">
 			预约结束日期<input class="datebox" id="endDate" style="height: 25px; width: 90px" value=2015-06-18 data-options="editable:false">
-			<button class="btn btn-primary btn-sm" type="button" onclick="BookedQuery()" style="width:70px;padding-bottom: 3px; padding-top: 3px;">查&nbsp;询</button>
+			<button class="btn btn-success btn-sm" type="button" onclick="BookedQuery()" style="width:70px;padding-bottom: 3px; padding-top: 3px;">查&nbsp;询</button>
 		<!-- 	<a href="javascript:BookedQuery()"  class="linkbutton" data-options="iconCls:'chis-query'">查询</a> -->
 		</div>
 	<table id="bookedInfo"></table> 
 </fieldset>
-<fieldset style="height: 225px">
-	<legend style="color:red">预约登记</legend>
-		<div id="tb">
-	       	 姓名<input class="validatebox" id="patientName" type="text" style="height: 25px; width: 100px">
-			移动电话<input class="validatebox" id="patientTelephone"  type="text" style="height: 25px; width: 100px">
-			<button class="btn btn-primary btn-sm" type="button" onclick="RegisterQuery()" style="padding-bottom: 3px; padding-top: 3px; width: 70px">查&nbsp;询</button>
-			<!-- <a href="javascript:RegisterQuery()"  class="linkbutton" data-options="iconCls:'chis-query'">查询</a> -->
-			<span style="color: red">请查询患者信息进行预约登记;若无患者登记信息,请先进行</span> <a href="javascript:void(0)" onclick="redirect2PatientReg();">
-							   <span style="color: blue">患者登记</span></a>
-		</div>
-	<table id="patientinfo"></table> 
-</fieldset>
+
 <div id="calendarDlg" class="dialog" title="Modal Window" data-options="cache:false,modal:true,closed:true" style="width:780px;height:390px;">
 	<div style="width:360px;float:left;margin-top:5;font-size:16px;">
 		<fieldset style="height:325px">

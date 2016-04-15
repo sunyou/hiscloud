@@ -24,7 +24,7 @@
 		<form id="aa">
 		起始时间：<input id="start" style="width:120px;" class="datebox" data-options="editable:false"/>
 		终止时间：<input id="end" style="width:120px;" class="datebox" data-options="editable:false"/>
-		<button class="btn btn-primary btn-sm" type="button" onclick="findDate()" style="width:70px;padding-bottom: 3px; padding-top: 3px;">查&nbsp;询</button>
+		<button class="btn btn-success btn-sm" type="button" onclick="findDate()" style="width:70px;padding-bottom: 3px; padding-top: 3px;">查&nbsp;询</button>
 <%--	    <A TYPE="BUTTON" ID="PRINTBTN" HREF="#"  TARGET="_BLANK" CLASS="BTN BTN-SUCCESS BTN-SM" ONCLICK="PRINT();" STYLE="WIDTH:90PX;PADDING-BOTTOM: 3PX; PADDING-TOP: 3PX;"><FONT COLOR="WHITE">打印当前页</FONT></A>--%>
 	                          
 		</form>

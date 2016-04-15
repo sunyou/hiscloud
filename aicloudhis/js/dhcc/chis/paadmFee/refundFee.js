@@ -6,7 +6,7 @@ $(function(){
 		$CommonUI.destoryPoshytip($("#leftToolbar"));
 	});
 	//历史结算记录datagrid
-	var options_Rek = { toolbar: "#leftToolbar",  height: 460, width: '100%', border: true, singleSelect: true, pagination: false, 
+	var options_Rek = {   height: 460, width: '100%', border: true, singleSelect: true, pagination: false, 
 						rownumbers: false, fitColumns: true,
 						onClickRow: function(rowIndex, rowData) {
 							$('#patName').text(rowData.patientName);
@@ -82,6 +82,12 @@ $(function(){
 			$('#queryValueText').css("display","inline");
 		}
 	});
+	
+	//检索框放跟右边患者信息放一块，已收费病人列表只显示3天的 at 2016/04/12 需要修改后台方法
+	$CommonUI.getDataGrid('#reks').datagrid({
+		url:$WEB_ROOT_PATH + "/patientManage/getPatientListByRefundFee.ajax",
+		queryParams:{ "filterStr": "","feeSts":1,"page": 1, "rows": 15}
+	}); 
 });
 
 function queryBillList(){	 

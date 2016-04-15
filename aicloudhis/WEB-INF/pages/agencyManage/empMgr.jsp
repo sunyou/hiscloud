@@ -118,7 +118,7 @@
 				<option value="demo" selected="selected">云诊所</option>
 			</select>
 		科室：<input id="orgSelect" />
-		<button type="button" class="btn btn-primary btn-sm" onclick="queryEmp();">查 询</button>
+		<button type="button" class="btn btn-success btn-sm" onclick="queryEmp();">查 询</button>
 	</div>
 </body>
 </html>

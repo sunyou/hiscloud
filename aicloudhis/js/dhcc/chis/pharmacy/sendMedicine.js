@@ -9,7 +9,7 @@ $(function() {
 	$CommonUI.getDataGrid('#patInfoDg').datagrid({
 		height: 460, 
 		width: '100%', 
-		toolbar: "#tbLeft",
+		/*toolbar: "#tbLeft",*/
 		singleSelect: true,
 		pagination: false,
 		fitColumns: true,
@@ -37,7 +37,7 @@ $(function() {
 	});
 	
 	//发药明细Datagrid
-	var options = { toolbar: "#infomsg", height: 460, width: 900,singleSelect: false, pagination: false, rownumbers: false,fitColumns: true,
+	var options = { toolbar: "#infomsg", height: 230, width: 900,singleSelect: false, pagination: false, rownumbers: false,fitColumns: true,
 					onLoadSuccess : function(data){
 						if(data.total == 0){
 							$('#OrderDg').datagrid('unselectAll');
@@ -111,12 +111,43 @@ $(function() {
 	               ]];
 	//var url = $WEB_ROOT_PATH + '/doctAdviceManage/doctAdviceManageCtrl.htm?BLHMI=orderSubList';
 	var url = '';
-	//$CommonUI.edatagrid('#OrderDg', url, queryParams, columns, pageOpts, sortOpts, options);
+//	$CommonUI.edatagrid('#OrderDg', url, {}, columns, pageOpts, sortOpts, options);
 	$CommonUI.datagriddetail($('#OrderDg'), url, {}, function(rowIndex, rowData){
 		 return '<table id="MedInfoDg'+rowIndex+'" style="height:auto;border: 0px;"></table>';
 	}, columns, pageOpts, sortOpts,options);
-	
-	
+	//add at 2016/04/12 只是为了展示，具体业务逻辑待实现
+	$CommonUI.getDataGrid('#MedInfoDg').datagrid({
+		height: 230, 
+		width: 900, 
+		singleSelect: true,
+		pagination: false,
+		fitColumns: true,
+		autoRowHeight: true,
+		rownumbers: true,
+		//scrollbarSize: 0,
+		url : $WEB_ROOT_PATH + '/pharmacyManage/querySendMedDetailList.ajax?ordid='+0 ,
+		columns : [[
+	          {title: "药品名称",field: "itemname",width: 70},
+	          {title: "药品通用名",field: "itemCommonName",width:70},
+	          {title: "规格",field: "itemSpec",width:50},
+	          {title: "数量",field: "dispensQuantity",width: 30},
+	          {title: "单位",field: "dispensUnit",width: 30},
+	          {title: "单价",field: "salesPrice",width: 30},
+	          {title: "金额",field: "amountTotal",width: 30},
+	          {title: "批次",field: "ordDate",width: 100,hidden:true},
+	          {title: "生产厂家",field: "entname",width: 105},
+	          {title: "备注",field: "note",width: 45}
+		]],
+		rowStyler : function(index,row,css){
+			return 'background-color:#BEEFFD;color:#000000';
+		},
+		onResize:function(){
+			
+        },
+        onLoadSuccess:function(){
+        	
+        }
+	});
 });
 
 //患者列表查询按钮

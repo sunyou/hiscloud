@@ -1,0 +1,131 @@
+﻿@charset "utf-8";
+body,html{background-attachment:fixed;  background-repeat:no-repeat; background-position:top center; background-image:url(../images/bg.jpg); background-color: #4cb1fc;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend{margin:0;padding:0;}
+body,button,input,select,textarea{ font-family: arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif; font-size: 62.5%;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+ul,ol,dl{list-style:none;}
+a{text-decoration:none;}
+a:hover{ text-decoration: none;}
+.fl{ float:left; }
+.fr{ float:right;}
+.clear{ clear:both;}
+.input20{ width:20px; height:20px; vertical-align:middle;}
+.999{ color:#999;}
+input,button{ outline:none; }
+button{ cursor:pointer;}
+.font-18{ font-size: 1.8rem;}
+.wrap{ width: 1200px; margin: 0 auto;}
+.wrap100{ width: 100%;}
+
+
+.m-t-10{ margin-top:10px;}
+.m-t-15{ margin-top:15px;}
+.m-t-20{ margin-top:20px;}
+.m-t-30{ margin-top:30px;}
+.m-t-62{ margin-top:62px;}
+.m-t-68{ margin-top:68px;}
+.m-t-100{ margin-top:100px;}
+.m-t-110{ margin-top:110px;}
+.m-t-120{ margin-top:120px;}
+.m-t-130{ margin-top:130px;}
+.m-t-140{ margin-top:140px;}
+.m-t-150{ margin-top:150px;}
+.m-t-160{ margin-top:160px;}
+.m-t-170{ margin-top:170px;}
+.m-t-180{ margin-top:180px;}
+.m-t-190{ margin-top:190px;}
+.m-b-15{ margin-bottom:15px;}
+.m-b-100{ margin-bottom:100px;}
+.m-l-10{ margin-left: 10px;}
+.m-l-20{ margin-left: 20px;}
+.m-r-10{ margin-right: 10px;}
+.m-r-20{ margin-right: 20px;}
+.p-r-8{ padding-right:8px;}
+.p-t-150{ padding-top:150px;}
+.p-b-100{ padding-bottom:100px;}
+.p-b-70{ padding-bottom:70px;}
+.p-b-20{ padding-bottom:20px;}
+
+.w-b-3{ width:3%;}
+.w-b-5{ width:5%;}
+.w-b-10{ width:10%;}
+.w-b-15{ width:15%;}
+.w-b-20{ width:20%;}
+.w-b-24{ width:24%;}
+.w-b-28{ width:28%;}
+.w-b-30{ width:30%;}
+.w-b-35{ width:35%;}
+.w-b-32{ width:32%;}
+.w-b-40{ width:40%;}
+.w-b-50{ width:50%;}
+.w-b-55{ width:55%;}
+.w-b-60{ width:60%;}
+.w-b-65{ width:65%;}
+.w-b-70{ width:70%;}
+.w-b-80{ width:80%;}
+.w-b-90{ width:90%;}
+.w-b-100{ width:100%;}
+.h-50{height: 50px;}
+.h-60{height: 60px;}
+.h-70{height: 70px;}
+.h-80{height: 80px;}
+.h-90{height: 90px;}
+.h-100{height: 100px;}
+.h-110{height: 110px;}
+.h-120{height: 120px;}
+.hidden{ display: none; height: 0; width: 0;font-size: 0;}
+.division{ border-top:1px solid #ddd; border-bottom: 1px solid #ddd; height: 15px; background: #eee;}
+.xx-division{ border-top:1px dashed #ddd; padding:5px 0;}
+
+.bg-color-blue{background: #528bdf; color: #fff;}
+.bg-color-orange{background: #f0832b; color: #fff;}
+.bg-color-green{background: #4daf2f; color: #fff;}
+.bg-color-violet{background: #d058bb; color: #fff;}
+
+.t-blue{ color: #6292d6;}
+.t-orange{ color: #f0832b;}
+.t-grey{ color: #999;}
+.t-333{ color: #333;}
+
+
+/* CSS Document */
+
+
+.home{ position: relative; min-height: 530px;  }
+.home .logo{ position: absolute;  top:30px; }
+.home .h-menu{ position: absolute;  top:150px; }
+.home .h-menu ul li{ float: left; margin-right: 50px; text-align: center;position: relative;  }
+.home .h-menu ul li a{  color: #fff; font-size: 15px; }
+.floatWindow{ position: absolute; top:75px; left:70px; background: #fff; padding:10px; min-width: 350px;min-height:200px;z-index:1000 }
+.floatWindow h5{ line-height: 35px; font-size: 16px; text-align: left; border-bottom: 1px dashed #eee; color: #0474ca; }
+.floatWindow ol li{ line-height: 30px; font-size: 14px; }
+.floatWindow ol li a{  color: #666;}
+.floatWindow ol li a:hover{  color: #f60;}
+
+
+
+.copyright{ font-size: 14px; color: #fff; }
+.copyright .asiaLogo{ display: block; float: left; background:url(../images/asiaLogo.png) no-repeat; width:41px; height: 37px; margin-top:-10px;  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

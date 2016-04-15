@@ -141,7 +141,7 @@
 				<div id="tb" style="height: auto;">
 				开始时间：<input class="datebox" id="startDate" data-options="editable:false">
 				结束时间：<input class="datebox" id="endDate" data-options="editable:false">
-				<button id="createScheduleBtn" type="button" class="btn btn-primary btn-sm" onclick="schedulingSave()" style="width:100px;padding-bottom: 3px; padding-top: 3px;">生成班次</button></td>
+				<button id="createScheduleBtn" type="button" class="btn btn-success btn-sm" onclick="schedulingSave()" style="width:100px;padding-bottom: 3px; padding-top: 3px;">生成班次</button></td>
 		   	 	<!-- <a href="javascript:schedulingSave()" class="linkbutton" data-options="iconCls:'chis-schedule'">生成班次</a> -->
 				</div>
 		</fieldset>
