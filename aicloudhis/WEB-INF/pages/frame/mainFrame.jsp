@@ -80,13 +80,16 @@ function Getmenuinfo(id){
 				var mainul=$("#main-menu");
 				pages =  new Array();
 				var children=data.children.sort((function(a,b){return a.seq-b.seq;}));
-			 	firstURL = children[0].securityUrl;
-			 	firstTitle = children[0].funcName;
+				
 				changeUrl(firstURL,firstTitle);
 				$.each(children, function(i, childrenBean) { 
 					var src=childrenBean.securityUrl;
 					src= src == null || src == "" ? "" : $WEB_ROOT_PATH+"/"+src;
 					var name=childrenBean.funcName;
+					if(childrenBean.seq == id){
+						firstURL = childrenBean.securityUrl;
+					 	firstTitle = childrenBean.funcName;
+					}
 				 	if(firstURL == null || firstURL == ""){
 				 		firstURL = childrenBean.securityUrl;
 				 	    firstTitle = name;
@@ -196,8 +199,17 @@ function logout(){
 	}); 
 };
 function passacouuid(){
-	var id="";
+	var id=getQueryString("id");
+	if(id == undefined)id="";
 	return id;
+}
+function getQueryString(name) {
+    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+        return unescape(r[2]);
+    }
+    return null;
 }
 function getName(){
 	var name="";

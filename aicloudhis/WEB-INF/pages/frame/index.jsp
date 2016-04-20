@@ -51,6 +51,20 @@
                 <a href="#"><img src="${ctx}/images/h-icon3.png" width="69" height="69" /><br />通 知</a>
             </li>
             <li id="system">
+                <a href="${ctx }/frame/mainFrame.html"><img src="${ctx}/images/h-icon5.png" width="69" height="69" /><br />患者管理</a>
+            </li>
+            <div class="clear"></div>
+            </br> </br>
+            <li id="system">
+                <a href="${ctx }/frame/mainFrame.html?id=4"><img src="${ctx}/images/h-icon6.png" width="69" height="69" /><br />预约管理</a>
+            </li>
+            <li id="system">
+                <a href="${ctx }/frame/mainFrame.html?id=5"><img src="${ctx}/images/h-icon7.png" width="69" height="69" /><br />诊疗管理</a>
+            </li>
+            <li id="system">
+                <a href="${ctx }/frame/mainFrame.html?id=6"><img src="${ctx}/images/h-icon9.png" width="69" height="69" /><br />收费管理</a>
+            </li>
+            <li id="system">
                 <a href="${ctx }/frame/mainFrame.html"><img src="${ctx}/images/h-icon4.png" width="69" height="69" /><br />进入系统</a>
             </li>
         </ul>
