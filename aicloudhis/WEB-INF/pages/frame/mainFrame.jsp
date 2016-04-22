@@ -162,6 +162,19 @@ function Getmenuinfo(id){
 					var liend = '</li>';
 					$(liend).appendTo(mainul);
 				});
+				if(id == "43"){//通知 add at 04/22 因为当设置这几个菜单不显示时，查询不出来
+					firstURL = "notice/notice.html";
+			 		firstTitle = "通知";
+			 		pages[$WEB_ROOT_PATH+"/"+firstURL]=firstTitle;
+				}else if(id == "58"){
+					firstURL = "outPatient/patientLog.html";
+			 		firstTitle = "门诊日志";
+			 		pages[$WEB_ROOT_PATH+"/"+firstURL]=firstTitle;
+				}else if(id == "40"){
+					firstURL = "tregisterplan/scheduleReports.html";
+			 		firstTitle = "排班管理";
+			 		pages[$WEB_ROOT_PATH+"/"+firstURL]=firstTitle;
+				}
 				changeUrl($WEB_ROOT_PATH+"/"+firstURL,firstTitle);
 				
 		$("#menu-item-8:has(ul)").live('mouseover mouseout', function(event) {

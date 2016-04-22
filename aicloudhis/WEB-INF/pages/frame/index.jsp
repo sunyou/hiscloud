@@ -48,9 +48,14 @@
                 <a href="#"><img src="${ctx}/images/h-icon2.png" width="69" height="69" /><br/>公 告</a>
             </li>
             <li id="message">
-                <a href="#"><img src="${ctx}/images/h-icon3.png" width="69" height="69" /><br />通 知</a>
+                <a href="${ctx }/frame/mainFrame.html?id=43"><img src="${ctx}/images/h-icon3.png" width="69" height="69" /><br />通 知</a>
             </li>
-            <li id="system">
+            <li id="system"> 
+                <a href="${ctx }/frame/mainFrame.html?id=58"><img src="${ctx}/images/h-icon6.png" width="69" height="69" /><br />门诊日志</a>
+            </li>
+            <div class="clear"></div> </br> </br>
+            
+           <%--  <li id="system">
                 <a href="${ctx }/frame/mainFrame.html"><img src="${ctx}/images/h-icon5.png" width="69" height="69" /><br />患者管理</a>
             </li>
             <div class="clear"></div>
@@ -63,8 +68,11 @@
             </li>
             <li id="system">
                 <a href="${ctx }/frame/mainFrame.html?id=6"><img src="${ctx}/images/h-icon9.png" width="69" height="69" /><br />收费管理</a>
+            </li>--%>
+             <li id="system"> 
+                <a href="${ctx }/frame/mainFrame.html?id=40"><img src="${ctx}/images/h-icon10.png" width="69" height="69" /><br />排班管理</a>
             </li>
-            <li id="system">
+            <li id="system"> 
                 <a href="${ctx }/frame/mainFrame.html"><img src="${ctx}/images/h-icon4.png" width="69" height="69" /><br />进入系统</a>
             </li>
         </ul>
