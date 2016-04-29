@@ -832,8 +832,14 @@ function loadPatientDetailInfo(patientid){
 	});
 	$.getJSON($WEB_ROOT_PATH+ "/patientManage/getPatientById.ajax?patientid="
 			+ patientid, function(d) {
+		if(d.rows && d.rows.length > 0){
+			d['dto.patient'] = d.rows[0];
+		}else{
+			return;
+		}
 		$('#patientTelephone').val(d['dto.patient'].patientTelephone);
-		$('#createForm input[name="dto.patient.patientName"]').val(d['dto.patient'].patientName);
+		//$('#createForm input[name="dto.patient.patientName"]').val(d['dto.patient'].patientName);
+		$('#patientName').val(d['dto.patient'].patientName);
 		$('#patientEname').val(d['dto.patient'].patientEname);
 		$('#patientIdentityname').val(d['dto.patient'].patientIdentityname);
 		$('#createForm input[name="dto.patient.patientTelephone"]').val(d['dto.patient'].patientTelephone);

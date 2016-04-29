@@ -18,6 +18,8 @@ $(function(){
 	     						}
 	     						else if(str.length==15){
 	     							return str.substr(0,6)+"******"+str.substr(str.length-3);
+	     						}else{
+	     							return value;
 	     						}
  							}
 	     				}
@@ -150,7 +152,8 @@ function FindData() {
 		     				}, 	     			
 		     			{title : "操作",field : "lookRecord",width : 120,align : 'center',formatter:function(value,row,index){
 			     			var familyAddress=row.provinCesid+row.cityid+row.cityaeraid+row.streetinfo;
-			     			return a = '<a href="javascript:void(0)" onclick="treats(\''+row.patientid+'\')">诊疗</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="javascript:void(0)" onclick="look(\''+row.patientid+'\',\''+familyAddress+'\')">就诊记录</a>';
+			     			//a = '<a href="javascript:void(0)" onclick="treats(\''+row.patientid+'\')">诊疗</a>&nbsp;&nbsp;/&nbsp;&nbsp;';
+			     			return '<a href="javascript:void(0)" onclick="look(\''+row.patientid+'\',\''+familyAddress+'\')">就诊记录</a>';
 			     		}}]];
 	var queryParams = {"patientName":patName,
 					   "patientEname":patName,
@@ -393,10 +396,15 @@ function err(){
 	$CommonUI.alert("失败");
 }
 function succUpdate(d) {
-	if(d!=null&&d!=""){
+	/*if(d!=null&&d!=""){
 		if(d['dto.patient'].patientid!=null){
 			$CommonUI.alert("修改成功!");
 		}
+	}*/
+	if(d.result == "success"){
+		$CommonUI.alert("修改成功!");
+	}else{
+		$CommonUI.alert("修改失败!");
 	}
 	$("#dg").datagrid('reload');
 	$("#dlg").dialog('close');

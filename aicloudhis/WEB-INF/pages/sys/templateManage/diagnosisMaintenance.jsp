@@ -62,7 +62,7 @@
 					           ]]    
 					       "></select></td> 
 					         <input id="diagid" type="hidden" style="width: 105px;" name="diagTypeid"  data-options="required:true" readonly /> 
-					        <td>诊断编码：<input id="diagTypeid" type="text" style="width: 105px;" name="diagid" data-options="required:true" readonly /></td>
+					        <td>诊断编码：<input id="diagTypeid" type="text" style="width: 105px;" name="diagid" data-options="required:true" /></td>
 							<td>助记符：<input id="inputstr" type="text"  class="validatebox" style="width: 105px;" name="inputstr" /></td> 
 							<td>诊断常用名：<input id="diagaliases" type="text" style="width: 105px;" name="diagaliases" /></td>
 							<!-- <td>排序号<input id="sortno" type="text" class="validatebox" name="dto.orgDiag.sortno" style="width: 105px;" data-options="min:0,precision:0"></input></td> -->

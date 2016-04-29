@@ -889,6 +889,7 @@ function viewpur(uuidPl,uuid,entid,description,amountTotal,purchasecheckOrgid){
 	$.getJSON($WEB_ROOT_PATH+'/purchaseManage/stockMgrCtrl.ajax?BLHMI=listPur', {
 		"uuid" : uuid,
 	}, function(data) {
+		console.log(data);
 		$CommonUI.getDataGrid('#medDg').datagrid('loadData',{total:data.mePlSubBean.length,rows:data.mePlSubBean} );
 		if(data.mePlSubBean!=""){
 			for ( var i = 0; i < $CommonUI.getDataGrid('#medDg').datagrid('getRows').length; i++) {

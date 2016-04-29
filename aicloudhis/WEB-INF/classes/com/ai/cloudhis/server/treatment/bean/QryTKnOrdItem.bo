@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sysbolist>
   <sysbo datasource="aihis" name="QryTKnOrdItem" mainattr="UUID">
-    <mapingenty type="query">select a.*,
-       b.basic_unit,
-       b.charge_cateid,
-       b.control_cateid,
-       b.create_userid,
-       b.dispens_facotr,
-       b.dispens_unit,
-       b.entid_producer,
-       b.entid_supplier,
-       c.freq_name,
-       b.inputstr,
-       1 interval_Days,
-       b.ismeditem,
-       b.item_chemistry_name,
-       b.item_common_name,
-       b.item_doseid,
-       b.item_usageid,
-       b.medfactor,
-       b.medunit,
-       b.note,
-       b.ord_cateid,
-       1 per_Quantity,
-       b.pharmacy_cate_twosubid pharmacycate,
-       b.sales_price1,
-       b.sales_price2,
-       b.updatetime,
-       b.warehous_facotr,
-       b.warehous_unit,
-       b.wholesales_price,
-       b.createtime
-  from T_Kn_Ord_Item a, T_Ord_Item b,t_frequecy c
- where a.ord_itemid = b.ord_itemid and a.freqid=c.freqid(+)</mapingenty>
+    <mapingenty type="query">select a.*, 
+       b.basic_unit, 
+       b.charge_cateid, 
+       b.control_cateid, 
+       b.create_userid, 
+       b.dispens_facotr, 
+       b.dispens_unit, 
+       b.entid_producer, 
+       b.entid_supplier, 
+       c.freq_name, 
+       b.inputstr, 
+       1 interval_Days, 
+       b.ismeditem, 
+       b.item_chemistry_name, 
+       b.item_common_name, 
+       b.item_doseid, 
+       b.item_usageid, 
+       b.medfactor, 
+       b.medunit, 
+       b.note, 
+       b.ord_cateid, 
+       1 per_Quantity, 
+       b.pharmacy_cate_twosubid pharmacycate, 
+       b.sales_price1, 
+       b.sales_price2, 
+       b.updatetime, 
+       b.warehous_facotr, 
+       b.warehous_unit, 
+       b.wholesales_price, 
+       b.createtime 
+  from T_Kn_Ord_Item a
+ LEFT JOIN 
+ T_Ord_Item b on a.ord_itemid = b.ord_itemid
+ LEFT JOIN t_frequecy c on a.freqid=c.freqid</mapingenty>
     <datafilter />
     <attrlist>
       <attr floatlength="0" name="UUID" maxlength="32" datatype="String" type="COL">
