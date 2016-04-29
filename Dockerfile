@@ -3,7 +3,7 @@ FROM ubuntu
 ENV TIME_ZONE=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && echo $TIME_ZONE > /etc/timezone
 
-RUN apt-get update && apt-get install curl
+RUN apt-get update && apt-get install -y curl
 
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
