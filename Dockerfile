@@ -8,6 +8,9 @@ ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
 WORKDIR $CATALINA_HOME
 
+# runtime dependency for Tomcat Native Libraries
+RUN apt-get update && apt-get install -y libapr1 && rm -rf /var/lib/apt/lists/*
+
 # see https://www.apache.org/dist/tomcat/tomcat-8/KEYS
 RUN set -ex \
 	&& for key in \
